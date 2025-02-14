@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfpp5vunkyy2o"]
+
+[ext_resource type="Script" path="res://GameElements/Player/player_movement.gd" id="1_rdrlh"]
+[ext_resource type="Texture2D" uid="uid://cx607jsnglp31" path="res://icon.svg" id="2_wvr7m"]
+[ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_xf24s"]
+[ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="3_rau4g"]
+[ext_resource type="Texture2D" uid="uid://dcx410r361to6" path="res://Assets/Dust/circle_32.png" id="4_d2ekf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
+radius = 67.42
+
+[sub_resource type="Animation" id="Animation_6ao1v"]
+resource_name = "walk"
+
+[sub_resource type="Animation" id="Animation_sumgo"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_25kg0"]
+_data = {
+"idle": SubResource("Animation_sumgo"),
+"walk": SubResource("Animation_6ao1v")
+}
+
+[node name="Player" type="Node2D" groups=["Player"]]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
+unique_name_in_owner = true
+script = ExtResource("1_rdrlh")
+player_speed = 400
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+script = ExtResource("2_xf24s")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_wvr7m")
+
+[node name="WalkAudio" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_rlqqf")
+
+[node name="PlayerAnimation" type="AnimationPlayer" parent="CharacterBody2D"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_25kg0")
+}
+
+[node name="DustParticle" type="GPUParticles2D" parent="CharacterBody2D"]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(0, 67)
+emitting = false
+amount = 20
+amount_ratio = 0.5
+process_material = ExtResource("3_rau4g")
+texture = ExtResource("4_d2ekf")
+speed_scale = 2.0
