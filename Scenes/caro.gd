@@ -13,19 +13,15 @@ func _ready():
 	
 	# Load the cards
 	print("Pushing card...")
-	_cardManager.pushCard(dashCardResource.instantiate())
+	_cardManager.addCard(dashCardResource.instantiate())
 
-	# wait 1 second and them add the bomb card
-	await wait(1)
-	_cardManager.pushCard(bombCardResource.instantiate())
+
+	_cardManager.addCard(bombCardResource.instantiate())
 
 	# Start the game
 	_cardManager.start()
 
 	pass # Replace with function body.
-
-func wait(seconds: float) -> void:
-	await get_tree().create_timer(seconds).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
