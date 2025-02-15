@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://cbchxg4rabb4m"
+=======
+uid="uid://de22yuhmjoqjj"
+>>>>>>> Stashed changes
 path="res://.godot/imported/vole objet.png-d57caf0b21845a812eba7ca52587f2a3.ctex"
 metadata={
 "vram_texture": false
