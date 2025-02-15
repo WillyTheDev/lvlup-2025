@@ -5,6 +5,7 @@ extends Node
 
 var _cardStack: Array[Card]
 var _inGame: bool
+@export var player: Node2D = null
 
 # Init the manager
 func _init():
@@ -44,6 +45,7 @@ func reset():
 # Push a card to the stack
 # @param card: Card to be pushed
 func addCard(card: Card):
+	card.player = self.player
 	self._cardStack.push_back(card)
 
 # Remove the current card and go to the next one
