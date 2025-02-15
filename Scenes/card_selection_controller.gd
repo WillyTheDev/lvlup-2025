@@ -23,6 +23,7 @@ func reset_selection():
 	number_of_selected_card = 0
 	for child in %SelectedCardList.get_children():
 		%SelectedCardList.remove_child(child)
+		%CardManager.clearStack()
 
 func _on_stun_card_button_pressed():
 	add_card_to_selected_list(STUN_CARD.instantiate())
