@@ -90,7 +90,7 @@ func get_closest_treasure():
 
 func get_closest_enemy():
 	# Get all overlapping bodies
-	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	var overlapping_bodies = %CheckZone.get_overlapping_bodies()
 	# Get only the enemies
 	var enemy_bodies = overlapping_bodies.filter(func(body): return body is Enemy)
 	# If there are no enemies, remove the outline from the closest enemy

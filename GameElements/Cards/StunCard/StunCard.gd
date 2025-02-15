@@ -13,4 +13,5 @@ func apply_effect():
 		var player = get_node("/root/Game/Map/Player")
 	player.stun_closest_enemy()
 	player.can_stun = false
+	queue_free()
 	

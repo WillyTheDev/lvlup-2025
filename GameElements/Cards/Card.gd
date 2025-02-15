@@ -18,8 +18,9 @@ func _initI(id, card_texture_normal, card_texture_hover, card_texture_pressed, c
 
 func _input(event):
 	if event.is_action_pressed("use_card"):
-		apply_effect()
 		card_has_been_used.emit()
+		apply_effect()
+		
 		
 		
 func apply_effect():
