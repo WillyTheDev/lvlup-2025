@@ -8,6 +8,7 @@ var dash_velocity: int = 0
 var can_stun := false
 var can_destroy_wall := false
 var can_get_treasure := false
+var can_unlock_door := false
 var closest_enemy : Node2D = null
 var closest_wall : Node2D = null
 var closest_treasure : Node2D = null
@@ -27,6 +28,8 @@ func _process(delta):
 		get_closest_wall()
 	if can_get_treasure:
 		get_closest_treasure()
+	if can_unlock_door:
+		get_closest_door()
 				
 						
 
@@ -95,6 +98,22 @@ func get_closest_wall():
 				if closest_wall != null:
 					closest_wall.set_outline(false)
 					closest_wall = null
+
+func get_closest_door():
+	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Door:
+			if closest_door == null:
+				closest_door = body.get_parent()
+				closest_door.set_outline(true)
+			else:
+				var distance = self.global_position.distance_to(body.get_parent().global_position)
+				if distance < (self.global_position.distance_to(closest_door.global_position)):
+					closest_door.set_outline(false)
+					closest_door = body.get_parent()
+					closest_door.set_outline(true)
+			return true) == false:
+				if closest_door != null:
+					closest_door.set_outline(false)
+					closest_door = null
 	
 func stun_closest_enemy():
 	if closest_enemy != null:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://7jqo2l5ydysj"]
 
-[ext_resource type="Script" path="res://GameElements/Player/player_movement.gd" id="1_4f2pt"]
+[ext_resource type="Script" path="res://GameElements/Player/player.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
 [ext_resource type="Texture2D" uid="uid://cx607jsnglp31" path="res://icon.svg" id="3_8jhd1"]
 [ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="4_fj21j"]
