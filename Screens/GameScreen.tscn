@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=13 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://wlp50gc4teyc" path="res://GameElements/CardSelectionLayer/card_selection_layer.tscn" id="7_eqmjq"]
 [ext_resource type="PackedScene" uid="uid://dl7b6fnbwdqtt" path="res://GameElements/AlertLayer/alert_layer.tscn" id="8_6i3pe"]
 [ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="9_4wosp"]
+[ext_resource type="AudioStream" uid="uid://d0qs0r1qpiutx" path="res://Assets/Music/Sneaky Steal in the House.mp3" id="11_24i8l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m1dnm"]
 shader = ExtResource("2_q1uqj")
@@ -38,6 +39,9 @@ shader_parameter/vignette_opacity = 0.5
 [node name="Game" type="Node2D"]
 script = ExtResource("1_m4qnj")
 
+[node name="TransitionLayer" parent="." instance=ExtResource("2_jgh8e")]
+layer = 2
+
 [node name="filter" type="CanvasLayer" parent="."]
 layer = 2
 
@@ -49,8 +53,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-
-[node name="TransitionLayer" parent="." instance=ExtResource("2_jgh8e")]
 
 [node name="Map" parent="." instance=ExtResource("3_ajet5")]
 
@@ -84,9 +86,16 @@ position = Vector2(199, 862)
 
 [node name="AlertLayer" parent="Map" instance=ExtResource("8_6i3pe")]
 unique_name_in_owner = true
+visible = false
 
-[node name="CardManager" parent="Map" node_paths=PackedStringArray("player") instance=ExtResource("9_4wosp")]
+[node name="CanvasLayer" type="CanvasLayer" parent="Map"]
+
+[node name="CardManager" parent="Map/CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("9_4wosp")]
 unique_name_in_owner = true
-player = NodePath("../Player")
+player = NodePath("../../Player")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_24i8l")
+autoplay = true
 
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]

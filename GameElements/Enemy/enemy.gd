@@ -20,6 +20,10 @@ func _physics_process(delta):
 		var direction = (global_position - target.global_position).normalized() * normalized
 		velocity = enemy_speed * direction
 		move_and_slide()
+		if velocity.length() > 0.0:
+			play_animation_walk()
+		else:
+			play_animation_idle()
 
 func set_outline(value):
 	if value == true:
@@ -54,3 +58,9 @@ func enable_enemy():
 	self.set_collision_mask_value(1, true)
 	%CatchArea.set_collision_layer_value(1, true)
 	%CatchArea.set_collision_mask_value(1, true)
+	
+func play_animation_idle():
+	%AnimationPlayer.play("idle")
+	
+func play_animation_walk():
+	%AnimationPlayer.play("walk")
