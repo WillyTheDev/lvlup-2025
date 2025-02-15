@@ -5,6 +5,7 @@ extends Node
 @export var card_selection_layer : CanvasLayer = null
 @export var player_spawn : Node2D = null
 @export var map : Node2D = null
+@export var alert_layer: CanvasLayer = null
 
 
 signal player_has_been_catched
@@ -13,6 +14,7 @@ func _ready():
 	get_tree().paused = true
 
 func player_catch():
+	alert_layer.stop_layer()
 	player_has_been_catched.emit()
 	card_selection_layer.visible = true
 	%BigCamera.enabled = true
@@ -20,6 +22,8 @@ func player_catch():
 	%CardSelectionLayer.reset_selection()
 	print("Player has been Catched !")
 
+func on_treasure_get():
+	alert_layer.show_layer()
 
 func _on_execute_pressed():
 	get_tree().paused = false

@@ -142,12 +142,14 @@ func stun_closest_enemy():
 	
 func destroy_closest_wall():
 	if closest_wall != null:
+		%Camera2D.apply_shake(5, self.global_position)
 		closest_wall.destroys()
 		closest_wall = null
 	
 func get_treasure():
 	if closest_treasure != null:
 		closest_treasure.take()
+		game_manager.on_treasure_get()
 		closest_treasure = null
 
 func open_closest_door():

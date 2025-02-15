@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d00bwnssiwch0"]
+[gd_scene load_steps=29 format=3 uid="uid://d00bwnssiwch0"]
 
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://cjk7gwycl1a3a" path="res://Assets/Cards/peter_mur.png" id="16_1kwqg"]
 [ext_resource type="Texture2D" uid="uid://45lgf8jv4ln5" path="res://Assets/Cards/vole objet.png" id="17_uodrl"]
 [ext_resource type="FontFile" uid="uid://wsxpjma3ixet" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Bold_Modular.ttf" id="19_6cmb3"]
+[ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="20_3piuh"]
+[ext_resource type="Script" path="res://Scenes/alert_layer.gd" id="20_tdfek"]
+[ext_resource type="PackedScene" uid="uid://dp64c1rocjlod" path="res://GameElements/Cards/GetCard/GetCard.tscn" id="22_c1ovh"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -33,6 +36,50 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 107, 717, 0, 0, 0, 0, 270, 806, 0, 0, 0, 0, 912, 726, 0, 0, 0, 0, 1385, 478)
 }
 point_count = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q806p"]
+shader = ExtResource("20_3piuh")
+shader_parameter/alpha = 0.5
+shader_parameter/inner_radius = 0.7
+shader_parameter/outer_radius = 1.2
+
+[sub_resource type="Animation" id="Animation_ktt07"]
+resource_name = "alert"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlertLayer/ColorRect:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5, 0.8]
+}
+
+[sub_resource type="Animation" id="Animation_w8snd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlertLayer/ColorRect:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fdce4"]
+_data = {
+"RESET": SubResource("Animation_w8snd"),
+"alert": SubResource("Animation_ktt07")
+}
 
 [node name="Map" type="Node2D"]
 script = SubResource("GDScript_lc114")
@@ -53,11 +100,12 @@ game_manager = NodePath("../GameManager")
 position = Vector2(494, -476)
 game_manager = NodePath("../GameManager")
 
-[node name="GameManager" parent="." node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map") instance=ExtResource("6_jaw44")]
+[node name="GameManager" parent="." node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer") instance=ExtResource("6_jaw44")]
 player = NodePath("../Player")
 card_selection_layer = NodePath("../CardSelectionLayer")
 player_spawn = NodePath("../PlayerSpawn")
 map = NodePath("..")
+alert_layer = NodePath("../AlertLayer")
 
 [node name="BigCamera" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -209,6 +257,33 @@ size_flags_horizontal = 4
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(1534, 1063)
+
+[node name="AlertLayer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("20_tdfek")
+
+[node name="ColorRect" type="ColorRect" parent="AlertLayer"]
+material = SubResource("ShaderMaterial_q806p")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -221.0
+offset_top = -166.0
+offset_right = 217.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AlertLayer"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_fdce4")
+}
+
+[node name="GetCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("22_c1ovh")]
+player = NodePath("../Player")
 
 [connection signal="pressed" from="CardSelectionLayer/Control/execute" to="GameManager" method="_on_execute_pressed"]
 [connection signal="pressed" from="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer/StunCardButton" to="CardSelectionLayer" method="_on_stun_card_button_pressed"]
