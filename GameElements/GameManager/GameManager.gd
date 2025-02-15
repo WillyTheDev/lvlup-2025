@@ -22,6 +22,7 @@ func player_catch():
 	player_has_been_catched.emit()
 	card_selection_layer.visible = true
 	player.player_camera.enabled = false
+	in_game_ui.visible = false
 	%BigCamera.enabled = true
 	%CardSelectionLayer.visible = true
 	%CardSelectionLayer.reset_selection()
@@ -32,6 +33,7 @@ func on_treasure_get():
 
 func _on_card_selection_layer_on_next_pressed():
 	get_tree().paused = false
+	in_game_ui.visible = true
 	on_next_round_started.emit()
 	card_selection_layer.visible = false
 	player.global_position = player_spawn.global_position

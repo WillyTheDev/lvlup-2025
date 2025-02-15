@@ -5,7 +5,7 @@
 
 [node name="InGameUiLayer" type="CanvasLayer" node_paths=PackedStringArray("cardManager")]
 script = ExtResource("1_6w3qp")
-cardManager = NodePath("Control/BottomRightSlot/CardManagerContainer/CardManager")
+cardManager = NodePath("Control/BottomRightSlot/CardManager")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -85,15 +85,7 @@ grow_vertical = 2
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="CardManagerContainer" type="MarginContainer" parent="Control/BottomRightSlot"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="CardManager" parent="Control/BottomRightSlot/CardManagerContainer" instance=ExtResource("1_koc6h")]
+[node name="CardManager" parent="Control/BottomRightSlot" instance=ExtResource("1_koc6h")]
 unique_name_in_owner = true
+position = Vector2(1700, 797)
 scale = Vector2(0.45, 0.45)

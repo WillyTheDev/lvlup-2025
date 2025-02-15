@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2i7wpdlyrxth"]
+[gd_scene load_steps=12 format=3 uid="uid://d2i7wpdlyrxth"]
 
 [ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
 [ext_resource type="Texture2D" uid="uid://p2rvs6wb7gwu" path="res://Assets/Enemy/Guard.png" id="2_uoo3p"]
-[ext_resource type="Texture2D" uid="uid://cr6gfq86yk3mj" path="res://Assets/UI/buttonE_active.png" id="3_vgtwt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_540wn"]
 radius = 43.2897
@@ -45,6 +44,33 @@ radius = 339.329
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
 radius = 60.208
 
+[sub_resource type="Animation" id="Animation_2q1bm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.273438, 0.273438)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasGroup/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -30)]
+}
+
 [sub_resource type="Animation" id="Animation_1mnqi"]
 resource_name = "idle"
 length = 1.5
@@ -72,33 +98,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1.31951, 1.31951),
 "update": 0,
 "values": [Vector2(0, -30), Vector2(0, -15.4999)]
-}
-
-[sub_resource type="Animation" id="Animation_2q1bm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasGroup/Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.273438, 0.273438)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasGroup/Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -30)]
 }
 
 [sub_resource type="Animation" id="Animation_7lhr3"]
@@ -172,14 +171,6 @@ unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_u1tj6")
 }
-
-[node name="EIndicator" type="Sprite2D" parent="."]
-unique_name_in_owner = true
-visible = false
-position = Vector2(93.9489, -108.684)
-rotation = 0.547101
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_vgtwt")
 
 [connection signal="body_entered" from="TauntArea" to="." method="_on_taunt_area_body_entered"]
 [connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]

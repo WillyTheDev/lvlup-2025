@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://be26ysfag4txm" path="res://Assets/Cards/dash.png" id="2_lp32m"]
 
 [node name="DashCard" type="TextureRect"]
-offset_right = 376.0
-offset_bottom = 512.0
+custom_minimum_size = Vector2(365, 505)
 texture = ExtResource("2_lp32m")
+expand_mode = 1
 script = ExtResource("1_n6wrk")
