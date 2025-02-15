@@ -18,11 +18,12 @@ script = ExtResource("1_s5747")
 [node name="DoorClosed" parent="Objects" instance=ExtResource("4_d5fuv")]
 position = Vector2(272, 56)
 
-[node name="LaserPower" parent="Objects" instance=ExtResource("5_ogylw")]
+[node name="LaserPower" parent="Objects" node_paths=PackedStringArray("laser_zone") instance=ExtResource("5_ogylw")]
 position = Vector2(520, 64)
+laser_zone = NodePath("../LaserZone")
 
-[node name="LaserZone" parent="Objects/LaserPower" instance=ExtResource("6_5a01n")]
-position = Vector2(-112, 0)
+[node name="LaserZone" parent="Objects" instance=ExtResource("6_5a01n")]
+position = Vector2(408, 64)
 
 [node name="ObjectStolen" parent="Objects" instance=ExtResource("7_wnjdp")]
 position = Vector2(632, 56)
