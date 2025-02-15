@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2i7wpdlyrxth"]
+[gd_scene load_steps=8 format=3 uid="uid://d2i7wpdlyrxth"]
 
 [ext_resource type="Texture2D" uid="uid://bsbp1yu51610v" path="res://GameElements/Enemy/Enemy.png" id="1_1e2d7"]
 [ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
@@ -12,7 +12,38 @@ radius = 339.329
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
 radius = 60.208
 
-[node name="Enemy" type="CharacterBody2D"]
+[sub_resource type="Shader" id="Shader_oot3p"]
+code = "shader_type canvas_item;
+
+uniform float onoff: hint_range(0.0,1.0) = 0.0;
+uniform vec3 line_colour: source_color = vec3(1.0);
+uniform int line_thickness: hint_range(0, 10) = 1;
+uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
+
+void fragment() {
+	vec2 size = SCREEN_PIXEL_SIZE * float(line_thickness) ;
+	float line_alpha = 0.0;
+	if (size.x * onoff > 0.0){
+		for (float i = -size.x; i <= size.x; i += SCREEN_PIXEL_SIZE.x) {
+			for (float j = -size.y; j <= size.y; j += SCREEN_PIXEL_SIZE.y) {
+				line_alpha += texture(screen_texture, SCREEN_UV + vec2(i, j)).a;
+			}
+		}
+	}
+	
+	vec4 colour = texture(screen_texture, SCREEN_UV);
+	vec4 outline = vec4(line_colour, min(line_alpha, 1.0) );
+	COLOR *= mix(outline, colour, colour.a);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6isw"]
+shader = SubResource("Shader_oot3p")
+shader_parameter/onoff = 1.0
+shader_parameter/line_colour = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 10
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 script = ExtResource("1_jljaa")
 enemy_speed = 100
@@ -20,11 +51,6 @@ enemy_speed = 100
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2p4x7")
 debug_color = Color(0, 0.639513, 0.363583, 0.42)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(0, -30)
-texture = ExtResource("1_1e2d7")
 
 [node name="TauntArea" type="Area2D" parent="."]
 
@@ -38,6 +64,15 @@ shape = SubResource("CircleShape2D_xo1kb")
 debug_color = Color(0.95366, 3.17663e-06, 0.552429, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_q6isw")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+position = Vector2(0, -30)
+texture = ExtResource("1_1e2d7")
 
 [connection signal="body_entered" from="TauntArea" to="." method="_on_taunt_area_body_entered"]
 [connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]

@@ -44,8 +44,5 @@ position = Vector2(637, -22)
 [node name="Wall3" parent="." instance=ExtResource("6_185lk")]
 position = Vector2(739, -22)
 
-[node name="Wall4" parent="." instance=ExtResource("6_185lk")]
-position = Vector2(1400, -34)
-
 [node name="BombCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_86u23")]
 player = NodePath("../Player")
