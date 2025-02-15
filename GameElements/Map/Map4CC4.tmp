@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://vgokp0mumkh7"]
+[gd_scene load_steps=6 format=3 uid="uid://vgokp0mumkh7"]
 
 [ext_resource type="Script" path="res://GameElements/Map/map.gd" id="1_wwq4p"]
 [ext_resource type="PackedScene" uid="uid://df727u3pjwy66" path="res://GameElements/Fog/Fog.tscn" id="2_jncq7"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="3_eu1h7"]
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="3_l57q2"]
 [ext_resource type="PackedScene" uid="uid://vi0l2bb3tajg" path="res://GameElements/Cards/DashCard/DashCard.tscn" id="5_enik4"]
-[ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="6_k40cr"]
-[ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="7_oeubb"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_wwq4p")
@@ -20,9 +18,3 @@ position = Vector2(578, 323)
 position = Vector2(-3, -6)
 
 [node name="DashCard" parent="." instance=ExtResource("5_enik4")]
-
-[node name="Enemy" parent="." instance=ExtResource("6_k40cr")]
-
-[node name="GameManager" parent="." instance=ExtResource("7_oeubb")]
-
-[node name="Camera2D" type="Camera2D" parent="."]

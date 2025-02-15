@@ -9,11 +9,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
 radius = 67.42
 
-[sub_resource type="Animation" id="Animation_6ao1v"]
-resource_name = "walk"
-
 [sub_resource type="Animation" id="Animation_sumgo"]
 resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_6ao1v"]
+resource_name = "walk"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_25kg0"]
 _data = {
@@ -26,7 +26,6 @@ _data = {
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
 unique_name_in_owner = true
 script = ExtResource("1_rdrlh")
-player_speed = 400
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 script = ExtResource("2_xf24s")

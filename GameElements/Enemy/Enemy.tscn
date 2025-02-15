@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2i7wpdlyrxth"]
+
+[ext_resource type="Texture2D" uid="uid://bsbp1yu51610v" path="res://GameElements/Enemy/Enemy.png" id="1_1e2d7"]
+[ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p4x7"]
+radius = 38.0526
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbkan"]
+radius = 339.329
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
+radius = 60.208
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_jljaa")
+enemy_speed = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2p4x7")
+debug_color = Color(0, 0.639513, 0.363583, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -30)
+texture = ExtResource("1_1e2d7")
+
+[node name="TauntArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TauntArea"]
+shape = SubResource("CircleShape2D_wbkan")
+
+[node name="CatchArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchArea"]
+shape = SubResource("CircleShape2D_xo1kb")
+debug_color = Color(0.95366, 3.17663e-06, 0.552429, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="TauntArea" to="." method="_on_taunt_area_body_entered"]
+[connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]
