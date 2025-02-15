@@ -11,6 +11,7 @@ var can_get_treasure := false
 var closest_enemy : Node2D = null
 var closest_wall : Node2D = null
 var closest_treasure : Node2D = null
+var closest_door : Node2D = null
 var tween: Tween
 
 func _ready():
@@ -96,17 +97,24 @@ func get_closest_wall():
 					closest_wall = null
 	
 func stun_closest_enemy():
-	closest_enemy.queue_free()
-	closest_enemy = null
+	if closest_enemy != null:
+		closest_enemy.queue_free()
+		closest_enemy = null
 	
 func destroy_closest_wall():
-	closest_wall.destroys()
-	closest_wall = null
+	if closest_wall != null:
+		closest_wall.destroys()
+		closest_wall = null
 	
 func get_treasure():
-	closest_treasure.take()
-	closest_treasure = null
-	
+	if closest_treasure != null:
+		closest_treasure.take()
+		closest_treasure = null
+
+func open_closest_door():
+	if closest_door != null:
+		closest_door.unlock()
+		closest_door = null
 
 
 func play_animation_idle():
