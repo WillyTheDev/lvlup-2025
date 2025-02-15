@@ -13,59 +13,78 @@ func _init():
 
 # Called when the node enters the scene tree for the first time.
 func start():
+	# Don't start the manager if the stack is empty
+	if self._cardStack.is_empty():
+		return
+	# Set the in game flag to true
 	self._inGame = true
 	# Display the top card
-	displayTopCard()
+	_displayCurrentCard()
 
 func stop():
+	 # Set the in game flag to false
 	self._inGame = false
-	# Remove the last card from the scene, but keep in the stack
-	var card = self._cardStack.back()
-	if card != null:
-		card.queue_free()
+	# If the stack is empty, just return
+	if self._cardStack.is_empty():
+		return
+	# Otherwise, remove the current card from the scene, but keep it in the stack
+	_getCurrentCard().queue_free()
 
 func reset():
 	# Reset the game state
 	self._inGame = false
-	# Remove the last card from the scene
-	var card = self._cardStack.back()
-	card.queue_free()
+	# If the stack is empty, just return
+	if _isStackEmpty():
+		return
+	# Remove the current card from the scene
+	_removeCurrentCard()
 	# Clear the stack
 	self._cardStack.clear()
 
 # Push a card to the stack
 # @param card: Card to be pushed
-func pushCard(card: Card):
+func addCard(card: Card):
 	self._cardStack.push_back(card)
 
 # Remove the current card and go to the next one
-func nextCard():
+func _nextCard():
 	# Don't allow the player to play if the game is not in progress
 	if !self._inGame:
 		return
-	var card: Card = self._cardStack.pop_back()
-	if card == null:
+	# If the stack is empty, stop the game
+	if _isStackEmpty():
 		stop()
 		return
-	# Method of Node to remove it from a scene
-	card.queue_free() # TODO: Try card.free if having issues
-	# Display the next card
-	displayTopCard()
+	# Remove the current card
+	_removeCurrentCard()
+	# Display the next current card
+	_displayCurrentCard()
 
-func displayTopCard():
-	# First, get the top card
-	var card: Card = self._cardStack.back()
-	if card == null:
+# Display the top card of the stack
+func _displayCurrentCard():
+	# If the stack is empty, stop the game (shouldn't happen here)
+	if _isStackEmpty():
 		stop()
 		return
+	# First, get the current card 
+	var card: Card = _getCurrentCard()
 	# Then, get the card position node
 	var cardPosition = %CardPosition
 	# Display the card by adding it to the node
 	cardPosition.add_child(card)
 	# Finally, subscribe to the card's signal
-	card.card_has_been_used.connect(nextCard)
-	
-# Clear the stack (used when there is a game over or reload)
-# TODO: Check if this is necessary
-func clearStack():
-	self._cardStack.clear()
+	card.card_has_been_used.connect(_nextCard)
+
+# Remove the current card from the scene and the stack
+func _removeCurrentCard():
+	var card = self._cardStack.pop_front()
+	if card != null:
+		card.queue_free()
+
+# Get the current card (without removing it from the stack)
+func _getCurrentCard():
+	return self._cardStack.front()
+
+# Return whether the stack is empty or not
+func _isStackEmpty():
+	return self._cardStack.is_empty()
