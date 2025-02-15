@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://b0v75qir1iy5k"]
+[gd_scene load_steps=5 format=3 uid="uid://b0v75qir1iy5k"]
+
+[ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cqea"]
+size = Vector2(100, 54)
+
+[sub_resource type="Gradient" id="Gradient_1loou"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.0784314, 0.807843, 0.807843, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2bjs"]
+gradient = SubResource("Gradient_1loou")
 
 [node name="DoorClosed" type="Node2D"]
+script = ExtResource("1_p72e1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_3cqea")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3cqea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2.98023e-08)
+scale = Vector2(0.390625, 24)
+texture = SubResource("GradientTexture1D_c2bjs")

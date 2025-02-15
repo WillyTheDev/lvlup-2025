@@ -1,14 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjtqwnlaytr4l"]
+[gd_scene load_steps=5 format=3 uid="uid://bq2ys07jgfpj7"]
 
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="1_dyuuu"]
+[ext_resource type="Script" path="res://Scenes/jn.gd" id="1_s5747"]
+[ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="2_k6t77"]
+[ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_ybfni"]
 
-[node name="Jn" type="Node2D"]
+[node name="Map" type="Node2D"]
+script = ExtResource("1_s5747")
 
-[node name="Wall" parent="." instance=ExtResource("1_dyuuu")]
-position = Vector2(52, 235)
+[node name="Player" parent="." instance=ExtResource("2_k6t77")]
+position = Vector2(578, 323)
 
-[node name="Wall2" parent="." instance=ExtResource("1_dyuuu")]
-position = Vector2(92, 235)
+[node name="GameManager" parent="." instance=ExtResource("6_ybfni")]
 
-[node name="Wall3" parent="." instance=ExtResource("1_dyuuu")]
-position = Vector2(72, 235)
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall1" parent="Walls" instance=ExtResource("1_dyuuu")]
+
+[node name="Wall2" parent="Walls" instance=ExtResource("1_dyuuu")]
+position = Vector2(320, 0)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("1_dyuuu")]
+position = Vector2(240, 0)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("1_dyuuu")]
+position = Vector2(160, 0)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("1_dyuuu")]
+position = Vector2(80, 0)
