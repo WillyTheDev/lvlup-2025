@@ -33,3 +33,5 @@ func _on_execute_pressed():
 	%BigCamera.enabled = false
 	%CardSelectionLayer.visible = false
 	map.add_child(new_player)
+	# Start the card manager
+	%CardManager.start()
