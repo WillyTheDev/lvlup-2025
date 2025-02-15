@@ -9,15 +9,13 @@ const GET_CARD = preload("res://GameElements/Cards/GetCard/GetCard.tscn")
 const BOMB_CARD = preload("res://GameElements/Cards/BombCard/BombCard.tscn")
 const LASER_CARD = preload("res://GameElements/Cards/SwitchCard/SwitchCard.tscn")
 const DOOR_CARD = preload("res://GameElements/Cards/DoorCard/DoorCard.tscn")
+const SELECTED_CARD = preload("res://UI/SelectedCard/selected_card.tscn")
 
 func add_card_to_selected_list(card: TextureRect):
 	if number_of_selected_card < maximum_amount_of_card:
-		print(card)
 		number_of_selected_card += 1
-		const CARD = preload("res://UI/SelectedCard/selected_card.tscn")
-		var new_card = CARD.instantiate()
-		new_card.normal_texture = card.texture
-		print(card.texture_normal)
+		var new_card = SELECTED_CARD.instantiate()
+		new_card.texture_normal = card.texture
 		%SelectedCardList.add_child(new_card)
 		%CardManager.addCard(card)
 
