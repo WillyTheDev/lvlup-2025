@@ -40,6 +40,9 @@ func reset():
 	# Remove the current card from the scene
 	_removeCurrentCard()
 	# Clear the stack
+	clearStack()
+
+func clearStack():
 	self._cardStack.clear()
 
 # Push a card to the stack
