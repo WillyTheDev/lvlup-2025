@@ -1,10 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5ljyg7cmr38"]
+[gd_scene load_steps=5 format=3 uid="uid://c5ljyg7cmr38"]
 
 [ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardsManager/CardManager.tscn" id="1_2iojd"]
 [ext_resource type="Script" path="res://Scenes/caro.gd" id="1_x43qf"]
+[ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="2_agnjn"]
+[ext_resource type="PackedScene" uid="uid://7jqo2l5ydysj" path="res://GameElements/Player/Player.tscn" id="3_kcrok"]
 
-[node name="Caro" type="Node2D"]
+[node name="Game" type="Node2D"]
 script = ExtResource("1_x43qf")
 
-[node name="CardsManager" parent="." instance=ExtResource("1_2iojd")]
-position = Vector2(1741, 902)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardManager" parent="CanvasLayer/Control" instance=ExtResource("1_2iojd")]
+position = Vector2(1492, 510)
+
+[node name="Map" type="Node" parent="."]
+
+[node name="GameManager" parent="Map" instance=ExtResource("2_agnjn")]
+
+[node name="Player" parent="Map" node_paths=PackedStringArray("game_manager") instance=ExtResource("3_kcrok")]
+game_manager = NodePath("../GameManager")
