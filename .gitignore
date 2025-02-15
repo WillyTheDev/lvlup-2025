@@ -2,6 +2,10 @@
 .godot/
 /android/
 
-Assets/Cards/assomer.png.import
-
+# .import files
 *.import
+
+# code editor / IDE ignores
+.vscode/
+
+
