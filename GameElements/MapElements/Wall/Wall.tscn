@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cbbpxm6qric1"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/Wall/Wall.gd" id="1_fp3t0"]
-[ext_resource type="Texture2D" uid="uid://cc85tyvtkkdyf" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
+[ext_resource type="Texture2D" uid="uid://cwg5f4lprvmuf" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv486"]
 size = Vector2(100, 16)

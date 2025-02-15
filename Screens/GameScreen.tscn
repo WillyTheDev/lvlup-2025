@@ -1,12 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=10 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
+[ext_resource type="PackedScene" uid="uid://b46070ptp8kn4" path="res://GameElements/Map/Map2.tscn" id="3_ajet5"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="3_ng6j0"]
+[ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="4_n1qik"]
+[ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="5_7rlnd"]
+[ext_resource type="PackedScene" uid="uid://wlp50gc4teyc" path="res://GameElements/CardSelectionLayer/card_selection_layer.tscn" id="7_eqmjq"]
+[ext_resource type="PackedScene" uid="uid://dl7b6fnbwdqtt" path="res://GameElements/AlertLayer/alert_layer.tscn" id="8_6i3pe"]
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="9_4wosp"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_m4qnj")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_jgh8e")]
 
-[node name="GameManager" parent="." instance=ExtResource("3_ng6j0")]
+[node name="Map" parent="." instance=ExtResource("3_ajet5")]
+
+[node name="Player" parent="Map" instance=ExtResource("4_n1qik")]
+unique_name_in_owner = true
+position = Vector2(196, 865)
+
+[node name="FogGenerator" parent="Map" instance=ExtResource("5_7rlnd")]
+unique_name_in_owner = true
+
+[node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer") instance=ExtResource("3_ng6j0")]
+unique_name_in_owner = true
+player = NodePath("../Player")
+card_selection_layer = NodePath("../CardSelectionLayer")
+player_spawn = NodePath("../PlayerSpawn")
+map = NodePath("..")
+alert_layer = NodePath("../AlertLayer")
+
+[node name="BigCamera" type="Camera2D" parent="Map"]
+unique_name_in_owner = true
+position = Vector2(965, 541)
+enabled = false
+
+[node name="CardSelectionLayer" parent="Map" instance=ExtResource("7_eqmjq")]
+unique_name_in_owner = true
+
+[node name="PlayerSpawn" type="Node2D" parent="Map"]
+position = Vector2(199, 862)
+
+[node name="AlertLayer" parent="Map" instance=ExtResource("8_6i3pe")]
+unique_name_in_owner = true
+
+[node name="CardManager" parent="Map" node_paths=PackedStringArray("player") instance=ExtResource("9_4wosp")]
+unique_name_in_owner = true
+player = NodePath("../Player")
+
+[connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]

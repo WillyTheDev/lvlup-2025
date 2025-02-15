@@ -1,3 +1,4 @@
+class_name Switch
 extends Node
 
 @export var laser_zone: Node = null

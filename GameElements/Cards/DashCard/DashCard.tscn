@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://vi0l2bb3tajg"]
 
 [ext_resource type="Script" path="res://GameElements/Cards/DashCard/DashCard.gd" id="1_n6wrk"]
-[ext_resource type="Texture2D" uid="uid://bsxaa80uo8rgg" path="res://Assets/Cards/dash.png" id="2_lp32m"]
+[ext_resource type="Texture2D" uid="uid://be26ysfag4txm" path="res://Assets/Cards/dash.png" id="2_lp32m"]
 
 [node name="DashCard" type="TextureRect"]
 offset_right = 376.0

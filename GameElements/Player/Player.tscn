@@ -1,22 +1,100 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfpp5vunkyy2o"]
+[gd_scene load_steps=13 format=3 uid="uid://dfpp5vunkyy2o"]
 
 [ext_resource type="Script" path="res://GameElements/Player/player.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
-[ext_resource type="Texture2D" uid="uid://lfjv06rffu8d" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
+[ext_resource type="Texture2D" uid="uid://80b7rq82ajgf" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
 [ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="4_fj21j"]
-[ext_resource type="Texture2D" uid="uid://c333mla4ku84k" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
+[ext_resource type="Texture2D" uid="uid://dcx410r361to6" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
 radius = 67.42
 
+[sub_resource type="Animation" id="Animation_w4a35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.195, 0.195)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_sumgo"]
 resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.406126, 0.812253),
+"update": 0,
+"values": [Vector2(0.195, 0.195), Vector2(0.195, 0.171719)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.406126, 0.812253),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5.96)]
+}
 
 [sub_resource type="Animation" id="Animation_6ao1v"]
 resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 2.37841),
+"update": 0,
+"values": [Vector2(0.195, 0.195), Vector2(0.195, 0.154141)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 2.37841),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10.46)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_25kg0"]
 _data = {
+"RESET": SubResource("Animation_w4a35"),
 "idle": SubResource("Animation_sumgo"),
 "walk": SubResource("Animation_6ao1v")
 }
@@ -27,7 +105,7 @@ radius = 275.465
 [sub_resource type="CircleShape2D" id="CircleShape2D_clmln"]
 radius = 113.283
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_4f2pt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -35,7 +113,7 @@ unique_name_in_owner = true
 script = ExtResource("2_57caf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.195313, 0.195313)
+scale = Vector2(0.195, 0.195)
 texture = ExtResource("3_68t0i")
 
 [node name="WalkAudio" type="AudioStreamPlayer2D" parent="."]
@@ -53,7 +131,7 @@ libraries = {
 [node name="DustParticle" type="GPUParticles2D" parent="."]
 unique_name_in_owner = true
 z_index = -1
-position = Vector2(0, 67)
+position = Vector2(1, 31)
 emitting = false
 amount = 20
 amount_ratio = 0.5

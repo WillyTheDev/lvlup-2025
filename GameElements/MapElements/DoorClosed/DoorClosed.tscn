@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
-[ext_resource type="Texture2D" uid="uid://47evwp0ebfln" path="res://Assets/LevelDesign/DoorClosed.png" id="3_7rwve"]
+[ext_resource type="Texture2D" uid="uid://dj0xb4thountf" path="res://Assets/LevelDesign/DoorClosed.png" id="3_vgt2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cqea"]
 size = Vector2(100, 54)
@@ -34,6 +34,6 @@ material = SubResource("ShaderMaterial_8qnhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
 texture_filter = 1
-position = Vector2(0, 1.01)
-scale = Vector2(0.195212, -0.12015)
-texture = ExtResource("3_7rwve")
+position = Vector2(0, -1.93)
+scale = Vector2(0.195212, 0.225564)
+texture = ExtResource("3_vgt2u")
