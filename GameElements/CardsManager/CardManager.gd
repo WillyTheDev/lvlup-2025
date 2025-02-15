@@ -14,7 +14,7 @@ func _init():
 # Called when the node enters the scene tree for the first time.
 func start():
 	# Don't start the manager if the stack is empty
-	if self._cardStack.is_empty():
+	if _isStackEmpty():
 		return
 	# Set the in game flag to true
 	self._inGame = true
@@ -25,7 +25,7 @@ func stop():
 	 # Set the in game flag to false
 	self._inGame = false
 	# If the stack is empty, just return
-	if self._cardStack.is_empty():
+	if _isStackEmpty():
 		return
 	# Otherwise, remove the current card from the scene, but keep it in the stack
 	_getCurrentCard().queue_free()
@@ -51,7 +51,7 @@ func _nextCard():
 	# Don't allow the player to play if the game is not in progress
 	if !self._inGame:
 		return
-	# If the stack is empty, stop the game
+	# If the stack is empty, stop the manager
 	if _isStackEmpty():
 		stop()
 		return
@@ -62,7 +62,7 @@ func _nextCard():
 
 # Display the top card of the stack
 func _displayCurrentCard():
-	# If the stack is empty, stop the game (shouldn't happen here)
+	# If the stack is empty, stop the manager (shouldn't happen here)
 	if _isStackEmpty():
 		stop()
 		return
@@ -77,9 +77,10 @@ func _displayCurrentCard():
 
 # Remove the current card from the scene and the stack
 func _removeCurrentCard():
-	var card = self._cardStack.pop_front()
-	if card != null:
-		card.queue_free()
+	# If the stack is empty, stop the manager (shouldn't happen here)
+	if _isStackEmpty():
+		return
+	self._cardStack.pop_front().queue_free()
 
 # Get the current card (without removing it from the stack)
 func _getCurrentCard():
