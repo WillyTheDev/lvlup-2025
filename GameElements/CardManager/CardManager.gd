@@ -77,7 +77,7 @@ func _displayCurrentCard():
 	# Then, get the card position node
 	var cardPosition = %CardPosition
 	# Display the card by adding it to the node
-	cardPosition.add_child(card)
+	cardPosition.call_deferred("add_child", card)
 	# Finally, subscribe to the card's signal
 	card.card_has_been_used.connect(_nextCard)
 
@@ -86,7 +86,7 @@ func _removeCurrentCard():
 	# If the stack is empty, stop the manager (shouldn't happen here)
 	if _isStackEmpty():
 		return
-	self._cardStack.pop_front()
+	self._cardStack.pop_front().queue_free()
 
 # Get the current card (without removing it from the stack)
 func _getCurrentCard():
