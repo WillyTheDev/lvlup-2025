@@ -139,29 +139,33 @@ func get_closest_switch():
 	
 func stun_closest_enemy():
 	if closest_enemy != null:
+		%Camera2D.apply_shake(4, self.global_position)
 		closest_enemy.stun()
 		closest_enemy = null
 	
 func destroy_closest_wall():
 	if closest_wall != null:
-		%Camera2D.apply_shake(5, self.global_position)
+		%Camera2D.apply_shake(10, self.global_position)
 		closest_wall.destroys()
 		closest_wall = null
 	
 func get_treasure():
 	if closest_treasure != null:
 		closest_treasure.take()
+		%Camera2D.apply_shake(2, self.global_position)
 		game_manager.on_treasure_get()
 		closest_treasure = null
 
 func open_closest_door():
 	if closest_door != null:
-		closest_door.unlock()
+		%Camera2D.apply_shake(2, self.global_position)
+		closest_door.unlock_door()
 		closest_door = null
 
 func disable_closest_switch_laser():
 	if closest_switch != null:
 		closest_switch.disable_laser()
+		%Camera2D.apply_shake(2, self.global_position)
 		closest_switch = null
 
 func play_animation_idle():

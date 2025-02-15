@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcx410r361to6" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
-radius = 67.42
+radius = 44.3778
 
 [sub_resource type="Animation" id="Animation_w4a35"]
 length = 0.001
@@ -106,6 +106,7 @@ radius = 275.465
 radius = 113.283
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_4f2pt")
 
 [node name="Camera2D" type="Camera2D" parent="."]

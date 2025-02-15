@@ -234,10 +234,6 @@ rotation = 1.5708
 position = Vector2(640, 960)
 rotation = 1.5708
 
-[node name="Wall49" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
-position = Vector2(640, 760)
-rotation = 1.5708
-
 [node name="Wall24" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
 position = Vector2(1800, 660)
 rotation = 1.57079
@@ -347,12 +343,7 @@ position = Vector2(1600, 540)
 rotation = 1.57079
 
 [node name="Wall82" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
-position = Vector2(1600, 600)
-rotation = 1.57079
-
-[node name="Wall54" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
-position = Vector2(1640, 640)
-rotation = 3.14159
+position = Vector2(1540, 456)
 
 [node name="Wall55" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
 position = Vector2(640, 860)
@@ -407,7 +398,7 @@ curve = SubResource("Curve2D_hwjfb")
 
 [node name="PathFollow2D" parent="MapElements/Enemies/Path2D" instance=ExtResource("4_butla")]
 position = Vector2(0, 0)
-rotation = 3.14159
+rotation = 0.0
 loop = true
 path_speed = 0.01
 
@@ -426,7 +417,7 @@ scale = Vector2(3, 3)
 
 [node name="DoorClosed" parent="MapElements/Doors" instance=ExtResource("5_rmute")]
 position = Vector2(1490, 210)
-rotation = 1.57079
+rotation = -1.5708
 scale = Vector2(1.64, 1.64)
 
 [node name="ObjectStolen" parent="MapElements" instance=ExtResource("5_6tmmb")]

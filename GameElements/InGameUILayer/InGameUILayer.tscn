@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://bla6uvybvj3to"]
+
+[ext_resource type="Script" path="res://GameElements/InGameUILayer/in_game_ui_layer.gd" id="1_6w3qp"]
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="1_koc6h"]
+
+[node name="InGameUiLayer" type="CanvasLayer" node_paths=PackedStringArray("cardManager")]
+script = ExtResource("1_6w3qp")
+cardManager = NodePath("Control/BottomRightSlot/CardManagerContainer/CardManager")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpperMiddleSlot" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.5
+offset_right = 20.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/UpperMiddleSlot"]
+layout_mode = 2
+
+[node name="Timer" type="MarginContainer" parent="Control/UpperMiddleSlot/VBoxContainer"]
+layout_mode = 2
+
+[node name="BoxMargin" type="MarginContainer" parent="Control/UpperMiddleSlot/VBoxContainer/Timer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BackgroundBox" type="ColorRect" parent="Control/UpperMiddleSlot/VBoxContainer/Timer/BoxMargin"]
+layout_mode = 2
+color = Color(1, 1, 1, 0.372549)
+
+[node name="TextMargin" type="MarginContainer" parent="Control/UpperMiddleSlot/VBoxContainer/Timer/BoxMargin"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TimerText" type="RichTextLabel" parent="Control/UpperMiddleSlot/VBoxContainer/Timer/BoxMargin/TextMargin"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "00:00"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="GoalText" type="RichTextLabel" parent="Control/UpperMiddleSlot/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Sample text"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="BottomRightSlot" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="CardManagerContainer" type="MarginContainer" parent="Control/BottomRightSlot"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="CardManager" parent="Control/BottomRightSlot/CardManagerContainer" instance=ExtResource("1_koc6h")]
+unique_name_in_owner = true
+scale = Vector2(0.45, 0.45)

@@ -1,7 +1,7 @@
 extends Node2D
-const MAP_SIZE_X = 1000
-const MAP_SIZE_Y = 1000
-const FOG_SIZE = 50
+@export var MAP_SIZE_X = 1000
+@export var MAP_SIZE_Y = 1000
+const FOG_SIZE = 100
 
 func _ready():
 	var position_to_instantiate = Vector2(0,0)

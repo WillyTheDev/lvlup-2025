@@ -6,12 +6,14 @@ extends Node
 @export var player_spawn : Node2D = null
 @export var map : Node2D = null
 @export var alert_layer: CanvasLayer = null
-
+@export var in_game_ui: CanvasLayer
 
 signal player_has_been_catched
 signal on_next_round_started
 
 func _ready():
+	# Set the player in the card manager
+	in_game_ui.cardManager.player = player
 	get_tree().paused = true
 
 func player_catch():
@@ -30,10 +32,15 @@ func on_treasure_get():
 
 func _on_card_selection_layer_on_next_pressed():
 	get_tree().paused = false
+	on_next_round_started.emit()
 	card_selection_layer.visible = false
 	player.global_position = player_spawn.global_position
 	%BigCamera.enabled = false
 	player.player_camera.enabled = true
 	%CardSelectionLayer.visible = false
+	# Make the in game UI visible
+	print(in_game_ui)
+	in_game_ui.visible = true
 	# Start the card manager
-	%CardManager.start()
+	print(in_game_ui.cardManager)
+	in_game_ui.cardManager.start()
