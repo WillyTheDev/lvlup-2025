@@ -9,7 +9,8 @@ var target : Node2D = null
 var normalized = 1
 func _ready():
 	if get_parent() is PathFollow2D:
-		normalized = 1
+		print("Parent is PathFollow2D")
+		normalized = -1
 	else:
 		normalized = -1
 	set_outline(false)

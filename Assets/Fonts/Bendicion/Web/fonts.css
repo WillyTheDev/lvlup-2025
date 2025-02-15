@@ -1,0 +1,44 @@
+@font-face {
+	font-family:'Bendicion';
+	src:	url('Bendicion-Light_Modular.eot');
+	src:	url('Bendicion-Light_Modular.eot?#iefix') format('embedded-opentype'),
+			url('Bendicion-Light_Modular.woff2') format('woff2'),
+			url('Bendicion-Light_Modular.woff') format('woff'),
+			url('Bendicion-Light_Modular.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'Bendicion';
+	src:	url('Bendicion-Regular_Modular.eot');
+	src:	url('Bendicion-Regular_Modular.eot?#iefix') format('embedded-opentype'),
+			url('Bendicion-Regular_Modular.woff2') format('woff2'),
+			url('Bendicion-Regular_Modular.woff') format('woff'),
+			url('Bendicion-Regular_Modular.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'Bendicion';
+	src:	url('Bendicion-Bold_Modular.eot');
+	src:	url('Bendicion-Bold_Modular.eot?#iefix') format('embedded-opentype'),
+			url('Bendicion-Bold_Modular.woff2') format('woff2'),
+			url('Bendicion-Bold_Modular.woff') format('woff'),
+			url('Bendicion-Bold_Modular.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'Bendicion';
+	src:	url('Bendicion-Extrabold_Modular.eot');
+	src:	url('Bendicion-Extrabold_Modular.eot?#iefix') format('embedded-opentype'),
+			url('Bendicion-Extrabold_Modular.woff2') format('woff2'),
+			url('Bendicion-Extrabold_Modular.woff') format('woff'),
+			url('Bendicion-Extrabold_Modular.svg') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
+

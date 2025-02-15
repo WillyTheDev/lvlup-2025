@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d00bwnssiwch0"]
+[gd_scene load_steps=11 format=3 uid="uid://d00bwnssiwch0"]
 
 [ext_resource type="PackedScene" uid="uid://7jqo2l5ydysj" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="5_scwpf"]
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="6_185lk"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
-[ext_resource type="PackedScene" uid="uid://dxm3fw8kml3ym" path="res://GameElements/Cards/DashCard/BombCard.tscn" id="7_86u23"]
+[ext_resource type="PackedScene" uid="uid://dxm3fw8kml3ym" path="res://GameElements/Cards/BombCard/BombCard.tscn" id="7_86u23"]
+[ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="8_cpwme"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -16,11 +17,17 @@ func _ready():
 	pass
 "
 
+[sub_resource type="Curve2D" id="Curve2D_ve0h4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 107, 717, 0, 0, 0, 0, 270, 806, 0, 0, 0, 0, 912, 726, 0, 0, 0, 0, 1385, 478)
+}
+point_count = 4
+
 [node name="Map" type="Node2D"]
 script = SubResource("GDScript_lc114")
 
 [node name="Player" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("1_s32qe")]
-position = Vector2(578, 323)
+position = Vector2(762, 202)
 game_manager = NodePath("../GameManager")
 
 [node name="FogGenerator" parent="." instance=ExtResource("2_yjxuw")]
@@ -49,3 +56,12 @@ position = Vector2(1400, -34)
 
 [node name="BombCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_86u23")]
 player = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ve0h4")
+
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource("8_cpwme")]
+position = Vector2(107, 717)
+path_speed = 0.005
