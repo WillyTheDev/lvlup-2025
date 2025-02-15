@@ -9,6 +9,7 @@ extends Node
 @export var in_game_ui: CanvasLayer
 @export var victory_layer : CanvasLayer = null
 
+var player_is_playing = false
 var start_time = 0
 var elapsed_time = 0
 signal player_has_been_catched
@@ -18,6 +19,11 @@ func _ready():
 	# Set the player in the card manager
 	in_game_ui.cardManager.player = player
 	get_tree().paused = true
+	
+func _process(delta):
+	if player_is_playing == true:
+		var end_time = Time.get_ticks_msec()
+		elapsed_time = float(end_time - start_time) / 1000.0
 
 func player_catch():
 	get_tree().paused = true
@@ -50,9 +56,11 @@ func _on_card_selection_layer_on_next_pressed():
 	# Start the card manager
 	print(in_game_ui.cardManager)
 	in_game_ui.cardManager.start()
+	player_is_playing = true
 	start_time = Time.get_ticks_msec()
 
 func player_has_finished():
+	player_is_playing = false
 	get_tree().paused = true
 	var end_time = Time.get_ticks_msec()
 	elapsed_time = float(end_time - start_time) / 1000.0
