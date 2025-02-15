@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c82qfejb18h83"]
+
+[ext_resource type="Script" path="res://GameElements/Map/Map.gd" id="1_83u2p"]
+[ext_resource type="Texture2D" uid="uid://bc43atfr5a1go" path="res://Assets/Map/ref_map1.png" id="2_bcq50"]
+[ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="3_dt85u"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_83u2p")
+
+[node name="RefNiveau1" type="Sprite2D" parent="."]
+position = Vector2(929.03, 726.5)
+scale = Vector2(3.51075, 3.51075)
+texture = ExtResource("2_bcq50")
+metadata/_edit_lock_ = true
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(220, 780)
+rotation = 1.5708
+
+[node name="Wall2" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(220, 940)
+rotation = 1.5708
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(280, 1000)
+rotation = 3.14159
