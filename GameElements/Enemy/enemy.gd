@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 var target : Node2D = null
 var normalized = 1
+
 func _ready():
 	if get_parent() is PathFollow2D:
 		print("Parent is PathFollow2D")
@@ -37,3 +38,10 @@ func _on_taunt_area_body_entered(body):
 func _on_catch_area_body_entered(body):
 	if body.is_in_group("Player"):
 		game_manager.player_catch()
+		
+func stun():
+	game_manager.on_next_round_started.connect(enable_enemy)
+	self.visible = false
+	
+func enable_enemy():
+	self.visible = true

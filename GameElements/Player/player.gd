@@ -117,7 +117,7 @@ func get_closest_door():
 	
 func stun_closest_enemy():
 	if closest_enemy != null:
-		closest_enemy.queue_free()
+		closest_enemy.stun()
 		closest_enemy = null
 	
 func destroy_closest_wall():

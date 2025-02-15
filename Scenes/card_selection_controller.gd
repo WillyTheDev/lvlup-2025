@@ -11,7 +11,10 @@ func add_card_to_selected_list(texture):
 		new_card.normal_texture = texture
 		%SelectedCardList.add_child(new_card)
 
-
+func reset_selection():
+	number_of_selected_card = 0
+	for child in %SelectedCardList.get_children():
+		%SelectedCardList.remove_child(child)
 
 func _on_stun_card_button_pressed():
 	add_card_to_selected_list($MarginContainer/VBoxContainer/GridContainer/StunCardButton.texture_normal)

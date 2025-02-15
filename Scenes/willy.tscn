@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="5_scwpf"]
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="6_185lk"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
-[ext_resource type="PackedScene" uid="uid://dxm3fw8kml3ym" path="res://GameElements/Cards/BombCard/BombCard.tscn" id="7_86u23"]
 [ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="8_cpwme"]
 [ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="8_reflk"]
 [ext_resource type="Script" path="res://Scenes/card_selection_controller.gd" id="9_avmdi"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c0h7f248e7k1q" path="res://Assets/Cards/lockpicking.png" id="15_a7ivr"]
 [ext_resource type="Texture2D" uid="uid://cjk7gwycl1a3a" path="res://Assets/Cards/peter_mur.png" id="16_1kwqg"]
 [ext_resource type="Texture2D" uid="uid://45lgf8jv4ln5" path="res://Assets/Cards/vole objet.png" id="17_uodrl"]
+[ext_resource type="FontFile" uid="uid://wsxpjma3ixet" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Bold_Modular.ttf" id="19_6cmb3"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -89,6 +89,8 @@ game_manager = NodePath("../../GameManager")
 position = Vector2(2104, 153)
 
 [node name="CardSelectionLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
 script = ExtResource("9_avmdi")
 
 [node name="Control" type="MarginContainer" parent="CardSelectionLayer"]
@@ -116,13 +118,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 32
+theme_override_constants/margin_left = 156
 theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
+theme_override_constants/margin_right = 156
 theme_override_constants/margin_bottom = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CardSelectionLayer/MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 mouse_filter = 2
 
 [node name="GridContainer" type="GridContainer" parent="CardSelectionLayer/MarginContainer/VBoxContainer"]
@@ -185,8 +188,17 @@ texture_normal = ExtResource("17_uodrl")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="RichTextLabel" type="RichTextLabel" parent="CardSelectionLayer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/normal_font = ExtResource("19_6cmb3")
+theme_override_font_sizes/normal_font_size = 40
+text = "Selected Card:"
+
 [node name="MarginContainer" type="MarginContainer" parent="CardSelectionLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 0
 mouse_filter = 2
 theme_override_constants/margin_top = 64
 
@@ -197,9 +209,6 @@ size_flags_horizontal = 4
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(1534, 1063)
-
-[node name="BombCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_86u23")]
-player = NodePath("../Player")
 
 [connection signal="pressed" from="CardSelectionLayer/Control/execute" to="GameManager" method="_on_execute_pressed"]
 [connection signal="pressed" from="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer/StunCardButton" to="CardSelectionLayer" method="_on_stun_card_button_pressed"]
