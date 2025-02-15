@@ -11,11 +11,11 @@ var can_destroy_wall := false
 var can_get_treasure := false
 var can_unlock_door := false
 var can_disable_laser := false
-var closest_enemy : Node2D = null
-var closest_wall : Node2D = null
-var closest_treasure : Node2D = null
-var closest_door : Node2D = null
-var closest_switch : Node2D = null
+var closest_enemy: Node2D = null
+var closest_wall: Node2D = null
+var closest_treasure: Node2D = null
+var closest_door: Node2D = null
+var closest_switch: Node2D = null
 var tween: Tween
 
 func _ready():
@@ -38,7 +38,6 @@ func _process(delta):
 		get_closest_switch()
 				
 						
-
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * (player_speed + dash_velocity)
@@ -90,20 +89,31 @@ func get_closest_enemy():
 					closest_enemy = null
 					
 func get_closest_wall():
-	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Wall:
+
+	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	
+	var no_walls = !overlapping_bodies.any(func(body): return body.get_parent() is Wall)
+	if no_walls:
+		if closest_wall != null:
+			closest_wall.set_outline(false)
+			closest_wall = null
+		return
+
+	for i in range(overlapping_bodies.size()):
+		var body = overlapping_bodies[i].get_parent()
+
+		if body is Wall:
+			var distance = self.global_position.distance_to(body.global_position)
+
 			if closest_wall == null:
-				closest_wall = body.get_parent()
+				closest_wall = body
 				closest_wall.set_outline(true)
 			else:
-				var distance = self.global_position.distance_to(body.get_parent().global_position)
-				if distance < (self.global_position.distance_to(closest_wall.global_position)):
+				var smallest_distance = self.global_position.distance_to(closest_wall.global_position)
+				if distance < smallest_distance:
 					closest_wall.set_outline(false)
-					closest_wall = body.get_parent()
+					closest_wall = body
 					closest_wall.set_outline(true)
-			return true) == false:
-				if closest_wall != null:
-					closest_wall.set_outline(false)
-					closest_wall = null
 
 func get_closest_door():
 	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Door:
