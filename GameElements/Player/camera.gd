@@ -11,7 +11,7 @@ var initial_position : Vector2 = Vector2(0,0)
 var target : Vector2 = Vector2(0,0)
 
 func _ready():
-	get_node("/root/Map/GameManager")._player_has_been_catched.connect(show_entire_map)
+	get_parent().game_manager._player_has_been_catched.connect(show_entire_map)
 	
 func show_entire_map():
 	print("Camera Show Map")

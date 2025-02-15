@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ljyg7cmr38"]
+
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardsManager/CardManager.tscn" id="1_2iojd"]
+[ext_resource type="Script" path="res://Scenes/caro.gd" id="1_x43qf"]
+
+[node name="Caro" type="Node2D"]
+script = ExtResource("1_x43qf")
+
+[node name="CardsManager" parent="." instance=ExtResource("1_2iojd")]
+position = Vector2(1741, 902)
