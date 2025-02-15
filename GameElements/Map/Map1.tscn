@@ -1,28 +1,259 @@
-[gd_scene load_steps=4 format=3 uid="uid://c82qfejb18h83"]
+[gd_scene load_steps=11 format=3 uid="uid://c82qfejb18h83"]
 
 [ext_resource type="Script" path="res://GameElements/Map/Map.gd" id="1_83u2p"]
 [ext_resource type="Texture2D" uid="uid://bc43atfr5a1go" path="res://Assets/Map/ref_map1.png" id="2_bcq50"]
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="3_dt85u"]
+[ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="4_tevxr"]
+[ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="5_b2da7"]
+[ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="6_i4xq0"]
+[ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="7_sqc53"]
+
+[sub_resource type="Gradient" id="Gradient_cjg57"]
+offsets = PackedFloat32Array(0.478088)
+colors = PackedColorArray(0.839937, 0.582845, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pqh4a"]
+gradient = SubResource("Gradient_cjg57")
+
+[sub_resource type="Curve2D" id="Curve2D_lvplu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 615.385)
+}
+point_count = 2
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_83u2p")
 
 [node name="RefNiveau1" type="Sprite2D" parent="."]
-position = Vector2(929.03, 726.5)
+visible = false
+position = Vector2(989.03, 726.5)
 scale = Vector2(3.51075, 3.51075)
 texture = ExtResource("2_bcq50")
-metadata/_edit_lock_ = true
+
+[node name="Room" type="Node2D" parent="."]
+z_index = -10
+
+[node name="Sprite2D" type="Sprite2D" parent="Room"]
+position = Vector2(940, 854.875)
+scale = Vector2(6.875, 290.25)
+texture = SubResource("GradientTexture1D_pqh4a")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Room"]
+position = Vector2(940, 660)
+scale = Vector2(2.03125, 280)
+texture = SubResource("GradientTexture1D_pqh4a")
 
 [node name="Walls" type="Node" parent="."]
 
-[node name="Wall" parent="Walls" instance=ExtResource("3_dt85u")]
-position = Vector2(220, 780)
-rotation = 1.5708
-
 [node name="Wall2" parent="Walls" instance=ExtResource("3_dt85u")]
-position = Vector2(220, 940)
+position = Vector2(280, 960)
 rotation = 1.5708
 
 [node name="Wall3" parent="Walls" instance=ExtResource("3_dt85u")]
-position = Vector2(280, 1000)
+position = Vector2(340, 1000)
 rotation = 3.14159
+
+[node name="Wall4" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(440, 1000)
+rotation = 3.14159
+
+[node name="Wall5" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(540, 1000)
+rotation = 3.14159
+
+[node name="Wall6" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(640, 1000)
+rotation = 3.14159
+
+[node name="Wall7" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(740, 1000)
+rotation = 3.14159
+
+[node name="Wall8" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(840, 1000)
+rotation = 3.14159
+
+[node name="Wall9" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(940, 1000)
+rotation = 3.14159
+
+[node name="Wall10" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1040, 1000)
+rotation = 3.14159
+
+[node name="Wall11" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1140, 1000)
+rotation = 3.14159
+
+[node name="Wall12" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1240, 1000)
+rotation = 3.14159
+
+[node name="Wall13" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1340, 1000)
+rotation = 3.14159
+
+[node name="Wall14" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1440, 1000)
+rotation = 3.14159
+
+[node name="Wall15" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1540, 1000)
+rotation = 3.14159
+
+[node name="Wall16" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1640, 1000)
+rotation = 3.14159
+
+[node name="Wall17" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1740, 1000)
+rotation = 3.14159
+
+[node name="Wall18" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1800, 960)
+rotation = 1.57079
+
+[node name="Wall19" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1800, 860)
+rotation = 1.57079
+
+[node name="Wall21" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1800, 760)
+rotation = 1.57079
+
+[node name="Wall20" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1440, 720)
+rotation = 3.14159
+
+[node name="Wall22" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1540, 720)
+rotation = 3.14159
+
+[node name="Wall23" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1640, 720)
+rotation = 3.14159
+
+[node name="Wall24" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1740, 720)
+rotation = 3.14159
+
+[node name="Wall25" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1240, 720)
+rotation = 3.14159
+
+[node name="Wall26" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1340, 720)
+rotation = 3.14159
+
+[node name="Wall27" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1200, 560)
+rotation = 4.71238
+
+[node name="Wall28" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1200, 660)
+rotation = 4.71238
+
+[node name="Wall29" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(840, 520)
+rotation = 3.14159
+
+[node name="Wall30" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(940, 520)
+rotation = 3.14159
+
+[node name="Wall31" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1040, 520)
+rotation = 3.14159
+
+[node name="Wall32" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(1140, 520)
+rotation = 3.14159
+
+[node name="Wall33" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(680, 560)
+rotation = 4.71238
+
+[node name="Wall34" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(740, 520)
+rotation = 3.14159
+
+[node name="Wall35" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(440, 720)
+rotation = 3.14159
+
+[node name="Wall36" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(340, 720)
+rotation = 3.14159
+
+[node name="Wall37" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(280, 760)
+rotation = 1.5708
+
+[node name="Wall38" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(680, 660)
+rotation = 4.71238
+
+[node name="Wall39" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(640, 720)
+rotation = 3.14159
+
+[node name="Wall40" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(540, 720)
+rotation = 3.14159
+
+[node name="Wall41" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(60, 860)
+rotation = 1.5708
+
+[node name="Wall42" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(60, 960)
+rotation = 1.5708
+
+[node name="Wall43" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(120, 1000)
+rotation = 3.14159
+
+[node name="Wall44" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(220, 1000)
+rotation = 3.14159
+
+[node name="Wall45" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(220, 720)
+rotation = 3.14159
+
+[node name="Wall46" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(120, 720)
+rotation = 3.14159
+
+[node name="Wall47" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(60, 760)
+rotation = 1.5708
+
+[node name="Wall48" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(640, 960)
+rotation = 1.5708
+
+[node name="Wall49" parent="Walls" instance=ExtResource("3_dt85u")]
+position = Vector2(640, 760)
+rotation = 1.5708
+
+[node name="Enemy2" parent="." instance=ExtResource("4_tevxr")]
+position = Vector2(1340, 860)
+scale = Vector2(0.52, 0.52)
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(960, 600)
+scale = Vector2(0.52, 0.52)
+curve = SubResource("Curve2D_lvplu")
+
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource("5_b2da7")]
+position = Vector2(0, 0)
+rotation = 5.23598
+loop = true
+path_speed = 0.01
+
+[node name="ObjectStolen" parent="." instance=ExtResource("6_i4xq0")]
+position = Vector2(1680, 840)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_sqc53")]
+position = Vector2(160, 860)
