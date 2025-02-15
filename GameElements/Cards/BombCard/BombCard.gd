@@ -10,7 +10,7 @@ func _ready():
 
 func apply_effect():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.destroy_closest_wall()
 	player.can_destroy_wall = false
 	self.queue_free()
