@@ -1,26 +1,35 @@
 [gd_scene load_steps=7 format=3 uid="uid://d00bwnssiwch0"]
 
-[ext_resource type="PackedScene" uid="uid://df727u3pjwy66" path="res://GameElements/Fog/Fog.tscn" id="2_jncq7"]
-[ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="3_eu1h7"]
-[ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="3_l57q2"]
-[ext_resource type="PackedScene" uid="uid://vi0l2bb3tajg" path="res://GameElements/Cards/DashCard/DashCard.tscn" id="5_enik4"]
-[ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="6_k40cr"]
-[ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="7_oeubb"]
+[ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
+[ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
+[ext_resource type="PackedScene" uid="uid://df727u3pjwy66" path="res://GameElements/Fog/Fog.tscn" id="3_dt5am"]
+[ext_resource type="PackedScene" uid="uid://vi0l2bb3tajg" path="res://GameElements/Cards/DashCard/DashCard.tscn" id="4_avjes"]
+[ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="5_scwpf"]
+[ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
+
+[sub_resource type="GDScript" id="GDScript_lc114"]
+script/source = "extends Node2D
+
+
+func _ready():
+	pass
+"
 
 [node name="Map" type="Node2D"]
+script = SubResource("GDScript_lc114")
 
-[node name="Player" parent="." instance=ExtResource("3_l57q2")]
+[node name="Player" parent="." instance=ExtResource("1_s32qe")]
 position = Vector2(578, 323)
 
-[node name="FogGenerator" parent="." instance=ExtResource("3_eu1h7")]
+[node name="FogGenerator" parent="." instance=ExtResource("2_yjxuw")]
 
-[node name="Fog" parent="." instance=ExtResource("2_jncq7")]
+[node name="Fog" parent="." instance=ExtResource("3_dt5am")]
 position = Vector2(-3, -6)
 
-[node name="DashCard" parent="." instance=ExtResource("5_enik4")]
+[node name="DashCard" parent="." instance=ExtResource("4_avjes")]
 
-[node name="Enemy" parent="." instance=ExtResource("6_k40cr")]
+[node name="Enemy" parent="." instance=ExtResource("5_scwpf")]
 
-[node name="GameManager" parent="." instance=ExtResource("7_oeubb")]
+[node name="GameManager" parent="." instance=ExtResource("6_jaw44")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
