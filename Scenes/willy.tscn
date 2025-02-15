@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://vgokp0mumkh7"]
 
-[ext_resource type="Script" path="res://GameElements/Map/map.gd" id="1_wwq4p"]
+[ext_resource type="Script" path="res://Scenes/map.gd" id="1_wwq4p"]
 [ext_resource type="PackedScene" uid="uid://df727u3pjwy66" path="res://GameElements/Fog/Fog.tscn" id="2_jncq7"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="3_eu1h7"]
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="3_l57q2"]
