@@ -417,7 +417,7 @@ scale = Vector2(3, 3)
 
 [node name="DoorClosed" parent="MapElements/Doors" instance=ExtResource("5_rmute")]
 position = Vector2(1490, 210)
-rotation = 1.57079
+rotation = -1.5708
 scale = Vector2(1.64, 1.64)
 
 [node name="ObjectStolen" parent="MapElements" instance=ExtResource("5_6tmmb")]

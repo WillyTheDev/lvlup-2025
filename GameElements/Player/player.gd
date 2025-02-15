@@ -159,7 +159,7 @@ func get_treasure():
 func open_closest_door():
 	if closest_door != null:
 		%Camera2D.apply_shake(2, self.global_position)
-		closest_door.unlock()
+		closest_door.unlock_door()
 		closest_door = null
 
 func disable_closest_switch_laser():
