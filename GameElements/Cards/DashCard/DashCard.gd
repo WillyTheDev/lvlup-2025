@@ -5,4 +5,4 @@ func _ready():
 	pass
 
 func apply_effect():
-	get_node("/root/Map/Player/CharacterBody2D").dash()
+	get_node("/root/Game/Map/Player").dash()
