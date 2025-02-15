@@ -22,5 +22,6 @@ func destroys():
 
 func enable_enemy():
 	self.visible = true
+	set_outline(false)
 	%StaticBody2D.set_collision_layer_value(1,true)
 	%StaticBody2D.set_collision_mask_value(1, true)
