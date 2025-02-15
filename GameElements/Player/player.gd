@@ -9,10 +9,12 @@ var can_stun := false
 var can_destroy_wall := false
 var can_get_treasure := false
 var can_unlock_door := false
+var can_disable_laser := false
 var closest_enemy : Node2D = null
 var closest_wall : Node2D = null
 var closest_treasure : Node2D = null
 var closest_door : Node2D = null
+var closest_switch : Node2D = null
 var tween: Tween
 
 func _ready():
@@ -30,6 +32,8 @@ func _process(delta):
 		get_closest_treasure()
 	if can_unlock_door:
 		get_closest_door()
+	if can_disable_laser:
+		get_closest_switch()
 				
 						
 
@@ -114,6 +118,22 @@ func get_closest_door():
 				if closest_door != null:
 					closest_door.set_outline(false)
 					closest_door = null
+					
+func get_closest_switch():
+	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Switch:
+			if closest_switch == null:
+				closest_switch = body.get_parent()
+				closest_switch.set_outline(true)
+			else:
+				var distance = self.global_position.distance_to(body.get_parent().global_position)
+				if distance < (self.global_position.distance_to(closest_switch.global_position)):
+					closest_switch.set_outline(false)
+					closest_switch = body.get_parent()
+					closest_switch.set_outline(true)
+			return true) == false:
+				if closest_switch != null:
+					closest_switch.set_outline(false)
+					closest_switch = null
 	
 func stun_closest_enemy():
 	if closest_enemy != null:
@@ -135,6 +155,10 @@ func open_closest_door():
 		closest_door.unlock()
 		closest_door = null
 
+func disable_closest_switch_laser():
+	if closest_switch != null:
+		closest_switch.disable_laser()
+		closest_switch = null
 
 func play_animation_idle():
 	%PlayerAnimation.play("idle")
