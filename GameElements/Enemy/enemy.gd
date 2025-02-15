@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 var target : Node2D = null
 var normalized = 1
+var starting_position : Vector2
 
 func _ready():
 	if get_parent() is PathFollow2D:
@@ -14,6 +15,7 @@ func _ready():
 	else:
 		normalized = -1
 	set_outline(false)
+	starting_position = self.global_position
 
 func _physics_process(delta):
 	if target != null:
@@ -53,11 +55,13 @@ func stun():
 	%CatchArea.set_collision_mask_value(1, false)
 	
 func enable_enemy():
+	self.global_position = starting_position
 	self.visible = true
 	self.set_collision_layer_value(1,true)
 	self.set_collision_mask_value(1, true)
 	%CatchArea.set_collision_layer_value(1, true)
 	%CatchArea.set_collision_mask_value(1, true)
+	set_outline(false)
 	
 func play_animation_idle():
 	%AnimationPlayer.play("idle")
