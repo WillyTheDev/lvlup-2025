@@ -4,9 +4,10 @@
 [ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="2_7qvos"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_swdxl"]
+resource_local_to_scene = true
 shader = ExtResource("2_7qvos")
-shader_parameter/alpha = 0.5
-shader_parameter/inner_radius = 0.7
+shader_parameter/alpha = 0.8
+shader_parameter/inner_radius = 0.5
 shader_parameter/outer_radius = 1.2
 
 [sub_resource type="Animation" id="Animation_w8snd"]
@@ -21,7 +22,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.5]
+"values": [0.8]
 }
 
 [sub_resource type="Animation" id="Animation_ktt07"]
@@ -38,7 +39,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.5, 0.8]
+"values": [0.5, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fdce4"]
@@ -48,7 +49,6 @@ _data = {
 }
 
 [node name="AlertLayer" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_exqs0")
 
 [node name="ColorRect" type="ColorRect" parent="."]

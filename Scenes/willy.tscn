@@ -21,7 +21,7 @@
 [ext_resource type="FontFile" uid="uid://wsxpjma3ixet" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Bold_Modular.ttf" id="19_6cmb3"]
 [ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="20_3piuh"]
 [ext_resource type="Script" path="res://Scenes/alert_layer.gd" id="20_tdfek"]
-[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardsManager/CardManager.tscn" id="22_hph3c"]
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="22_hph3c"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
