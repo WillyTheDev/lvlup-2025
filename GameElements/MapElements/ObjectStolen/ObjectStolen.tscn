@@ -1,16 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ubotfui64268"]
+[gd_scene load_steps=4 format=3 uid="uid://ubotfui64268"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.gd" id="1_x3ajw"]
+[ext_resource type="Texture2D" uid="uid://3jqxm8dkubit" path="res://Assets/LevelDesign/ObjectStolen.png" id="2_dj67j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4mx0"]
 size = Vector2(58, 50)
-
-[sub_resource type="Gradient" id="Gradient_1loou"]
-offsets = PackedFloat32Array(0.539749)
-colors = PackedColorArray(0.943046, 0.429234, 0.729871, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_xv3wj"]
-gradient = SubResource("Gradient_1loou")
 
 [node name="ObjectStolen" type="Node2D" groups=["ObjectStolen"]]
 script = ExtResource("1_x3ajw")
@@ -27,9 +21,5 @@ shape = SubResource("RectangleShape2D_k4mx0")
 shape = SubResource("RectangleShape2D_k4mx0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.0546875, 32)
-texture = SubResource("GradientTexture1D_xv3wj")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(0.140625, 12)
-texture = SubResource("GradientTexture1D_xv3wj")
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("2_dj67j")
