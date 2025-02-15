@@ -410,7 +410,7 @@ curve = SubResource("Curve2D_hwjfb")
 
 [node name="PathFollow2D" parent="MapElements/Enemies/Path2D" instance=ExtResource("4_butla")]
 position = Vector2(0, 0)
-rotation = 5.23598
+rotation = 3.14159
 loop = true
 path_speed = 0.01
 

@@ -1,5 +1,4 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
-[gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
@@ -34,6 +33,7 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_8qnhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(0, -2.98023e-08)
-scale = Vector2(0.390625, 10)
+texture_filter = 1
+position = Vector2(0, -1.93)
+scale = Vector2(0.195212, 0.225564)
 texture = ExtResource("3_vgt2u")

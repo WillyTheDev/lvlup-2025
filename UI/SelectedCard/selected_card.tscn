@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5j7r1ciix4fh"]
+
+[ext_resource type="Texture2D" uid="uid://q1k0mrpulhd0" path="res://Assets/Cards/assomer.png" id="1_5sy8e"]
+[ext_resource type="Script" path="res://UI/SelectedCard/selected_card.gd" id="2_fgmqh"]
+
+[node name="SelectedCard" type="TextureButton"]
+custom_minimum_size = Vector2(193, 263)
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_5sy8e")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_fgmqh")
