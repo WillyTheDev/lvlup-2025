@@ -13,8 +13,6 @@ func _init():
 
 # Called when the node enters the scene tree for the first time.
 func start():
-	# Debug message, FIXME: Remove this
-	print("CardManager started")
 	self._inGame = true
 	# Display the top card
 	displayTopCard()
