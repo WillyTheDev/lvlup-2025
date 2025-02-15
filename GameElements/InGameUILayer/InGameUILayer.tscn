@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bla6uvybvj3to"]
+[gd_scene load_steps=6 format=3 uid="uid://bla6uvybvj3to"]
 
 [ext_resource type="Script" path="res://GameElements/InGameUILayer/in_game_ui_layer.gd" id="1_6w3qp"]
 [ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="1_koc6h"]
+[ext_resource type="Texture2D" uid="uid://by7i4jq3e4po5" path="res://Assets/UI/buttonRetry_neutral.png" id="3_khjl0"]
+[ext_resource type="Texture2D" uid="uid://cwef4pj71l284" path="res://Assets/UI/buttonRetry_active.png" id="4_ut4tw"]
+[ext_resource type="Texture2D" uid="uid://vnh08sxtf34t" path="res://Assets/UI/buttonRetry_hover.png" id="5_65syq"]
 
 [node name="InGameUiLayer" type="CanvasLayer" node_paths=PackedStringArray("cardManager")]
 script = ExtResource("1_6w3qp")
@@ -89,3 +92,24 @@ theme_override_constants/margin_bottom = 50
 unique_name_in_owner = true
 position = Vector2(1700, 797)
 scale = Vector2(0.45, 0.45)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="RetryButton" type="TextureButton" parent="Control/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_khjl0")
+texture_pressed = ExtResource("4_ut4tw")
+texture_hover = ExtResource("5_65syq")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Control/MarginContainer/RetryButton" to="." method="_on_retry_button_pressed"]

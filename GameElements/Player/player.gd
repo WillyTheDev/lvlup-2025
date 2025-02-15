@@ -17,6 +17,7 @@ var closest_treasure : Node2D = null
 var closest_door : Node2D = null
 var closest_switch : Node2D = null
 var tween: Tween
+var has_treasure = false
 
 func _ready():
 	game_manager = $"../GameManager"
@@ -155,6 +156,7 @@ func get_treasure():
 		%Camera2D.apply_shake(2, self.global_position)
 		game_manager.on_treasure_get()
 		closest_treasure = null
+		has_treasure = true
 
 func open_closest_door():
 	if closest_door != null:

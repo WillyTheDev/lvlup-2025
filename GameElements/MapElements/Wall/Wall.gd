@@ -15,4 +15,12 @@ func destroys():
 	new_smoke.global_position = self.global_position
 	new_smoke.scale += Vector2(0.5,0.5)
 	get_parent().add_child(new_smoke)
-	self.queue_free()
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
+	self.visible = false
+	%StaticBody2D.set_collision_layer_value(1,false)
+	%StaticBody2D.set_collision_mask_value(1, false)
+
+func enable_enemy():
+	self.visible = true
+	%StaticBody2D.set_collision_layer_value(1,true)
+	%StaticBody2D.set_collision_mask_value(1, true)
