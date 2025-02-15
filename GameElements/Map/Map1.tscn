@@ -249,6 +249,7 @@ curve = SubResource("Curve2D_lvplu")
 [node name="PathFollow2D" parent="Path2D" instance=ExtResource("5_b2da7")]
 position = Vector2(0, 0)
 rotation = 5.23598
+loop = true
 path_speed = 0.01
 
 [node name="ObjectStolen" parent="." instance=ExtResource("6_i4xq0")]

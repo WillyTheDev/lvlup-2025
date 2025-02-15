@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbbpxm6qric1"]
+[gd_scene load_steps=7 format=3 uid="uid://cbbpxm6qric1"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/Wall/Wall.gd" id="1_fp3t0"]
+[ext_resource type="Texture2D" uid="uid://cc85tyvtkkdyf" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv486"]
 size = Vector2(100, 16)
@@ -40,13 +41,6 @@ shader_parameter/onoff = 0.0
 shader_parameter/line_colour = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 5
 
-[sub_resource type="Gradient" id="Gradient_wjk7d"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_wvpk3"]
-gradient = SubResource("Gradient_wjk7d")
-
 [node name="Wall" type="Node2D" groups=["Wall"]]
 script = ExtResource("1_fp3t0")
 
@@ -66,6 +60,7 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_wpsqn")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(0, -6.25848e-07)
-scale = Vector2(0.390625, -22)
-texture = SubResource("GradientTexture1D_wvpk3")
+position = Vector2(-0.0416636, -5.33302e-07)
+rotation = 1.57079
+scale = Vector2(-0.0770474, 0.39095)
+texture = ExtResource("2_hsmxr")
