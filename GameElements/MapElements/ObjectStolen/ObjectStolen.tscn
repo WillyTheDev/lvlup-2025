@@ -33,6 +33,7 @@ shader_parameter/highlight_width = 15.0
 script = ExtResource("1_x3ajw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["ObjectStolen"]]
+unique_name_in_owner = true
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

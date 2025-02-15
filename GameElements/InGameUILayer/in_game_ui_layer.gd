@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @export var cardManager: CardManager
+@export var gameManager: Node2D
 
 var timerText: String = "00:00"
 var goalText: String = ""
@@ -14,3 +15,7 @@ func _ready():
 func _process(_delta):
 	%TimerText.text = self.timerText
 	%GoalText.text = self.goalText
+
+
+func _on_retry_button_pressed():
+	gameManager.player_catch()

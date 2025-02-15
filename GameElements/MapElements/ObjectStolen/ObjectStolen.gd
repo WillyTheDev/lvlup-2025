@@ -19,4 +19,12 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 
 func take():
-	self.queue_free()
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
+	self.visible = false
+	%StaticBody2D.set_collision_layer_value(1,false)
+	%StaticBody2D.set_collision_mask_value(1, false)
+
+func enable_enemy():
+	self.visible = true
+	%StaticBody2D.set_collision_layer_value(1,true)
+	%StaticBody2D.set_collision_mask_value(1, true)

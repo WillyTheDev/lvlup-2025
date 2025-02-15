@@ -7,7 +7,10 @@ extends Node
 @export var map : Node2D = null
 @export var alert_layer: CanvasLayer = null
 @export var in_game_ui: CanvasLayer
+@export var victory_layer : CanvasLayer = null
 
+var start_time = 0
+var elapsed_time = 0
 signal player_has_been_catched
 signal on_next_round_started
 
@@ -37,6 +40,7 @@ func _on_card_selection_layer_on_next_pressed():
 	on_next_round_started.emit()
 	card_selection_layer.visible = false
 	player.global_position = player_spawn.global_position
+	player.has_treasure = false
 	%BigCamera.enabled = false
 	player.player_camera.enabled = true
 	%CardSelectionLayer.visible = false
@@ -46,3 +50,11 @@ func _on_card_selection_layer_on_next_pressed():
 	# Start the card manager
 	print(in_game_ui.cardManager)
 	in_game_ui.cardManager.start()
+	start_time = Time.get_ticks_msec()
+
+func player_has_finished():
+	get_tree().paused = true
+	var end_time = Time.get_ticks_msec()
+	elapsed_time = float(end_time - start_time) / 1000.0
+	%VictoryLayer.visible = true
+	$"../../VictoryLayer/MarginContainer/VBoxContainer/Time Label".text = "[center]" + str(elapsed_time) + " seconds"

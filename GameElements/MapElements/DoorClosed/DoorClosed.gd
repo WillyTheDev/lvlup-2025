@@ -13,11 +13,12 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 	
 func unlock_door():
-	if tween:
-		tween.stop
-	tween = create_tween()
-	tween.tween_property(self, "progress", 0, 3)
-	tween.finished.connect(_remove_door)
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
+	self.visible = false
+	%StaticBody2D.set_collision_layer_value(1,false)
+	%StaticBody2D.set_collision_mask_value(1, false)
 
-func _remove_door():
-	self.queue_free()
+func enable_enemy():
+	self.visible = true
+	%StaticBody2D.set_collision_layer_value(1,true)
+	%StaticBody2D.set_collision_mask_value(1, true)
