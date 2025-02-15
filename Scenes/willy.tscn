@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d00bwnssiwch0"]
+[gd_scene load_steps=16 format=3 uid="uid://d00bwnssiwch0"]
 
 [ext_resource type="PackedScene" uid="uid://7jqo2l5ydysj" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
@@ -6,11 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="5_scwpf"]
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="6_185lk"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
-[ext_resource type="PackedScene" uid="uid://dxm3fw8kml3ym" path="res://GameElements/Cards/BombCard/BombCard.tscn" id="7_86u23"]
+[ext_resource type="PackedScene" uid="uid://cwdy33wdtapg3" path="res://GameElements/Cards/BombCard/BombCard.tscn" id="7_86u23"]
 [ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="8_cpwme"]
 [ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="8_reflk"]
 [ext_resource type="Texture2D" uid="uid://swph2n418dvq" path="res://Assets/UI/buttonNext_neutral.png" id="10_82wjs"]
 [ext_resource type="Texture2D" uid="uid://bq47wya6c2loc" path="res://Assets/UI/buttonNext_active.png" id="11_8fmvk"]
+[ext_resource type="Texture2D" uid="uid://q1k0mrpulhd0" path="res://Assets/Cards/assomer.png" id="12_8bmdv"]
 [ext_resource type="Texture2D" uid="uid://clm81qbfm0gyh" path="res://Assets/UI/buttonNext_hover.png" id="12_dh83i"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
@@ -82,7 +83,6 @@ game_manager = NodePath("../../GameManager")
 position = Vector2(2104, 153)
 
 [node name="CardSelectionLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="MarginContainer" parent="CardSelectionLayer"]
 anchors_preset = 15
@@ -100,6 +100,89 @@ size_flags_vertical = 8
 texture_normal = ExtResource("10_82wjs")
 texture_pressed = ExtResource("11_8fmvk")
 texture_hover = ExtResource("12_dh83i")
+
+[node name="ColorRect" type="ColorRect" parent="CardSelectionLayer/Control"]
+layout_mode = 2
+color = Color(0.756363, 0, 0.132444, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CardSelectionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardSelectionLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CardSelectionLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("12_8bmdv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton3" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton4" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton5" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton6" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="MarginContainer" type="MarginContainer" parent="CardSelectionLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectedCardList" type="HBoxContainer" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton2" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton3" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton4" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton5" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
+
+[node name="TextureButton6" type="TextureButton" parent="CardSelectionLayer/MarginContainer/VBoxContainer/MarginContainer/SelectedCardList"]
+layout_mode = 2
+texture_normal = ExtResource("12_8bmdv")
 
 [node name="PlayerSpawn" type="Node2D" parent="."]
 position = Vector2(1534, 1063)
