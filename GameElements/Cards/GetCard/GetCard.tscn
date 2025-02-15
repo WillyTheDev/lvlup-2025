@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp64c1rocjlod"]
+[gd_scene load_steps=3 format=3 uid="uid://dp64c1rocjlod"]
 
+[ext_resource type="Texture2D" uid="uid://dolfe0jvijqgv" path="res://Assets/Cards/vole objet.png" id="1_rf3fr"]
 [ext_resource type="Script" path="res://GameElements/Cards/GetCard/GetCard.gd" id="1_rymf6"]
 
-[node name="GetCard" type="Node2D"]
+[node name="GetCard" type="TextureRect"]
+texture = ExtResource("1_rf3fr")
 script = ExtResource("1_rymf6")
