@@ -5,7 +5,7 @@ extends Card
 
 func _ready():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.can_destroy_wall = true
 
 func apply_effect():
