@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://7jqo2l5ydysj"]
+[gd_scene load_steps=12 format=3 uid="uid://7jqo2l5ydysj"]
 
 [ext_resource type="Script" path="res://GameElements/Player/player_movement.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
@@ -23,6 +23,9 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x6vgm"]
 radius = 275.465
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_clmln"]
+radius = 113.283
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_4f2pt")
@@ -62,3 +65,10 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckZone"]
 shape = SubResource("CircleShape2D_x6vgm")
+
+[node name="BombZone" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BombZone"]
+shape = SubResource("CircleShape2D_clmln")
+debug_color = Color(0.976029, 0, 0.414963, 0.42)

@@ -7,7 +7,6 @@
 position = Vector2(2, 4)
 rotation = 0.571508
 rotates = false
-loop = false
 script = ExtResource("1_dkjo3")
 path_speed = 0.0
 

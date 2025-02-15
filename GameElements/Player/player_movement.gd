@@ -67,7 +67,7 @@ func get_closest_enemy():
 					closest_enemy = null
 					
 func get_closest_wall():
-	if %CheckZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Wall:
+	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Wall:
 			if closest_wall == null:
 				closest_wall = body.get_parent()
 				closest_wall.set_outline(true)

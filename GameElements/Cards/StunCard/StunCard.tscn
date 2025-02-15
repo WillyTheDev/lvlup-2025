@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bqguqexbagoqt"]
 
-[ext_resource type="Script" path="res://GameElements/Cards/DashCard/StunCard.gd" id="1_j8pc8"]
+[ext_resource type="Script" path="res://GameElements/Cards/StunCard/StunCard.gd" id="1_j8pc8"]
 
 [node name="StunCard" type="Node2D"]
 script = ExtResource("1_j8pc8")
