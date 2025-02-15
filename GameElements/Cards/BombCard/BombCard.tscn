@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxm3fw8kml3ym"]
+[gd_scene load_steps=3 format=3 uid="uid://cwdy33wdtapg3"]
 
 [ext_resource type="Script" path="res://GameElements/Cards/BombCard/BombCard.gd" id="1_ilefi"]
+[ext_resource type="Texture2D" uid="uid://bno4r17wge25r" path="res://Assets/Cards/peter_mur.png" id="2_4dwaq"]
 
-[node name="BombCard" type="Node2D"]
+[node name="BombCard" type="TextureRect"]
+offset_right = 376.0
+offset_bottom = 512.0
+texture = ExtResource("2_4dwaq")
 script = ExtResource("1_ilefi")

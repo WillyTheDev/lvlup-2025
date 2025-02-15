@@ -1,8 +1,28 @@
 class_name GameManager
 extends Node
 
-signal _player_has_been_catched
+@export var player : Node2D = null
+@export var card_selection_layer : CanvasLayer = null
+@export var player_spawn : Node2D = null
+@export var map : Node2D = null
+
+
+signal player_has_been_catched
 
 func player_catch():
-	_player_has_been_catched.emit()
+	player_has_been_catched.emit()
+	card_selection_layer.visible = true
+	%BigCamera.enabled = true
 	print("Player has been Catched !")
+
+
+func _on_execute_pressed():
+	const player_scene = preload("res://GameElements/Player/Player.tscn")
+	var new_player = player_scene.instantiate()
+	card_selection_layer.visible = false
+	new_player.global_position = player_spawn.global_position
+	new_player.game_manager = self
+	new_player.player_speed = 400
+	new_player.dash_speed = 1000
+	%BigCamera.enabled = false
+	map.add_child(new_player)

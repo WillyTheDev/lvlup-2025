@@ -12,3 +12,4 @@ script = ExtResource("1_dkjo3")
 path_speed = 0.0
 
 [node name="Enemy" parent="." instance=ExtResource("2_ooovb")]
+unique_name_in_owner = true

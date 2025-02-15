@@ -10,4 +10,9 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 
 func destroys():
+	const SMOKE = preload("res://GameElements/Smoke_explosion/smoke_explosion.tscn")
+	var new_smoke = SMOKE.instantiate()
+	new_smoke.global_position = self.global_position
+	new_smoke.scale += Vector2(0.5,0.5)
+	get_parent().add_child(new_smoke)
 	self.queue_free()

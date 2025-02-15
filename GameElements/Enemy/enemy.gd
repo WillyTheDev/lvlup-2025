@@ -34,7 +34,6 @@ func _on_taunt_area_body_entered(body):
 		if get_parent() is PathFollow2D:
 			get_parent().path_speed = 0
 
-
 func _on_catch_area_body_entered(body):
 	if body.is_in_group("Player"):
 		game_manager.player_catch()

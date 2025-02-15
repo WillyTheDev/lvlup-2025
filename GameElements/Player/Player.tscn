@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dfpp5vunkyy2o"]
 
-[ext_resource type="Script" path="res://GameElements/Player/player_movement.gd" id="1_4f2pt"]
+[ext_resource type="Script" path="res://GameElements/Player/player.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
 [ext_resource type="Texture2D" uid="uid://lfjv06rffu8d" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
 [ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="4_fj21j"]
@@ -31,6 +31,7 @@ radius = 113.283
 script = ExtResource("1_4f2pt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_57caf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
