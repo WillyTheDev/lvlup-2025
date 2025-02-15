@@ -70,14 +70,13 @@ position = Vector2(739, -22)
 [node name="Wall4" parent="." instance=ExtResource("6_185lk")]
 position = Vector2(1400, -34)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ve0h4")
 
-[node name="PathFollow2D" parent="Path2D" instance=ExtResource("8_cpwme")]
+[node name="PathFollow2D" parent="Path2D" node_paths=PackedStringArray("game_manager") instance=ExtResource("8_cpwme")]
 position = Vector2(107, 717)
 path_speed = 0.002
+game_manager = NodePath("../../GameManager")
 
 [node name="ObjectStolen" parent="." instance=ExtResource("8_reflk")]
 position = Vector2(2104, 153)
