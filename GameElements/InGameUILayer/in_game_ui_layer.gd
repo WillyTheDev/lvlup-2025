@@ -13,7 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	%TimerText.text = self.timerText
+	%TimerText.text = "%02d:%02d" % [int(gameManager.elapsed_time) / 60, int(gameManager.elapsed_time) % 60]
 	%GoalText.text = self.goalText
 
 
