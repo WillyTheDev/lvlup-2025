@@ -64,89 +64,129 @@ func dash():
 	tween.tween_property(self, "dash_velocity", 0, 0.5).set_ease(Tween.EASE_OUT)
 	
 func get_closest_treasure():
-	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Treasure:
-			if closest_treasure == null:
-				closest_treasure = body.get_parent()
+	# Get all overlapping bodies
+	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	# Get only the treasures
+	var treasure_bodies = overlapping_bodies.filter(func(body): return body is Treasure)
+	# If there are no treasures, remove the outline from the closest treasure
+	if treasure_bodies.size() == 0:
+		if closest_treasure != null:
+			closest_treasure.set_outline(false)
+			closest_treasure = null
+		return
+	# If there are treasures, find the closest one and set its outline
+	for i in range(treasure_bodies.size()):
+		var body = treasure_bodies[i]
+		var distance = self.global_position.distance_to(body.global_position)
+		if closest_treasure == null:
+			closest_treasure = body
+			closest_treasure.set_outline(true)
+		else:
+			var smallest_distance = self.global_position.distance_to(closest_treasure.global_position)
+			if distance < smallest_distance:
+				closest_treasure.set_outline(false)
+				closest_treasure = body
 				closest_treasure.set_outline(true)
-			return true) == false:
-				if closest_treasure != null:
-					closest_treasure.set_outline(false)
-					closest_treasure = null
 
 func get_closest_enemy():
-	if %CheckZone.get_overlapping_bodies().any(func(body): if body is Enemy:
-			if closest_enemy == null:
+	# Get all overlapping bodies
+	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	# Get only the enemies
+	var enemy_bodies = overlapping_bodies.filter(func(body): return body is Enemy)
+	# If there are no enemies, remove the outline from the closest enemy
+	if enemy_bodies.size() == 0:
+		if closest_enemy != null:
+			closest_enemy.set_outline(false)
+			closest_enemy = null
+		return
+	# If there are enemies, find the closest one and set its outline
+	for i in range(enemy_bodies.size()):
+		var body = enemy_bodies[i]
+		var distance = self.global_position.distance_to(body.global_position)
+		if closest_enemy == null:
+			closest_enemy = body
+			closest_enemy.set_outline(true)
+		else:
+			var smallest_distance = self.global_position.distance_to(closest_enemy.global_position)
+			if distance < smallest_distance:
+				closest_enemy.set_outline(false)
 				closest_enemy = body
-				body.set_outline(true)
-			else:
-				var distance = self.global_position.distance_to(body.global_position)
-				if distance < (self.global_position.distance_to(closest_enemy.global_position)):
-					closest_enemy.set_outline(false)
-					closest_enemy = body
-					body.set_outline(true)
-			return true) == false:
-				if closest_enemy != null:
-					closest_enemy.set_outline(false)
-					closest_enemy = null
+				closest_enemy.set_outline(true)
 					
 func get_closest_wall():
-
+	# Get all overlapping bodies
 	var overlapping_bodies = %BombZone.get_overlapping_bodies()
-	
-	var no_walls = !overlapping_bodies.any(func(body): return body.get_parent() is Wall)
-	if no_walls:
+	# Get only the walls
+	var wall_bodies = overlapping_bodies.filter(func(body): return body.get_parent() is Wall)
+	# If there are no walls, remove the outline from the closest wall
+	if wall_bodies.size() == 0:
 		if closest_wall != null:
 			closest_wall.set_outline(false)
 			closest_wall = null
 		return
-
-	for i in range(overlapping_bodies.size()):
-		var body = overlapping_bodies[i].get_parent()
-
-		if body is Wall:
-			var distance = self.global_position.distance_to(body.global_position)
-
-			if closest_wall == null:
+	# If there are walls, find the closest one and set its outline
+	for i in range(wall_bodies.size()):
+		var body = wall_bodies[i].get_parent()
+		var distance = self.global_position.distance_to(body.global_position)
+		if closest_wall == null:
+			closest_wall = body
+			closest_wall.set_outline(true)
+		else:
+			var smallest_distance = self.global_position.distance_to(closest_wall.global_position)
+			if distance < smallest_distance:
+				closest_wall.set_outline(false)
 				closest_wall = body
 				closest_wall.set_outline(true)
-			else:
-				var smallest_distance = self.global_position.distance_to(closest_wall.global_position)
-				if distance < smallest_distance:
-					closest_wall.set_outline(false)
-					closest_wall = body
-					closest_wall.set_outline(true)
 
 func get_closest_door():
-	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Door:
-			if closest_door == null:
-				closest_door = body.get_parent()
+	# Get all overlapping bodies
+	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	# Get only the doors
+	var door_bodies = overlapping_bodies.filter(func(body): return body.get_parent() is Door)
+	# If there are no doors, remove the outline from the closest door
+	if door_bodies.size() == 0:
+		if closest_door != null:
+			closest_door.set_outline(false)
+			closest_door = null
+		return
+	# If there are doors, find the closest one and set its outline
+	for i in range(door_bodies.size()):
+		var body = door_bodies[i].get_parent()
+		var distance = self.global_position.distance_to(body.global_position)
+		if closest_door == null:
+			closest_door = body
+			closest_door.set_outline(true)
+		else:
+			var smallest_distance = self.global_position.distance_to(closest_door.global_position)
+			if distance < smallest_distance:
+				closest_door.set_outline(false)
+				closest_door = body
 				closest_door.set_outline(true)
-			else:
-				var distance = self.global_position.distance_to(body.get_parent().global_position)
-				if distance < (self.global_position.distance_to(closest_door.global_position)):
-					closest_door.set_outline(false)
-					closest_door = body.get_parent()
-					closest_door.set_outline(true)
-			return true) == false:
-				if closest_door != null:
-					closest_door.set_outline(false)
-					closest_door = null
 					
 func get_closest_switch():
-	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Switch:
-			if closest_switch == null:
-				closest_switch = body.get_parent()
+	# Get all overlapping bodies
+	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	# Get only the switches
+	var switch_bodies = overlapping_bodies.filter(func(body): return body.get_parent() is Switch)
+	# If there are no switches, remove the outline from the closest switch
+	if switch_bodies.size() == 0:
+		if closest_switch != null:
+			closest_switch.set_outline(false)
+			closest_switch = null
+		return
+	# If there are switches, find the closest one and set its outline
+	for i in range(switch_bodies.size()):
+		var body = switch_bodies[i].get_parent()
+		var distance = self.global_position.distance_to(body.global_position)
+		if closest_switch == null:
+			closest_switch = body
+			closest_switch.set_outline(true)
+		else:
+			var smallest_distance = self.global_position.distance_to(closest_switch.global_position)
+			if distance < smallest_distance:
+				closest_switch.set_outline(false)
+				closest_switch = body
 				closest_switch.set_outline(true)
-			else:
-				var distance = self.global_position.distance_to(body.get_parent().global_position)
-				if distance < (self.global_position.distance_to(closest_switch.global_position)):
-					closest_switch.set_outline(false)
-					closest_switch = body.get_parent()
-					closest_switch.set_outline(true)
-			return true) == false:
-				if closest_switch != null:
-					closest_switch.set_outline(false)
-					closest_switch = null
 	
 func stun_closest_enemy():
 	if closest_enemy != null:
