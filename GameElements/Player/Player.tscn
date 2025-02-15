@@ -31,6 +31,7 @@ radius = 113.283
 script = ExtResource("1_4f2pt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_57caf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

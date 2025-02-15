@@ -10,11 +10,6 @@ var move_camera_toward_core = false
 var initial_position : Vector2 = Vector2(0,0)
 var target : Vector2 = Vector2(0,0)
 
-func _ready():
-	get_parent().game_manager._player_has_been_catched.connect(show_entire_map)
-	
-func show_entire_map():
-	print("Camera Show Map")
 	
 func apply_shake(strength, emitter_position: Vector2):
 	shake_strength = strength * (-0.0025 * (global_position.distance_to(emitter_position)) + 1)

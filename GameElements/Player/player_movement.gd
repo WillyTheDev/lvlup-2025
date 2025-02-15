@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-
 @export var player_speed: int = 400
 @export var dash_speed: int = 1000
 @export var game_manager: Node2D = null
+@onready var player_camera = %Camera2D
 var dash_velocity: int = 0
 var can_stun := false
 var can_destroy_wall := false
@@ -14,7 +14,7 @@ var closest_treasure : Node2D = null
 var tween: Tween
 
 func _ready():
-	game_manager._player_has_been_catched.connect(kill_player)
+	game_manager.player_has_been_catched.connect(kill_player)
 
 func kill_player():
 	self.queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d00bwnssiwch0"]
+[gd_scene load_steps=15 format=3 uid="uid://d00bwnssiwch0"]
 
 [ext_resource type="PackedScene" uid="uid://7jqo2l5ydysj" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
 [ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="8_cpwme"]
 [ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="8_reflk"]
-[ext_resource type="PackedScene" uid="uid://dp64c1rocjlod" path="res://GameElements/Cards/GetCard/GetCard.tscn" id="9_tnixs"]
+[ext_resource type="PackedScene" uid="uid://bqguqexbagoqt" path="res://GameElements/Cards/StunCard/StunCard.tscn" id="9_12kwn"]
+[ext_resource type="Texture2D" uid="uid://swph2n418dvq" path="res://Assets/UI/buttonNext_neutral.png" id="10_82wjs"]
+[ext_resource type="Texture2D" uid="uid://bq47wya6c2loc" path="res://Assets/UI/buttonNext_active.png" id="11_8fmvk"]
+[ext_resource type="Texture2D" uid="uid://clm81qbfm0gyh" path="res://Assets/UI/buttonNext_hover.png" id="12_dh83i"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -39,9 +42,21 @@ position = Vector2(-3, -6)
 [node name="Enemy" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("5_scwpf")]
 game_manager = NodePath("../GameManager")
 
-[node name="GameManager" parent="." instance=ExtResource("6_jaw44")]
+[node name="Enemy2" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("5_scwpf")]
+position = Vector2(494, -476)
+game_manager = NodePath("../GameManager")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="GameManager" parent="." node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map") instance=ExtResource("6_jaw44")]
+player = NodePath("../Player")
+card_selection_layer = NodePath("../CardSelectionLayer")
+player_spawn = NodePath("../PlayerSpawn")
+map = NodePath("..")
+
+[node name="BigCamera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1082, 413)
+enabled = false
+zoom = Vector2(0.5, 0.5)
 
 [node name="Wall" parent="." instance=ExtResource("6_185lk")]
 position = Vector2(537, -22)
@@ -67,5 +82,30 @@ path_speed = 0.002
 [node name="ObjectStolen" parent="." instance=ExtResource("8_reflk")]
 position = Vector2(2104, 153)
 
-[node name="GetCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_tnixs")]
+[node name="StunCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_12kwn")]
 player = NodePath("../Player")
+
+[node name="CardSelectionLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="MarginContainer" parent="CardSelectionLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="execute" type="TextureButton" parent="CardSelectionLayer/Control"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("10_82wjs")
+texture_pressed = ExtResource("11_8fmvk")
+texture_hover = ExtResource("12_dh83i")
+
+[node name="PlayerSpawn" type="Node2D" parent="."]
+position = Vector2(1534, 1063)
+
+[connection signal="pressed" from="CardSelectionLayer/Control/execute" to="GameManager" method="_on_execute_pressed"]
