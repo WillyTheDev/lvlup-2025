@@ -5,7 +5,7 @@ extends Node
 @export var card_selection_layer : CanvasLayer = null
 @export var player_spawn : Node2D = null
 @export var map : Node2D = null
-@onready var player_scene : Node2D = preload("res://GameElements/Player/Player.tscn").instantiate()
+
 
 signal player_has_been_catched
 
@@ -14,13 +14,15 @@ func player_catch():
 	card_selection_layer.visible = true
 	%BigCamera.enabled = true
 	print("Player has been Catched !")
-	
+
 
 func _on_execute_pressed():
+	const player_scene = preload("res://GameElements/Player/Player.tscn")
+	var new_player = player_scene.instantiate()
 	card_selection_layer.visible = false
-	player_scene.global_position = player_spawn.global_position
-	player_scene.game_manager = self
-	player_scene.player_speed = 400
-	player_scene.dash_speed = 1000
+	new_player.global_position = player_spawn.global_position
+	new_player.game_manager = self
+	new_player.player_speed = 400
+	new_player.dash_speed = 1000
 	%BigCamera.enabled = false
-	map.add_child(player_scene)
+	map.add_child(new_player)
