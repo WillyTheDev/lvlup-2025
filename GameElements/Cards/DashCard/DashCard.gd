@@ -5,7 +5,7 @@ var player : Node2D = null
 
 func _ready():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 
 func apply_effect():
 	player.dash()

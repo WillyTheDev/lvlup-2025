@@ -1,17 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://yfevd8114od4"]
 
 [ext_resource type="Script" path="res://GameElements/CardManager/CardManager.gd" id="1_5a4eq"]
-[ext_resource type="Texture2D" uid="uid://cpqs2nuo7jkyu" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
+[ext_resource type="Texture2D" uid="uid://ckfxexl6mh0ot" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
 
-[node name="CardManager" type="MarginContainer"]
-offset_right = 411.0
-offset_bottom = 552.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="CardManager" type="Node2D"]
 script = ExtResource("1_5a4eq")
 
 [node name="Card-stack4Pile" type="TextureRect" parent="."]
-layout_mode = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -411.0
+offset_top = -552.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
 texture = ExtResource("2_ja26n")
 
 [node name="CardPosition" type="Node2D" parent="."]

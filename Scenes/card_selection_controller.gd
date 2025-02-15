@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @export var maximum_amount_of_card := 5
+@export var in_game_ui: CanvasLayer
 var number_of_selected_card = 0
 
 const STUN_CARD = preload("res://GameElements/Cards/StunCard/StunCard.tscn")
@@ -19,13 +20,13 @@ func add_card_to_selected_list(card: Card):
 		var new_card = SELECTED_CARD.instantiate()
 		new_card.texture_normal = card.texture
 		%SelectedCardList.add_child(new_card)
-		%CardManager.addCard(card)
+		in_game_ui.cardManager.addCard(card)
 
 func reset_selection():
 	number_of_selected_card = 0
 	for child in %SelectedCardList.get_children():
 		%SelectedCardList.remove_child(child)
-		%CardManager.clearStack()
+		in_game_ui.cardManager.clearStack()
 
 func _on_stun_card_button_pressed():
 	add_card_to_selected_list(STUN_CARD.instantiate())
