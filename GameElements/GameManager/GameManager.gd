@@ -10,13 +10,16 @@ extends Node
 
 signal player_has_been_catched
 signal on_next_round_started
+
 func _ready():
 	get_tree().paused = true
 
 func player_catch():
+	get_tree().paused = true
 	alert_layer.stop_layer()
 	player_has_been_catched.emit()
 	card_selection_layer.visible = true
+	player.player_camera.enabled = false
 	%BigCamera.enabled = true
 	%CardSelectionLayer.visible = true
 	%CardSelectionLayer.reset_selection()
@@ -28,15 +31,9 @@ func on_treasure_get():
 func _on_card_selection_layer_on_next_pressed():
 	get_tree().paused = false
 	card_selection_layer.visible = false
-	if %Player == null:
-		const player_scene = preload("res://GameElements/Player/Player.tscn")
-		var new_player = player_scene.instantiate()
-		new_player.global_position = player_spawn.global_position
-		new_player.game_manager = self
-		new_player.player_speed = 400
-		new_player.dash_speed = 1000
-		map.add_child(new_player)
+	player.global_position = player_spawn.global_position
 	%BigCamera.enabled = false
+	player.player_camera.enabled = true
 	%CardSelectionLayer.visible = false
 	# Start the card manager
 	%CardManager.start()

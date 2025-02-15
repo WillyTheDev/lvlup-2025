@@ -37,6 +37,7 @@ func _on_taunt_area_body_entered(body):
 func _on_catch_area_body_entered(body):
 	if body.is_in_group("Player"):
 		get_node("/root/Game/Map/GameManager").player_catch()
+		target = null
 		
 func stun():
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)

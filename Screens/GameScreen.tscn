@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="5_7rlnd"]
 [ext_resource type="PackedScene" uid="uid://wlp50gc4teyc" path="res://GameElements/CardSelectionLayer/card_selection_layer.tscn" id="7_eqmjq"]
 [ext_resource type="PackedScene" uid="uid://dl7b6fnbwdqtt" path="res://GameElements/AlertLayer/alert_layer.tscn" id="8_6i3pe"]
-[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="9_uhl8e"]
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="9_4wosp"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_m4qnj")
@@ -46,7 +46,7 @@ position = Vector2(199, 862)
 [node name="AlertLayer" parent="Map" instance=ExtResource("8_6i3pe")]
 unique_name_in_owner = true
 
-[node name="CardManager" parent="Map" node_paths=PackedStringArray("player") instance=ExtResource("9_uhl8e")]
+[node name="CardManager" parent="Map" node_paths=PackedStringArray("player") instance=ExtResource("9_4wosp")]
 unique_name_in_owner = true
 player = NodePath("../Player")
 

@@ -23,7 +23,7 @@ func _ready():
 	game_manager.player_has_been_catched.connect(kill_player)
 
 func kill_player():
-	self.queue_free()
+	pass
 	
 func _process(delta):
 	if can_stun:

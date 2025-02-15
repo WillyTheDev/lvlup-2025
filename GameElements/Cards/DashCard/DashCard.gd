@@ -1,8 +1,11 @@
 class_name DashCard
 extends Card
 
+var player : Node2D = null
+
 func _ready():
-	pass
+	if player == null:
+		var player = get_node("/root/Game/Map/Player")
 
 func apply_effect():
-	get_node("/root/Game/Map/Player").dash()
+	player.dash()
