@@ -86,7 +86,7 @@ func _removeCurrentCard():
 	# If the stack is empty, stop the manager (shouldn't happen here)
 	if _isStackEmpty():
 		return
-	self._cardStack.pop_front().queue_free()
+	self._cardStack.pop_front()
 
 # Get the current card (without removing it from the stack)
 func _getCurrentCard():
