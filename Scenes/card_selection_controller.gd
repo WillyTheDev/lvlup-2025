@@ -11,7 +11,9 @@ const LASER_CARD = preload("res://GameElements/Cards/SwitchCard/SwitchCard.tscn"
 const DOOR_CARD = preload("res://GameElements/Cards/DoorCard/DoorCard.tscn")
 const SELECTED_CARD = preload("res://UI/SelectedCard/selected_card.tscn")
 
-func add_card_to_selected_list(card: TextureRect):
+signal on_next_pressed
+
+func add_card_to_selected_list(card: Card):
 	if number_of_selected_card < maximum_amount_of_card:
 		number_of_selected_card += 1
 		var new_card = SELECTED_CARD.instantiate()
@@ -53,3 +55,7 @@ func _on_bomb_card_button_pressed():
 func _on_get_treasure_card_button_pressed():
 	add_card_to_selected_list(GET_CARD.instantiate())
 	# add_card_to_selected_list($MarginContainer/VBoxContainer/GridContainer/GetTreasureCardButton.texture_normal)
+
+
+func _on_execute_pressed():
+	on_next_pressed.emit()

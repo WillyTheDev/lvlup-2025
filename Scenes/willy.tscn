@@ -21,7 +21,7 @@
 [ext_resource type="FontFile" uid="uid://wsxpjma3ixet" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Bold_Modular.ttf" id="19_6cmb3"]
 [ext_resource type="Shader" path="res://Shaders/vignette.gdshader" id="20_3piuh"]
 [ext_resource type="Script" path="res://Scenes/alert_layer.gd" id="20_tdfek"]
-[ext_resource type="PackedScene" uid="uid://dp64c1rocjlod" path="res://GameElements/Cards/GetCard/GetCard.tscn" id="22_c1ovh"]
+[ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="22_hph3c"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -43,6 +43,21 @@ shader_parameter/alpha = 0.5
 shader_parameter/inner_radius = 0.7
 shader_parameter/outer_radius = 1.2
 
+[sub_resource type="Animation" id="Animation_w8snd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AlertLayer/ColorRect:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
 [sub_resource type="Animation" id="Animation_ktt07"]
 resource_name = "alert"
 length = 0.8
@@ -58,21 +73,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.5, 0.8]
-}
-
-[sub_resource type="Animation" id="Animation_w8snd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AlertLayer/ColorRect:material:shader_parameter/alpha")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fdce4"]
@@ -93,12 +93,10 @@ game_manager = NodePath("../GameManager")
 [node name="Fog" parent="." instance=ExtResource("3_dt5am")]
 position = Vector2(-3, -6)
 
-[node name="Enemy" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("5_scwpf")]
-game_manager = NodePath("../GameManager")
+[node name="Enemy" parent="." instance=ExtResource("5_scwpf")]
 
-[node name="Enemy2" parent="." node_paths=PackedStringArray("game_manager") instance=ExtResource("5_scwpf")]
+[node name="Enemy2" parent="." instance=ExtResource("5_scwpf")]
 position = Vector2(494, -476)
-game_manager = NodePath("../GameManager")
 
 [node name="GameManager" parent="." node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer") instance=ExtResource("6_jaw44")]
 player = NodePath("../Player")
@@ -128,10 +126,9 @@ position = Vector2(1400, -34)
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ve0h4")
 
-[node name="PathFollow2D" parent="Path2D" node_paths=PackedStringArray("game_manager") instance=ExtResource("8_cpwme")]
+[node name="PathFollow2D" parent="Path2D" instance=ExtResource("8_cpwme")]
 position = Vector2(107, 717)
 path_speed = 0.002
-game_manager = NodePath("../../GameManager")
 
 [node name="ObjectStolen" parent="." instance=ExtResource("8_reflk")]
 position = Vector2(2104, 153)
@@ -282,8 +279,7 @@ libraries = {
 "": SubResource("AnimationLibrary_fdce4")
 }
 
-[node name="GetCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("22_c1ovh")]
-player = NodePath("../Player")
+[node name="CardManager" parent="." instance=ExtResource("22_hph3c")]
 
 [connection signal="pressed" from="CardSelectionLayer/Control/execute" to="GameManager" method="_on_execute_pressed"]
 [connection signal="pressed" from="CardSelectionLayer/MarginContainer/VBoxContainer/GridContainer/StunCardButton" to="CardSelectionLayer" method="_on_stun_card_button_pressed"]

@@ -25,17 +25,18 @@ func player_catch():
 func on_treasure_get():
 	alert_layer.show_layer()
 
-func _on_execute_pressed():
+func _on_card_selection_layer_on_next_pressed():
 	get_tree().paused = false
-	const player_scene = preload("res://GameElements/Player/Player.tscn")
-	var new_player = player_scene.instantiate()
 	card_selection_layer.visible = false
-	new_player.global_position = player_spawn.global_position
-	new_player.game_manager = self
-	new_player.player_speed = 400
-	new_player.dash_speed = 1000
+	if %Player == null:
+		const player_scene = preload("res://GameElements/Player/Player.tscn")
+		var new_player = player_scene.instantiate()
+		new_player.global_position = player_spawn.global_position
+		new_player.game_manager = self
+		new_player.player_speed = 400
+		new_player.dash_speed = 1000
+		map.add_child(new_player)
 	%BigCamera.enabled = false
 	%CardSelectionLayer.visible = false
-	map.add_child(new_player)
 	# Start the card manager
 	%CardManager.start()

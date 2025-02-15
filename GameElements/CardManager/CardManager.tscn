@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://yfevd8114od4"]
 
 [ext_resource type="Script" path="res://GameElements/CardManager/CardManager.gd" id="1_5a4eq"]
-[ext_resource type="Texture2D" uid="uid://ckfxexl6mh0ot" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
+[ext_resource type="Texture2D" uid="uid://cpqs2nuo7jkyu" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
 
 [node name="CardManager" type="MarginContainer"]
 offset_right = 411.0

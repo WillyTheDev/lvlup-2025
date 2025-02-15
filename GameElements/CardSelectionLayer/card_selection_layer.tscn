@@ -1,0 +1,139 @@
+[gd_scene load_steps=12 format=3 uid="uid://wlp50gc4teyc"]
+
+[ext_resource type="Script" path="res://Scenes/card_selection_controller.gd" id="1_l4q4s"]
+[ext_resource type="Texture2D" uid="uid://swph2n418dvq" path="res://Assets/UI/buttonNext_neutral.png" id="2_33gdo"]
+[ext_resource type="Texture2D" uid="uid://bq47wya6c2loc" path="res://Assets/UI/buttonNext_active.png" id="3_btpi2"]
+[ext_resource type="Texture2D" uid="uid://clm81qbfm0gyh" path="res://Assets/UI/buttonNext_hover.png" id="4_mdae6"]
+[ext_resource type="Texture2D" uid="uid://q1k0mrpulhd0" path="res://Assets/Cards/assomer.png" id="5_ir85q"]
+[ext_resource type="Texture2D" uid="uid://be26ysfag4txm" path="res://Assets/Cards/dash.png" id="6_ydqto"]
+[ext_resource type="Texture2D" uid="uid://ckinr5o3fiqt7" path="res://Assets/Cards/desactiver_laser.png" id="7_b2t1d"]
+[ext_resource type="Texture2D" uid="uid://c0h7f248e7k1q" path="res://Assets/Cards/lockpicking.png" id="8_56kem"]
+[ext_resource type="Texture2D" uid="uid://cjk7gwycl1a3a" path="res://Assets/Cards/peter_mur.png" id="9_vsit2"]
+[ext_resource type="Texture2D" uid="uid://45lgf8jv4ln5" path="res://Assets/Cards/vole objet.png" id="10_7m8la"]
+[ext_resource type="FontFile" uid="uid://wsxpjma3ixet" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Bold_Modular.ttf" id="11_ukm5t"]
+
+[node name="CardSelectionLayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_l4q4s")
+
+[node name="Control" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="execute" type="TextureButton" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("2_33gdo")
+texture_pressed = ExtResource("3_btpi2")
+texture_hover = ExtResource("4_mdae6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 156
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 156
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="StunCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("5_ir85q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="DashCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("6_ydqto")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LaserCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("7_b2t1d")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LockPickCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("8_56kem")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BombCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("9_vsit2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GetTreasureCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(193, 263)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("10_7m8la")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/normal_font = ExtResource("11_ukm5t")
+theme_override_font_sizes/normal_font_size = 40
+text = "Selected Card:"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 64
+
+[node name="SelectedCardList" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[connection signal="pressed" from="Control/execute" to="." method="_on_execute_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/StunCardButton" to="." method="_on_stun_card_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/DashCardButton" to="." method="_on_dash_card_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/LaserCardButton" to="." method="_on_laser_card_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/LockPickCardButton" to="." method="_on_lock_pick_card_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/BombCardButton" to="." method="_on_bomb_card_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/GetTreasureCardButton" to="." method="_on_get_treasure_card_button_pressed"]

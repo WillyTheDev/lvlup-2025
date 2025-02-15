@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @export var player_speed: int = 400
@@ -18,6 +19,7 @@ var closest_switch : Node2D = null
 var tween: Tween
 
 func _ready():
+	game_manager = $"../GameManager"
 	game_manager.player_has_been_catched.connect(kill_player)
 
 func kill_player():

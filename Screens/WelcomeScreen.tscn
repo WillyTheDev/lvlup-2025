@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -28,4 +28,5 @@ texture_hover = ExtResource("4_gl246")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_17hql")]
 
+[connection signal="pressed" from="CanvasLayer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="transition_is_finished" from="TransitionLayer" to="." method="_on_transition_layer_transition_is_finished"]

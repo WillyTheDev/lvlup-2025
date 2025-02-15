@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dp64c1rocjlod"]
 
-[ext_resource type="Texture2D" uid="uid://dolfe0jvijqgv" path="res://Assets/Cards/vole objet.png" id="1_rf3fr"]
+[ext_resource type="Texture2D" uid="uid://45lgf8jv4ln5" path="res://Assets/Cards/vole objet.png" id="1_rf3fr"]
 [ext_resource type="Script" path="res://GameElements/Cards/GetCard/GetCard.gd" id="1_rymf6"]
 
 [node name="GetCard" type="TextureRect"]
