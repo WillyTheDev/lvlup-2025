@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://vi0l2bb3tajg"]
+[gd_scene load_steps=3 format=3 uid="uid://vi0l2bb3tajg"]
 
 [ext_resource type="Script" path="res://GameElements/Cards/DashCard/DashCard.gd" id="1_n6wrk"]
+[ext_resource type="Texture2D" uid="uid://bsxaa80uo8rgg" path="res://Assets/Cards/dash.png" id="2_lp32m"]
 
 [node name="DashCard" type="Node2D"]
+position = Vector2(975, 523)
 script = ExtResource("1_n6wrk")
+
+[node name="Dash" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("2_lp32m")
