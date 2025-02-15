@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ubotfui64268"]
+[gd_scene load_steps=8 format=3 uid="uid://ubotfui64268"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.gd" id="1_x3ajw"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xu2oh"]
+[ext_resource type="Texture2D" uid="uid://3jqxm8dkubit" path="res://Assets/LevelDesign/ObjectStolen.png" id="3_fgowr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4mx0"]
-size = Vector2(58, 50)
+size = Vector2(60, 60)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b4j13"]
 resource_local_to_scene = true
@@ -43,5 +44,5 @@ scale = Vector2(0.0546875, 32)
 texture = SubResource("GradientTexture1D_xv3wj")
 
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasGroup"]
-scale = Vector2(0.140625, 12)
-texture = SubResource("GradientTexture1D_xv3wj")
+scale = Vector2(-0.0842179, 0.0841316)
+texture = ExtResource("3_fgowr")

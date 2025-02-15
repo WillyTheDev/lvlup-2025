@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0v75qir1iy5k"]
+[gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
+[ext_resource type="Texture2D" uid="uid://47evwp0ebfln" path="res://Assets/LevelDesign/DoorClosed.png" id="3_7rwve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cqea"]
 size = Vector2(100, 54)
@@ -12,13 +13,6 @@ shader = ExtResource("2_xdqor")
 shader_parameter/onoff = 0.0
 shader_parameter/line_colour = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 5
-
-[sub_resource type="Gradient" id="Gradient_m4ty6"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.0784314, 0.807843, 0.807843, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2bjs"]
-gradient = SubResource("Gradient_m4ty6")
 
 [node name="DoorClosed" type="Node2D" groups=["DoorClosed"]]
 script = ExtResource("1_p72e1")
@@ -35,9 +29,11 @@ shape = SubResource("RectangleShape2D_3cqea")
 shape = SubResource("RectangleShape2D_3cqea")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_8qnhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(0, -2.98023e-08)
-scale = Vector2(0.390625, 10)
-texture = SubResource("GradientTexture1D_c2bjs")
+texture_filter = 1
+position = Vector2(0, 1.01)
+scale = Vector2(0.195212, -0.12015)
+texture = ExtResource("3_7rwve")
