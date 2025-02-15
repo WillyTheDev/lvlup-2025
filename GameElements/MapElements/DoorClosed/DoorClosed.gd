@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func open_door():
-	pass
+	self.queue_free()

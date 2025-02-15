@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq2ys07jgfpj7"]
+[gd_scene load_steps=9 format=3 uid="uid://bq2ys07jgfpj7"]
 
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="1_dyuuu"]
 [ext_resource type="Script" path="res://Scenes/jn.gd" id="1_s5747"]
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="2_k6t77"]
+[ext_resource type="PackedScene" uid="uid://b0v75qir1iy5k" path="res://GameElements/MapElements/DoorClosed/DoorClosed.tscn" id="4_d5fuv"]
+[ext_resource type="PackedScene" uid="uid://dvkekb1sy14ic" path="res://GameElements/MapElements/LaserPower/LaserPower.tscn" id="5_ogylw"]
+[ext_resource type="PackedScene" uid="uid://cn78rkcxxxr8j" path="res://GameElements/MapElements/LaserZone/LaserZone.tscn" id="6_5a01n"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_ybfni"]
+[ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="7_wnjdp"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_s5747")
@@ -15,18 +19,19 @@ position = Vector2(578, 323)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Walls" type="Node" parent="."]
+[node name="Objects" type="Node" parent="."]
 
-[node name="Wall1" parent="Walls" instance=ExtResource("1_dyuuu")]
+[node name="DoorClosed" parent="Objects" instance=ExtResource("4_d5fuv")]
+position = Vector2(272, 56)
 
-[node name="Wall2" parent="Walls" instance=ExtResource("1_dyuuu")]
-position = Vector2(320, 0)
+[node name="LaserPower" parent="Objects" instance=ExtResource("5_ogylw")]
+position = Vector2(520, 64)
 
-[node name="Wall3" parent="Walls" instance=ExtResource("1_dyuuu")]
-position = Vector2(240, 0)
+[node name="LaserZone" parent="Objects/LaserPower" instance=ExtResource("6_5a01n")]
+position = Vector2(-112, 0)
 
-[node name="Wall4" parent="Walls" instance=ExtResource("1_dyuuu")]
-position = Vector2(160, 0)
+[node name="ObjectStolen" parent="Objects" instance=ExtResource("7_wnjdp")]
+position = Vector2(632, 56)
 
-[node name="Wall5" parent="Walls" instance=ExtResource("1_dyuuu")]
-position = Vector2(80, 0)
+[node name="Wall" parent="Objects" instance=ExtResource("1_dyuuu")]
+position = Vector2(136, 56)

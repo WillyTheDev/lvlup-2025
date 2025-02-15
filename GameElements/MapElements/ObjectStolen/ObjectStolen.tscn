@@ -12,10 +12,10 @@ colors = PackedColorArray(0.943046, 0.429234, 0.729871, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_xv3wj"]
 gradient = SubResource("Gradient_1loou")
 
-[node name="ObjectStolen" type="Node2D"]
+[node name="ObjectStolen" type="Node2D" groups=["ObjectStolen"]]
 script = ExtResource("1_x3ajw")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["ObjectStolen"]]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_k4mx0")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["ObjectStolen"]]
 shape = SubResource("RectangleShape2D_k4mx0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

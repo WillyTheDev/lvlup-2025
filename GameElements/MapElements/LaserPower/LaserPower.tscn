@@ -1,31 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvkekb1sy14ic"]
+[gd_scene load_steps=6 format=3 uid="uid://dvkekb1sy14ic"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/LaserPower/LaserPower.gd" id="1_0e1n3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2oco"]
 size = Vector2(58, 50)
 
-[sub_resource type="Gradient" id="Gradient_1loou"]
-offsets = PackedFloat32Array(0.539749)
-colors = PackedColorArray(0.64, 0.64, 0.64, 1)
+[sub_resource type="Gradient" id="Gradient_qjf0t"]
+offsets = PackedFloat32Array(0.589641)
+colors = PackedColorArray(0.753983, 0.753984, 0.753984, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_xy0h1"]
-gradient = SubResource("Gradient_1loou")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kl0i7"]
+gradient = SubResource("Gradient_qjf0t")
 
-[node name="LaserPower" type="Node2D"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gyodx"]
+gradient = SubResource("Gradient_qjf0t")
+
+[node name="LaserPower" type="Node2D" groups=["LaserPower"]]
 script = ExtResource("1_0e1n3")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["LaserPower"]]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_s2oco")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["LaserPower"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_s2oco")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+scale = Vector2(0.117187, 28)
+texture = SubResource("GradientTexture1D_kl0i7")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
 scale = Vector2(0.171875, 38)
-texture = SubResource("GradientTexture1D_xy0h1")
+texture = SubResource("GradientTexture1D_gyodx")

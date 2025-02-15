@@ -1,14 +1,16 @@
 extends Node
 
-@export var laser: Node2D 
+var laser_zone: Node = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	laser_zone = self.get_node("LaserZone")
+	assert(laser_zone != null, "[LaserPower] Error : LaserPower must have the corresponding LaserZone as child")
+	assert(laser_zone.is_in_group("LaserZone"), "[LaserPower] Error : LaserPower must have the corresponding LaserZone as child")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func disable_laser():
-	laser.queue_free()
+	laser_zone.queue_free()
