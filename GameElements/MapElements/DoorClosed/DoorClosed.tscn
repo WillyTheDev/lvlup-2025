@@ -1,4 +1,5 @@
 [gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
+[gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
@@ -29,6 +30,7 @@ shape = SubResource("RectangleShape2D_3cqea")
 shape = SubResource("RectangleShape2D_3cqea")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
 material = SubResource("ShaderMaterial_8qnhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]

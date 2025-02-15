@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://d2i7wpdlyrxth"]
 
-[ext_resource type="Texture2D" uid="uid://bsbp1yu51610v" path="res://GameElements/Enemy/Enemy.png" id="1_1e2d7"]
 [ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
+[ext_resource type="Texture2D" uid="uid://76jmx3cee56d" path="res://Assets/Enemy/Guard.png" id="2_uoo3p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2p4x7"]
 radius = 38.0526
@@ -73,7 +73,8 @@ material = SubResource("ShaderMaterial_q6isw")
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
 unique_name_in_owner = true
 position = Vector2(0, -30)
-texture = ExtResource("1_1e2d7")
+scale = Vector2(0.273438, 0.273438)
+texture = ExtResource("2_uoo3p")
 
 [connection signal="body_entered" from="TauntArea" to="." method="_on_taunt_area_body_entered"]
 [connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]

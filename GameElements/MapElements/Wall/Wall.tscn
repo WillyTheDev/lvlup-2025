@@ -60,7 +60,6 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_wpsqn")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
-position = Vector2(-0.0416636, -5.33302e-07)
 rotation = 1.57079
-scale = Vector2(-0.0770474, 0.39095)
+scale = Vector2(-0.0784261, 0.39095)
 texture = ExtResource("2_hsmxr")

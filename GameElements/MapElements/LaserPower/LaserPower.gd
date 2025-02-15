@@ -1,12 +1,10 @@
 extends Node
 
-var laser_zone: Node = null
+@export var laser_zone: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	laser_zone = self.get_node("LaserZone")
-	assert(laser_zone != null, "[LaserPower] Error : LaserPower must have the corresponding LaserZone as child")
-	assert(laser_zone.is_in_group("LaserZone"), "[LaserPower] Error : LaserPower must have the corresponding LaserZone as child")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
