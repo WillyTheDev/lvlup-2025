@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjtqwnlaytr4l"]
+
+[ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="1_dyuuu"]
+
+[node name="Jn" type="Node2D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_dyuuu")]
+position = Vector2(52, 235)
+
+[node name="Wall2" parent="." instance=ExtResource("1_dyuuu")]
+position = Vector2(92, 235)
+
+[node name="Wall3" parent="." instance=ExtResource("1_dyuuu")]
+position = Vector2(72, 235)

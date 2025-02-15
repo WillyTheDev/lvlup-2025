@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b0v75qir1iy5k"]
+
+[node name="DoorClosed" type="Node2D"]
