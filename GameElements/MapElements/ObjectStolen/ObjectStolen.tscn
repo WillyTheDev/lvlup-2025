@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://ubotfui64268"]
+[gd_scene load_steps=7 format=3 uid="uid://ubotfui64268"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.gd" id="1_x3ajw"]
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xu2oh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4mx0"]
 size = Vector2(58, 50)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b4j13"]
+resource_local_to_scene = true
+shader = ExtResource("2_xu2oh")
+shader_parameter/onoff = 0.0
+shader_parameter/line_colour = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1
 
 [sub_resource type="Gradient" id="Gradient_1loou"]
 offsets = PackedFloat32Array(0.539749)
@@ -26,10 +34,14 @@ shape = SubResource("RectangleShape2D_k4mx0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["ObjectStolen"]]
 shape = SubResource("RectangleShape2D_k4mx0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_b4j13")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
 scale = Vector2(0.0546875, 32)
 texture = SubResource("GradientTexture1D_xv3wj")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasGroup"]
 scale = Vector2(0.140625, 12)
 texture = SubResource("GradientTexture1D_xv3wj")

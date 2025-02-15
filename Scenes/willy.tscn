@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d00bwnssiwch0"]
+[gd_scene load_steps=12 format=3 uid="uid://d00bwnssiwch0"]
 
 [ext_resource type="PackedScene" uid="uid://7jqo2l5ydysj" path="res://GameElements/Player/Player.tscn" id="1_s32qe"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="2_yjxuw"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://d2i7wpdlyrxth" path="res://GameElements/Enemy/Enemy.tscn" id="5_scwpf"]
 [ext_resource type="PackedScene" uid="uid://cbbpxm6qric1" path="res://GameElements/MapElements/Wall/Wall.tscn" id="6_185lk"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="6_jaw44"]
-[ext_resource type="PackedScene" uid="uid://dxm3fw8kml3ym" path="res://GameElements/Cards/BombCard/BombCard.tscn" id="7_86u23"]
 [ext_resource type="PackedScene" uid="uid://dq5gpe13lsg6e" path="res://GameElements/Enemy/PathFollowingEnemy.tscn" id="8_cpwme"]
+[ext_resource type="PackedScene" uid="uid://ubotfui64268" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.tscn" id="8_reflk"]
+[ext_resource type="PackedScene" uid="uid://dp64c1rocjlod" path="res://GameElements/Cards/GetCard/GetCard.tscn" id="9_tnixs"]
 
 [sub_resource type="GDScript" id="GDScript_lc114"]
 script/source = "extends Node2D
@@ -54,9 +55,6 @@ position = Vector2(739, -22)
 [node name="Wall4" parent="." instance=ExtResource("6_185lk")]
 position = Vector2(1400, -34)
 
-[node name="BombCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_86u23")]
-player = NodePath("../Player")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -64,4 +62,10 @@ curve = SubResource("Curve2D_ve0h4")
 
 [node name="PathFollow2D" parent="Path2D" instance=ExtResource("8_cpwme")]
 position = Vector2(107, 717)
-path_speed = 0.005
+path_speed = 0.002
+
+[node name="ObjectStolen" parent="." instance=ExtResource("8_reflk")]
+position = Vector2(2104, 153)
+
+[node name="GetCard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_tnixs")]
+player = NodePath("../Player")

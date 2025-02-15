@@ -7,8 +7,10 @@ extends CharacterBody2D
 var dash_velocity: int = 0
 var can_stun := false
 var can_destroy_wall := false
+var can_get_treasure := false
 var closest_enemy : Node2D = null
 var closest_wall : Node2D = null
+var closest_treasure : Node2D = null
 var tween: Tween
 
 func _ready():
@@ -22,6 +24,8 @@ func _process(delta):
 		get_closest_enemy()
 	if can_destroy_wall:
 		get_closest_wall()
+	if can_get_treasure:
+		get_closest_treasure()
 				
 						
 
@@ -49,6 +53,15 @@ func dash():
 	tween = create_tween()
 	tween.tween_property(self, "dash_velocity", 0, 0.5).set_ease(Tween.EASE_OUT)
 	
+func get_closest_treasure():
+	if %BombZone.get_overlapping_bodies().any(func(body): if body.get_parent() is Treasure:
+			if closest_treasure == null:
+				closest_treasure = body.get_parent()
+				closest_treasure.set_outline(true)
+			return true) == false:
+				if closest_treasure != null:
+					closest_treasure.set_outline(false)
+					closest_treasure = null
 
 func get_closest_enemy():
 	if %CheckZone.get_overlapping_bodies().any(func(body): if body is Enemy:
@@ -89,6 +102,11 @@ func stun_closest_enemy():
 func destroy_closest_wall():
 	closest_wall.destroys()
 	closest_wall = null
+	
+func get_treasure():
+	closest_treasure.take()
+	closest_treasure = null
+	
 
 
 func play_animation_idle():
