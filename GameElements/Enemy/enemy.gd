@@ -23,4 +23,4 @@ func _on_taunt_area_body_entered(body):
 
 func _on_catch_area_body_entered(body):
 	if body.is_in_group("Player"):
-		get_node("/root/Map/GameManager").player_catch()
+		get_node("/root/Game/GameManager").player_catch()

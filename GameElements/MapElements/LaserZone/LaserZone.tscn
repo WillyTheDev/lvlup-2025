@@ -29,3 +29,5 @@ shape = SubResource("RectangleShape2D_cs7qx")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.171875, 38)
 texture = SubResource("GradientTexture1D_ftj5k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
