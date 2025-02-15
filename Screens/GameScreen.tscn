@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=12 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
+[ext_resource type="Shader" path="res://Shaders/vhs.gdshader" id="2_q1uqj"]
 [ext_resource type="PackedScene" uid="uid://b46070ptp8kn4" path="res://GameElements/Map/Map2.tscn" id="3_ajet5"]
 [ext_resource type="PackedScene" uid="uid://bf2c1gdbfmdxw" path="res://GameElements/GameManager/GameManager.tscn" id="3_ng6j0"]
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="4_n1qik"]
@@ -10,8 +11,44 @@
 [ext_resource type="PackedScene" uid="uid://dl7b6fnbwdqtt" path="res://GameElements/AlertLayer/alert_layer.tscn" id="8_6i3pe"]
 [ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="9_4wosp"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m1dnm"]
+shader = ExtResource("2_q1uqj")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.003
+shader_parameter/noise_opacity = 0.08
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.01
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.101
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_m4qnj")
+
+[node name="filter" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="filter"]
+material = SubResource("ShaderMaterial_m1dnm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_jgh8e")]
 
@@ -23,6 +60,8 @@ position = Vector2(196, 865)
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("5_7rlnd")]
 unique_name_in_owner = true
+MAP_SIZE_X = 4000
+MAP_SIZE_Y = 2000
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer") instance=ExtResource("3_ng6j0")]
 unique_name_in_owner = true

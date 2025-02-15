@@ -30,6 +30,7 @@ func on_treasure_get():
 
 func _on_card_selection_layer_on_next_pressed():
 	get_tree().paused = false
+	on_next_round_started.emit()
 	card_selection_layer.visible = false
 	player.global_position = player_spawn.global_position
 	%BigCamera.enabled = false

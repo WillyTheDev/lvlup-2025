@@ -3,14 +3,8 @@
 [ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
 [ext_resource type="Texture2D" uid="uid://p2rvs6wb7gwu" path="res://Assets/Enemy/Guard.png" id="2_uoo3p"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2p4x7"]
-radius = 38.0526
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wbkan"]
-radius = 339.329
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
-radius = 60.208
+[sub_resource type="CircleShape2D" id="CircleShape2D_540wn"]
+radius = 43.2897
 
 [sub_resource type="Shader" id="Shader_oot3p"]
 code = "shader_type canvas_item;
@@ -44,27 +38,20 @@ shader_parameter/onoff = 1.0
 shader_parameter/line_colour = Color(1, 1, 1, 1)
 shader_parameter/line_thickness = 10
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbkan"]
+radius = 339.329
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
+radius = 60.208
+
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
-collision_layer = 2
 script = ExtResource("1_jljaa")
 enemy_speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2p4x7")
-debug_color = Color(0, 0.639513, 0.363583, 0.42)
-
-[node name="TauntArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TauntArea"]
-shape = SubResource("CircleShape2D_wbkan")
-
-[node name="CatchArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchArea"]
-shape = SubResource("CircleShape2D_xo1kb")
-debug_color = Color(0.95366, 3.17663e-06, 0.552429, 0.42)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_540wn")
+debug_color = Color(0.613189, 0.360133, 0.998859, 0.42)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 unique_name_in_owner = true
@@ -75,6 +62,20 @@ unique_name_in_owner = true
 position = Vector2(0, -30)
 scale = Vector2(0.273438, 0.273438)
 texture = ExtResource("2_uoo3p")
+
+[node name="TauntArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TauntArea"]
+shape = SubResource("CircleShape2D_wbkan")
+
+[node name="CatchArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchArea"]
+shape = SubResource("CircleShape2D_xo1kb")
+debug_color = Color(0.95366, 3.17663e-06, 0.552429, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [connection signal="body_entered" from="TauntArea" to="." method="_on_taunt_area_body_entered"]
 [connection signal="body_entered" from="CatchArea" to="." method="_on_catch_area_body_entered"]

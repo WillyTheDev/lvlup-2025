@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://d21eh4y3w2ty2" path="res://GameElements/Fog/Fog.png" id="2_ytk0w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4a65n"]
-radius = 49.2544
+radius = 99.5038
 
 [node name="Fog" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_garv4")
 
 [node name="Fog" type="Sprite2D" parent="."]

@@ -9,3 +9,4 @@ func _ready():
 
 func apply_effect():
 	player.dash()
+	self.queue_free()

@@ -18,7 +18,8 @@ func _ready():
 func _physics_process(delta):
 	if target != null:
 		var direction = (global_position - target.global_position).normalized() * normalized
-		position += delta * enemy_speed * direction
+		velocity = enemy_speed * direction
+		move_and_slide()
 
 func set_outline(value):
 	if value == true:
@@ -42,6 +43,14 @@ func _on_catch_area_body_entered(body):
 func stun():
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	self.visible = false
+	self.set_collision_layer_value(1,false)
+	self.set_collision_mask_value(1, false)
+	%CatchArea.set_collision_layer_value(1, false)
+	%CatchArea.set_collision_mask_value(1, false)
 	
 func enable_enemy():
 	self.visible = true
+	self.set_collision_layer_value(1,true)
+	self.set_collision_mask_value(1, true)
+	%CatchArea.set_collision_layer_value(1, true)
+	%CatchArea.set_collision_mask_value(1, true)

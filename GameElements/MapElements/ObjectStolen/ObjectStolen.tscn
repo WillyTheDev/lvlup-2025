@@ -13,7 +13,7 @@ resource_local_to_scene = true
 shader = ExtResource("2_xu2oh")
 shader_parameter/onoff = 0.0
 shader_parameter/line_colour = Color(1, 1, 1, 1)
-shader_parameter/line_thickness = 1
+shader_parameter/line_thickness = 5
 
 [sub_resource type="Gradient" id="Gradient_1loou"]
 offsets = PackedFloat32Array(0.539749)
