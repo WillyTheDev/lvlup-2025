@@ -30,12 +30,12 @@ colors = PackedColorArray(0.688343, 0.696625, 0.828739, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_5206k"]
 gradient = SubResource("Gradient_xnoua")
 
-[sub_resource type="Gradient" id="Gradient_auak4"]
+[sub_resource type="Gradient" id="Gradient_7418h"]
 offsets = PackedFloat32Array(0.462151)
 colors = PackedColorArray(0.517715, 0.778263, 0.615166, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uq2o2"]
-gradient = SubResource("Gradient_auak4")
+gradient = SubResource("Gradient_7418h")
 
 [sub_resource type="Curve2D" id="Curve2D_hwjfb"]
 _data = {
@@ -278,6 +278,10 @@ rotation = 3.14159
 position = Vector2(1740, 220)
 rotation = 3.14159
 
+[node name="Wall76" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
+position = Vector2(1720, 220)
+rotation = 3.14159
+
 [node name="Wall64" parent="MapElements/Walls" instance=ExtResource("2_l8b2x")]
 position = Vector2(1240, 300)
 rotation = 3.14159
@@ -451,12 +455,12 @@ rotation = 3.14159
 scale = Vector2(23, 0.9)
 
 [node name="Wall61" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
-position = Vector2(980, -90)
+position = Vector2(980, -89)
 rotation = 3.14159
-scale = Vector2(23, 0.9)
+scale = Vector2(23, 1)
 
 [node name="Wall62" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
-position = Vector2(980, 1197)
+position = Vector2(980, 1195)
 rotation = 3.14159
 scale = Vector2(23, 0.9)
 

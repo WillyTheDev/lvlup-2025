@@ -279,12 +279,12 @@ rotation = 3.14159
 scale = Vector2(18, 0.9)
 
 [node name="Wall61" parent="MapElements/Bounds" instance=ExtResource("6_s4lt7")]
-position = Vector2(1040, 470)
+position = Vector2(1040, 472)
 rotation = 3.14159
 scale = Vector2(18, 0.9)
 
 [node name="Wall62" parent="MapElements/Bounds" instance=ExtResource("6_s4lt7")]
-position = Vector2(1040, 1210)
+position = Vector2(1040, 1208)
 rotation = 3.14159
 scale = Vector2(18, 0.9)
 
