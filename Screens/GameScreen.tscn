@@ -128,8 +128,9 @@ position = Vector2(196, 865)
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("5_7rlnd")]
 unique_name_in_owner = true
-MAP_SIZE_X = 4000
-MAP_SIZE_Y = 2000
+position = Vector2(-388, -206)
+MAP_SIZE_X = 6000
+MAP_SIZE_Y = 3000
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer", "in_game_ui") instance=ExtResource("3_ng6j0")]
 unique_name_in_owner = true

@@ -7,7 +7,6 @@
 size = Vector2(60, 40)
 
 [node name="LaserZone" type="Node2D" groups=["LaserZone"]]
-modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_dkr0o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
