@@ -153,6 +153,7 @@ enabled = false
 
 [node name="CardSelectionLayer" parent="Map" node_paths=PackedStringArray("in_game_ui") instance=ExtResource("13_tapi6")]
 unique_name_in_owner = true
+maximum_amount_of_card = 10
 in_game_ui = NodePath("../InGameUiLayer")
 
 [node name="PlayerSpawn" type="Node2D" parent="Map"]
