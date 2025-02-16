@@ -21,10 +21,6 @@ var has_treasure = false
 
 func _ready():
 	game_manager = $"../GameManager"
-	game_manager.player_has_been_catched.connect(kill_player)
-
-func kill_player():
-	pass
 	
 func _process(delta):
 	if can_stun:

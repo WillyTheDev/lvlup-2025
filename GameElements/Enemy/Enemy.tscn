@@ -182,7 +182,7 @@ volume_db = -10.0
 [node name="ChaseAudioPlayer" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_wraca")
-volume_db = 15.0
+volume_db = 5.0
 max_distance = 1000.0
 attenuation = 3.36358
 parameters/looping = true

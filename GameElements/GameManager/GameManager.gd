@@ -1,6 +1,8 @@
 class_name GameManager
 extends Node
 
+const SNEAK_MUSIC_FILE = preload("res://Assets/Music/Sneaky Steal in the House.mp3")
+
 @export var player : Node2D = null
 @export var card_selection_layer : CanvasLayer = null
 @export var player_spawn : Node2D = null
@@ -12,7 +14,6 @@ extends Node
 var player_is_playing = false
 var start_time = 0
 var elapsed_time = 0
-signal player_has_been_catched
 signal on_next_round_started
 
 func _ready():
@@ -20,15 +21,16 @@ func _ready():
 	in_game_ui.cardManager.player = player
 	get_tree().paused = true
 	
-func _process(delta):
+func _process(_delta):
 	if player_is_playing == true:
 		var end_time = Time.get_ticks_msec()
 		elapsed_time = float(end_time - start_time) / 1000.0
 
 func player_catch():
+	%AudioStreamPlayer.stream = SNEAK_MUSIC_FILE
+	%AudioStreamPlayer.play()
 	get_tree().paused = true
 	alert_layer.stop_layer()
-	player_has_been_catched.emit()
 	card_selection_layer.visible = true
 	%PeekButtonLayer.visible = true
 	player.player_camera.enabled = false

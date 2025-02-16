@@ -10,6 +10,7 @@ var starting_position : Vector2
 func _ready():
 	set_outline(false)
 	starting_position = self.global_position
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 
 func _physics_process(delta):
 	if target != null:
@@ -45,7 +46,6 @@ func _on_catch_area_body_entered(body):
 func stun():
 	%StunAudioPlayer.play()
 	%ChaseAudioPlayer.stop()
-	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	const SMOKE = preload("res://GameElements/Smoke_explosion/smoke_explosion.tscn")
 	var new_smoke = SMOKE.instantiate()
 	new_smoke.global_position = self.global_position
