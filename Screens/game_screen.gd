@@ -6,5 +6,3 @@ func _ready():
 func _on_retry_game_button_pressed():
 	%VictoryLayer.visible = false
 	%GameManager.player_catch()
-	
-	#get_tree().change_scene_to_file("res://Screens/WelcomeScreen.tscn")

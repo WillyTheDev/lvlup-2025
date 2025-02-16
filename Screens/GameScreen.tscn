@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=23 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b70nyp2j7rnhm" path="res://Assets/UI/buttonPeek_neutral.png" id="17_bbria"]
 [ext_resource type="Texture2D" uid="uid://7pb7u85xmqa4" path="res://Assets/UI/buttonPeek_active.png" id="18_weqm5"]
 [ext_resource type="Texture2D" uid="uid://st0vlv6afuep" path="res://Assets/UI/buttonPeek_hover.png" id="19_gptqk"]
+[ext_resource type="PackedScene" uid="uid://cv8cjg31p33xr" path="res://Screens/EscapeListener.tscn" id="21_b06v5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rypyi"]
 shader = ExtResource("2_q1uqj")
@@ -201,6 +202,9 @@ texture_normal = ExtResource("17_bbria")
 texture_pressed = ExtResource("18_weqm5")
 texture_hover = ExtResource("19_gptqk")
 script = ExtResource("6_wnuff")
+
+[node name="EscapeListener" parent="." instance=ExtResource("21_b06v5")]
+process_mode = 3
 
 [connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]

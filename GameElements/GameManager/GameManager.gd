@@ -21,7 +21,7 @@ func _ready():
 	in_game_ui.cardManager.player = player
 	get_tree().paused = true
 	
-func _process(delta):
+func _process(_delta):
 	if player_is_playing == true:
 		var end_time = Time.get_ticks_msec()
 		elapsed_time = float(end_time - start_time) / 1000.0
