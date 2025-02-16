@@ -1,5 +1,9 @@
 extends Node
 
+var area2d : Area2D
+
+func _ready():
+	area2d = %Area2D
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
