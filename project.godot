@@ -10,11 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Geometry of CFrime"
+config/name="Geometry of Crime"
 config/description=" Game created for the LvlUp Game Jam 2025 in 48 hours."
 run/main_scene="res://Screens/WelcomeScreen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://Assets/LevelDesign/ObjectStolen.png"
+config/icon="res://Assets/LevelDesign/ObjectStolen.png"
 
 [display]
 
