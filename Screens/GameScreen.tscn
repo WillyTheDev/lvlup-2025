@@ -165,6 +165,7 @@ position = Vector2(100, 755)
 scale = Vector2(1.8, 2.6)
 
 [node name="PeekButtonLayer" type="CanvasLayer" parent="Map"]
+visible = false
 
 [node name="ButtonMargin" type="MarginContainer" parent="Map/PeekButtonLayer"]
 anchors_preset = 3
@@ -186,9 +187,13 @@ texture_normal = ExtResource("17_bbria")
 texture_pressed = ExtResource("18_weqm5")
 texture_hover = ExtResource("19_gptqk")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+process_mode = 3
 stream = ExtResource("11_24i8l")
 autoplay = true
+playback_type = 1
+parameters/looping = true
 
 [connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]

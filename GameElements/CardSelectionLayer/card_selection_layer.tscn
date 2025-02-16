@@ -30,7 +30,6 @@
 [node name="CardSelectionLayer" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_l4q4s")
-maximum_amount_of_card = 10
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
