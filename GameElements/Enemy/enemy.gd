@@ -9,17 +9,12 @@ var normalized = 1
 var starting_position : Vector2
 
 func _ready():
-	if get_parent() is PathFollow2D:
-		print("Parent is PathFollow2D")
-		normalized = -1
-	else:
-		normalized = -1
 	set_outline(false)
 	starting_position = self.global_position
 
 func _physics_process(delta):
 	if target != null:
-		var direction = (global_position - target.global_position).normalized() * normalized
+		var direction = (global_position - target.global_position).normalized() * normalized * -1
 		velocity = enemy_speed * direction
 		move_and_slide()
 		if velocity.length() > 0.0:
@@ -48,6 +43,11 @@ func _on_catch_area_body_entered(body):
 		
 func stun():
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
+	const SMOKE = preload("res://GameElements/Smoke_explosion/smoke_explosion.tscn")
+	var new_smoke = SMOKE.instantiate()
+	new_smoke.global_position = self.global_position
+	new_smoke.scale += Vector2(0.5,0.5)
+	get_node("/root/Game/Map").add_child(new_smoke)
 	self.visible = false
 	self.set_collision_layer_value(1,false)
 	self.set_collision_mask_value(1, false)
