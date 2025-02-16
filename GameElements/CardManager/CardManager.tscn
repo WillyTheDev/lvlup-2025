@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://yfevd8114od4"]
+[gd_scene load_steps=6 format=3 uid="uid://yfevd8114od4"]
 
 [ext_resource type="Script" path="res://GameElements/CardManager/CardManager.gd" id="1_5a4eq"]
-[ext_resource type="Texture2D" uid="uid://cpqs2nuo7jkyu" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
+[ext_resource type="Texture2D" uid="uid://ckfxexl6mh0ot" path="res://Assets/UI/card-stack_4_pile.png" id="2_ja26n"]
 [ext_resource type="Script" path="res://GameElements/CardManager/e_button.gd" id="3_gpkl0"]
-[ext_resource type="Texture2D" uid="uid://dqn4ryvixakwo" path="res://Assets/UI/buttonE_neutral.png" id="4_wrinm"]
+[ext_resource type="Texture2D" uid="uid://1kgvsau5xonh" path="res://Assets/UI/buttonE_neutral.png" id="4_wrinm"]
+[ext_resource type="AudioStream" uid="uid://ddts8u56qjp3r" path="res://Assets/Sounds/clic_button.mp3" id="5_jv6xf"]
 
 [node name="CardManager" type="Node2D"]
 script = ExtResource("1_5a4eq")
@@ -84,3 +85,8 @@ offset_bottom = 60.0
 rotation = -0.174533
 scale = Vector2(1.45, 1.45)
 texture = ExtResource("4_wrinm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_jv6xf")
+volume_db = -10.0

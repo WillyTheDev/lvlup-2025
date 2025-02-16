@@ -15,6 +15,7 @@ var player_is_playing = false
 var start_time = 0
 var elapsed_time = 0
 signal on_next_round_started
+signal player_caught
 
 func _ready():
 	# Set the player in the card manager
@@ -27,6 +28,7 @@ func _process(_delta):
 		elapsed_time = float(end_time - start_time) / 1000.0
 
 func player_catch():
+	player_caught.emit
 	%AudioStreamPlayer.stream = SNEAK_MUSIC_FILE
 	%AudioStreamPlayer.play()
 	get_tree().paused = true

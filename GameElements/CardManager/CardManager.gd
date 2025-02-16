@@ -12,6 +12,11 @@ func _init():
 	self._cardStack = []
 	self._inGame = false
 
+func _process(_delta):
+	if Input.is_action_just_pressed("use_card"):
+		if _isStackEmpty():
+			%AudioStreamPlayer.play()
+
 # Called when the node enters the scene tree for the first time.
 func start():
 	# Don't start the manager if the stack is empty
