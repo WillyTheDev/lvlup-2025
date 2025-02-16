@@ -65,7 +65,7 @@ func dash():
 	
 func get_closest_treasure():
 	# Get all overlapping bodies
-	var overlapping_bodies = %BombZone.get_overlapping_bodies()
+	var overlapping_bodies = %BombZone.get_overlapping_bodies().map(func(body): return body.get_parent())
 	# Get only the treasures
 	var treasure_bodies = overlapping_bodies.filter(func(body): return body is Treasure)
 	# If there are no treasures, remove the outline from the closest treasure
