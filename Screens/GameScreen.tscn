@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=21 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
@@ -16,6 +16,9 @@
 [ext_resource type="AudioStream" uid="uid://bawb1sdd04el1" path="res://Assets/Music/Sneaky Steal in the House.mp3" id="11_24i8l"]
 [ext_resource type="PackedScene" uid="uid://x85x4403jd3j" path="res://GameElements/Destination/destination_area.tscn" id="12_u0x3s"]
 [ext_resource type="PackedScene" uid="uid://bla6uvybvj3to" path="res://GameElements/InGameUILayer/InGameUILayer.tscn" id="12_wxfhe"]
+[ext_resource type="Texture2D" uid="uid://b70nyp2j7rnhm" path="res://Assets/UI/buttonPeek_neutral.png" id="17_bbria"]
+[ext_resource type="Texture2D" uid="uid://7pb7u85xmqa4" path="res://Assets/UI/buttonPeek_active.png" id="18_weqm5"]
+[ext_resource type="Texture2D" uid="uid://st0vlv6afuep" path="res://Assets/UI/buttonPeek_hover.png" id="19_gptqk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rypyi"]
 shader = ExtResource("2_q1uqj")
@@ -161,9 +164,32 @@ gameManager = NodePath("../GameManager")
 position = Vector2(100, 755)
 scale = Vector2(1.8, 2.6)
 
+[node name="PeekButtonLayer" type="CanvasLayer" parent="Map"]
+
+[node name="ButtonMargin" type="MarginContainer" parent="Map/PeekButtonLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -366.0
+offset_top = -195.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Button" type="TextureButton" parent="Map/PeekButtonLayer/ButtonMargin"]
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("17_bbria")
+texture_pressed = ExtResource("18_weqm5")
+texture_hover = ExtResource("19_gptqk")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_24i8l")
 autoplay = true
 
 [connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]
+[connection signal="pressed" from="Map/PeekButtonLayer/ButtonMargin/Button" to="Map/GameManager" method="_on_peek_button_pressed"]
