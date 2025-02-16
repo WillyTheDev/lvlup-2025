@@ -30,6 +30,7 @@ func player_catch():
 	alert_layer.stop_layer()
 	player_has_been_catched.emit()
 	card_selection_layer.visible = true
+	%PeekButtonLayer.visible = true
 	player.player_camera.enabled = false
 	in_game_ui.visible = false
 	%BigCamera.enabled = true
@@ -45,6 +46,7 @@ func _on_card_selection_layer_on_next_pressed():
 	in_game_ui.visible = true
 	on_next_round_started.emit()
 	card_selection_layer.visible = false
+	%PeekButtonLayer.visible = false
 	player.global_position = player_spawn.global_position
 	player.has_treasure = false
 	%BigCamera.enabled = false
@@ -68,13 +70,4 @@ func player_has_finished():
 	$"../../VictoryLayer/MarginContainer/VBoxContainer/Time Label".text = "[center]" + str(elapsed_time) + " seconds"
 
 func _on_peek_button_pressed():
-	# TODO: Make the button clickable
-	print("Peek pressed")
-	%CardSelectionLayer.visible = false
-	
-func _input(event):
-	if event.is_action_pressed("show_map"):
-		if card_selection_layer.visible:
-			card_selection_layer.visible = false
-		else:
-			card_selection_layer.visible = true
+	card_selection_layer.visible = !card_selection_layer.visible
