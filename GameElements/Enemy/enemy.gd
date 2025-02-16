@@ -55,6 +55,7 @@ func stun():
 	%CatchArea.set_collision_mask_value(1, false)
 	
 func enable_enemy():
+	target = null
 	self.global_position = starting_position
 	self.visible = true
 	self.set_collision_layer_value(1,true)

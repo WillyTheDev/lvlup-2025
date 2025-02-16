@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c5j7r1ciix4fh"]
 
-[ext_resource type="Texture2D" uid="uid://8nnokq36mn5m" path="res://Assets/Cards/assomer.png" id="1_5sy8e"]
+[ext_resource type="Texture2D" uid="uid://q1k0mrpulhd0" path="res://Assets/Cards/assomer.png" id="1_5sy8e"]
 
 [node name="SelectedCard" type="TextureButton"]
 custom_minimum_size = Vector2(130, 177)
