@@ -1029,18 +1029,6 @@ rotation = 1.5708
 position = Vector2(1560, 1170)
 rotation = 1.5708
 
-[node name="Wall226" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1170)
-rotation = 1.5708
-
-[node name="Wall206" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 760)
-rotation = 1.5708
-
-[node name="Wall207" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 660)
-rotation = 1.5708
-
 [node name="Wall208" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
 position = Vector2(1120, 960)
 rotation = 1.5708
@@ -1067,46 +1055,6 @@ rotation = 1.5708
 
 [node name="Wall219" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
 position = Vector2(1560, 970)
-rotation = 1.5708
-
-[node name="Wall220" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 870)
-rotation = 1.5708
-
-[node name="Wall221" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 770)
-rotation = 1.5708
-
-[node name="Wall222" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 670)
-rotation = 1.5708
-
-[node name="Wall223" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1070)
-rotation = 1.5708
-
-[node name="Wall224" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 970)
-rotation = 1.5708
-
-[node name="Wall210" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 960)
-rotation = 1.5708
-
-[node name="Wall211" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 860)
-rotation = 1.5708
-
-[node name="Wall212" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 370)
-rotation = 1.5708
-
-[node name="Wall213" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 470)
-rotation = 1.5708
-
-[node name="Wall214" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 560)
 rotation = 1.5708
 
 [node name="Wall169" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
@@ -1362,8 +1310,8 @@ scale = Vector2(4.98047, 315)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(646.25, 925)
-scale = Vector2(3.62305, 570)
+position = Vector2(630, 930)
+scale = Vector2(3.67187, 600)
 texture = SubResource("GradientTexture1D_15ayl")
 
 [node name="Sprite2D15" type="Sprite2D" parent="MapElements/Rooms"]
@@ -1392,8 +1340,8 @@ scale = Vector2(0.78125, 133.75)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1330, 915)
-scale = Vector2(1.77246, 630)
+position = Vector2(1326.56, 915)
+scale = Vector2(1.7456, 630)
 texture = SubResource("GradientTexture1D_ittef")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapElements/Rooms"]
@@ -1452,8 +1400,8 @@ scale = Vector2(0.527345, 965)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D7" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(642.5, 392.5)
-scale = Vector2(3.65234, 435)
+position = Vector2(637.5, 397.5)
+scale = Vector2(3.61328, 445)
 texture = SubResource("GradientTexture1D_jkpyv")
 
 [node name="Enemies" type="Node" parent="MapElements"]
@@ -1471,7 +1419,7 @@ position = Vector2(2120, 1310)
 scale = Vector2(0.52, 0.52)
 
 [node name="Enemy6" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1560, 1290)
+position = Vector2(1620, 1440)
 scale = Vector2(0.33, 0.33)
 
 [node name="Enemy7" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
@@ -1574,7 +1522,6 @@ scale = Vector2(9.67999, 2.2)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="1"]
 position = Vector2(32.2723, 290.91)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1ssuq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="2"]
@@ -1644,7 +1591,7 @@ rotation = 1.57079
 scale = Vector2(2.17299, 1.41488)
 
 [node name="DoorClosed2" parent="MapElements/Doors" instance=ExtResource("6_lk6p2")]
-position = Vector2(630, 640)
+position = Vector2(620, 640)
 scale = Vector2(9.42171, 2.64516)
 
 [node name="ObjectStolen" parent="MapElements" instance=ExtResource("7_8lje3")]
