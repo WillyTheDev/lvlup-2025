@@ -14,7 +14,6 @@ const SNEAK_MUSIC_FILE = preload("res://Assets/Music/Sneaky Steal in the House.m
 var player_is_playing = false
 var start_time = 0
 var elapsed_time = 0
-signal player_has_been_catched
 signal on_next_round_started
 
 func _ready():
@@ -32,7 +31,6 @@ func player_catch():
 	%AudioStreamPlayer.play()
 	get_tree().paused = true
 	alert_layer.stop_layer()
-	player_has_been_catched.emit()
 	card_selection_layer.visible = true
 	%PeekButtonLayer.visible = true
 	player.player_camera.enabled = false

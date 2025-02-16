@@ -24,7 +24,6 @@ func disable_laser():
 	laser_zone.area2d.set_collision_layer_value(1,false)
 	laser_zone.area2d.set_collision_mask_value(1, false)
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
-	# Changer sprite ici lorsque désactiver
 	laser_zone.modulate = Color("ffffff00")
 	%StaticBody2D.set_collision_layer_value(1,false)
 	%StaticBody2D.set_collision_mask_value(1, false)
