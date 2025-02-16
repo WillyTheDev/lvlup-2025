@@ -3,6 +3,7 @@ extends Node
 
 const OFF_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_off.png")
 const ON_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_on.png")
+const HOVER_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_hover.png")
 
 @export var laser_zone: Node = null
 
@@ -10,11 +11,14 @@ func set_outline(value):
 	if value == true:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.WHITE)
 		%CanvasGroup.material.set_shader_parameter("onoff",1.0)
+		%CanvasGroup.get_node("Sprite").texture = HOVER_TEXTURE
 	else:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.BLACK)
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
+		%CanvasGroup.get_node("Sprite").texture = ON_TEXTURE
 
 func disable_laser():
+	set_outline(false)
 	%CanvasGroup.get_node("Sprite").texture = OFF_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,false)
 	laser_zone.area2d.set_collision_mask_value(1, false)

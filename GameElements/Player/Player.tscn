@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://GameElements/Player/player.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
-[ext_resource type="Texture2D" uid="uid://80b7rq82ajgf" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
+[ext_resource type="Texture2D" uid="uid://k6nmutniq7xl" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
 [ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="4_fj21j"]
-[ext_resource type="Texture2D" uid="uid://dcx410r361to6" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
+[ext_resource type="Texture2D" uid="uid://bgsuro5snpvxr" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
 radius = 44.3778
@@ -106,6 +106,7 @@ radius = 275.465
 radius = 113.283
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 12
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_4f2pt")
 
