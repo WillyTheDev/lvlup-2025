@@ -133,6 +133,7 @@ MAP_SIZE_Y = 2000
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer", "in_game_ui") instance=ExtResource("3_ng6j0")]
 unique_name_in_owner = true
+process_mode = 3
 player = NodePath("../Player")
 card_selection_layer = NodePath("../CardSelectionLayer")
 player_spawn = NodePath("../PlayerSpawn")

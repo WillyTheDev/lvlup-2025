@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://wlp50gc4teyc"]
+[gd_scene load_steps=28 format=3 uid="uid://wlp50gc4teyc"]
 
 [ext_resource type="Script" path="res://Scenes/card_selection_controller.gd" id="1_l4q4s"]
 [ext_resource type="Texture2D" uid="uid://swph2n418dvq" path="res://Assets/UI/buttonNext_neutral.png" id="2_33gdo"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ervt6pviqvft" path="res://Assets/Cards/peter_mur_hover.png" id="20_r5ing"]
 [ext_resource type="Texture2D" uid="uid://lcr7at5pu7lv" path="res://Assets/Cards/vole objet_pressed.png" id="22_xa61d"]
 [ext_resource type="Texture2D" uid="uid://b4ma11hmvb50x" path="res://Assets/Cards/vole objet_hover.png" id="23_4tnlj"]
+[ext_resource type="Texture2D" uid="uid://7cua66iwtgpp" path="res://Assets/UI/show_map.png" id="27_rilqm"]
 
 [node name="CardSelectionLayer" type="CanvasLayer"]
 process_mode = 3
@@ -224,6 +225,11 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="ShowMap" type="Sprite2D" parent="."]
+position = Vector2(150.844, 932.951)
+scale = Vector2(0.31156, 0.31156)
+texture = ExtResource("27_rilqm")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer/reset" to="." method="reset_selection"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer/StunCardButton" to="." method="_on_stun_card_button_pressed"]

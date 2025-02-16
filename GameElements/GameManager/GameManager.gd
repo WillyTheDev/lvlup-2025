@@ -71,3 +71,10 @@ func _on_peek_button_pressed():
 	# TODO: Make the button clickable
 	print("Peek pressed")
 	%CardSelectionLayer.visible = false
+	
+func _input(event):
+	if event.is_action_pressed("show_map"):
+		if card_selection_layer.visible:
+			card_selection_layer.visible = false
+		else:
+			card_selection_layer.visible = true
