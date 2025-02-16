@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c886xe01wsxlt"]
+[gd_scene load_steps=11 format=3 uid="uid://c886xe01wsxlt"]
 
 [ext_resource type="Script" path="res://Screens/welcome_screen.gd" id="1_3qcqo"]
 [ext_resource type="Texture2D" uid="uid://4noe77bou48k" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://Shaders/vhs.gdshader" id="2_571ob"]
 [ext_resource type="Texture2D" uid="uid://c2gk43snrmiho" path="res://Assets/UI/buttonPlay_active.png" id="3_abn7t"]
 [ext_resource type="Texture2D" uid="uid://ck35skx0nu6sc" path="res://Assets/UI/menu.png" id="3_r50f2"]
+[ext_resource type="FontFile" uid="uid://c8heiuppjp7jn" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="4_6srox"]
 [ext_resource type="Texture2D" uid="uid://glk80lihmt2t" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
 [ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="7_22trh"]
 
@@ -63,13 +64,73 @@ texture = ExtResource("3_r50f2")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -197.0
-offset_right = 512.0
+offset_top = -323.0
+offset_right = 679.0
 grow_vertical = 0
 theme_override_constants/margin_left = 126
 theme_override_constants/margin_bottom = 126
 
-[node name="PlayButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button1" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_6srox")
+theme_override_font_sizes/font_size = 64
+text = "1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_6srox")
+theme_override_font_sizes/font_size = 64
+text = "2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_6srox")
+theme_override_font_sizes/font_size = 64
+text = "3"
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -80,5 +141,8 @@ script = ExtResource("7_22trh")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_17hql")]
 
-[connection signal="pressed" from="CanvasLayer/MarginContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="transition_is_finished" from="TransitionLayer" to="." method="_on_transition_layer_transition_is_finished"]
