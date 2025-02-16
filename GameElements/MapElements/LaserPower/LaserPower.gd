@@ -33,6 +33,6 @@ func enable_enemy():
 	%CanvasGroup.get_node("Sprite").texture = ON_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,true)
 	laser_zone.area2d.set_collision_mask_value(1, true)
-	laser_zone.visibility.modulate = Color("ffffff")
+	laser_zone.modulate = Color("ffffff")
 	%StaticBody2D.set_collision_layer_value(1,true)
 	%StaticBody2D.set_collision_mask_value(1, true)
