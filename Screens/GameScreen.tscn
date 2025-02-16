@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://fincglxnx3tp"]
+[gd_scene load_steps=22 format=3 uid="uid://fincglxnx3tp"]
 
 [ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_m4qnj"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_jgh8e"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="4_n1qik"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="5_7rlnd"]
 [ext_resource type="Texture2D" uid="uid://2jisgctdsxcg" path="res://Assets/UI/buttonRetry_hover.png" id="5_h8stj"]
+[ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="6_wnuff"]
 [ext_resource type="PackedScene" uid="uid://wlp50gc4teyc" path="res://GameElements/CardSelectionLayer/card_selection_layer.tscn" id="7_eqmjq"]
 [ext_resource type="PackedScene" uid="uid://dl7b6fnbwdqtt" path="res://GameElements/AlertLayer/alert_layer.tscn" id="8_6i3pe"]
 [ext_resource type="AudioStream" uid="uid://bawb1sdd04el1" path="res://Assets/Music/Sneaky Steal in the House.mp3" id="11_24i8l"]
@@ -103,6 +104,7 @@ size_flags_vertical = 0
 texture_normal = ExtResource("3_xgb07")
 texture_pressed = ExtResource("4_b2437")
 texture_hover = ExtResource("5_h8stj")
+script = ExtResource("6_wnuff")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_jgh8e")]
 layer = 2
@@ -198,6 +200,7 @@ action_mode = 0
 texture_normal = ExtResource("17_bbria")
 texture_pressed = ExtResource("18_weqm5")
 texture_hover = ExtResource("19_gptqk")
+script = ExtResource("6_wnuff")
 
 [connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]

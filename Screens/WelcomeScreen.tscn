@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://c886xe01wsxlt"]
+[gd_scene load_steps=10 format=3 uid="uid://c886xe01wsxlt"]
 
 [ext_resource type="Script" path="res://Screens/welcome_screen.gd" id="1_3qcqo"]
-[ext_resource type="Texture2D" uid="uid://bd5pfasnxuhtg" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
+[ext_resource type="Texture2D" uid="uid://4noe77bou48k" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_17hql"]
 [ext_resource type="Shader" path="res://Shaders/vhs.gdshader" id="2_571ob"]
-[ext_resource type="Texture2D" uid="uid://dsl04ff0qyypp" path="res://Assets/UI/buttonPlay_active.png" id="3_abn7t"]
-[ext_resource type="Texture2D" uid="uid://buq43t755qjuq" path="res://Assets/UI/menu.png" id="3_r50f2"]
-[ext_resource type="Texture2D" uid="uid://nblrt86hb55" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
+[ext_resource type="Texture2D" uid="uid://c2gk43snrmiho" path="res://Assets/UI/buttonPlay_active.png" id="3_abn7t"]
+[ext_resource type="Texture2D" uid="uid://ck35skx0nu6sc" path="res://Assets/UI/menu.png" id="3_r50f2"]
+[ext_resource type="Texture2D" uid="uid://glk80lihmt2t" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
+[ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="7_22trh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_axdo5"]
 shader = ExtResource("2_571ob")
@@ -75,6 +76,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("2_1ty1s")
 texture_pressed = ExtResource("3_abn7t")
 texture_hover = ExtResource("4_gl246")
+script = ExtResource("7_22trh")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("2_17hql")]
 
