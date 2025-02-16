@@ -18,7 +18,7 @@ func _ready():
 
 [sub_resource type="Gradient" id="Gradient_cjg57"]
 offsets = PackedFloat32Array(0.462151)
-colors = PackedColorArray(0.839937, 0.582845, 1, 1)
+colors = PackedColorArray(0.825009, 0.683684, 0.480259, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_i6rbt"]
 gradient = SubResource("Gradient_cjg57")
@@ -32,7 +32,7 @@ gradient = SubResource("Gradient_xnoua")
 
 [sub_resource type="Gradient" id="Gradient_auak4"]
 offsets = PackedFloat32Array(0.462151)
-colors = PackedColorArray(0.539334, 0.775493, 0.59139, 1)
+colors = PackedColorArray(0.517715, 0.778263, 0.615166, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uq2o2"]
 gradient = SubResource("Gradient_auak4")
@@ -422,3 +422,45 @@ scale = Vector2(1.64, 1.64)
 
 [node name="ObjectStolen" parent="MapElements" instance=ExtResource("5_6tmmb")]
 position = Vector2(1180, 210)
+
+[node name="Bounds" type="Node" parent="MapElements"]
+
+[node name="Wall34" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(-170, 552)
+rotation = 1.5708
+scale = Vector2(13, 1)
+
+[node name="Wall35" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(-160, 552)
+rotation = 1.5708
+scale = Vector2(13, 1)
+
+[node name="Wall36" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(2112, 552)
+rotation = 1.5708
+scale = Vector2(13, 1)
+
+[node name="Wall37" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(2122, 552)
+rotation = 1.5708
+scale = Vector2(13, 1)
+
+[node name="Wall60" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(980, -70)
+rotation = 3.14159
+scale = Vector2(23, 0.9)
+
+[node name="Wall61" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(980, -90)
+rotation = 3.14159
+scale = Vector2(23, 0.9)
+
+[node name="Wall62" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(980, 1197)
+rotation = 3.14159
+scale = Vector2(23, 0.9)
+
+[node name="Wall63" parent="MapElements/Bounds" instance=ExtResource("2_l8b2x")]
+position = Vector2(980, 1177)
+rotation = 3.14159
+scale = Vector2(23, 0.9)
