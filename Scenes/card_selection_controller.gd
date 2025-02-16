@@ -61,6 +61,5 @@ func _on_get_treasure_card_button_pressed():
 	add_card_to_selected_list(GET_CARD.instantiate())
 	# add_card_to_selected_list($MarginContainer/VBoxContainer/GridContainer/GetTreasureCardButton.texture_normal)
 
-
 func _on_execute_pressed():
 	on_next_pressed.emit()
