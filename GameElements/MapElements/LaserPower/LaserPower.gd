@@ -1,6 +1,9 @@
 class_name Switch
 extends Node
 
+const OFF_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_off.png")
+const ON_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_on.png")
+
 @export var laser_zone: Node = null
 
 func set_outline(value):
@@ -12,7 +15,7 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 
 func disable_laser():
-	laser_zone.visible = false
+	%CanvasGroup.get_node("Sprite").texture = OFF_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,false)
 	laser_zone.area2d.set_collision_mask_value(1, false)
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
@@ -21,8 +24,7 @@ func disable_laser():
 	%StaticBody2D.set_collision_mask_value(1, false)
 
 func enable_enemy():
-	# remettre sprite original ici
-	laser_zone.visible = true
+	%CanvasGroup.get_node("Sprite").texture = ON_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,true)
 	laser_zone.area2d.set_collision_mask_value(1, true)
 	%StaticBody2D.set_collision_layer_value(1,true)

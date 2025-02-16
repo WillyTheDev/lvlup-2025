@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://GameElements/MapElements/LaserPower/LaserPower.gd" id="1_0e1n3"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_fyuag"]
-[ext_resource type="Texture2D" uid="uid://j2b55oaitxaf" path="res://Assets/LevelDesign/LaserPower_on.png" id="3_3qs4m"]
+[ext_resource type="Texture2D" uid="uid://dget2qpp2bv0j" path="res://Assets/LevelDesign/LaserPower_on.png" id="3_3qs4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2oco"]
 size = Vector2(60, 40)
@@ -36,7 +36,7 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_6w7bc")
 scale = Vector2(0.171875, 38)
 
-[node name="Sprite2D4" type="Sprite2D" parent="CanvasGroup"]
+[node name="Sprite" type="Sprite2D" parent="CanvasGroup"]
 texture_filter = 1
 position = Vector2(174.545, 0.263158)
 scale = Vector2(2.51807, 0.00982344)
