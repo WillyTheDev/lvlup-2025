@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0v75qir1iy5k"]
+[gd_scene load_steps=7 format=3 uid="uid://b0v75qir1iy5k"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
-[ext_resource type="Texture2D" uid="uid://dj0xb4thountf" path="res://Assets/LevelDesign/DoorClosed.png" id="3_vgt2u"]
+[ext_resource type="Texture2D" uid="uid://ur2oguwunt82" path="res://Assets/LevelDesign/DoorClosed.png" id="3_vgt2u"]
+[ext_resource type="AudioStream" uid="uid://dpo2cu82a15uh" path="res://Assets/Sounds/open_door.mp3" id="4_nd2x3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cqea"]
 size = Vector2(100, 54)
@@ -38,3 +39,8 @@ texture_filter = 1
 position = Vector2(0, -1.93)
 scale = Vector2(0.195212, 0.225564)
 texture = ExtResource("3_vgt2u")
+
+[node name="UnlockAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_nd2x3")
+volume_db = 5.0

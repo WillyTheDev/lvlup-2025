@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbbpxm6qric1"]
+[gd_scene load_steps=8 format=3 uid="uid://cbbpxm6qric1"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/Wall/Wall.gd" id="1_fp3t0"]
-[ext_resource type="Texture2D" uid="uid://cwg5f4lprvmuf" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
+[ext_resource type="Texture2D" uid="uid://c0bwiphrrig2m" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
+[ext_resource type="AudioStream" uid="uid://diamopjt2aapi" path="res://Assets/Sounds/bomb_wall.mp3" id="3_7n6kx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv486"]
 size = Vector2(100, 16)
@@ -65,3 +66,7 @@ material = SubResource("ShaderMaterial_wpsqn")
 rotation = 1.57079
 scale = Vector2(-0.0784261, 0.39095)
 texture = ExtResource("2_hsmxr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_7n6kx")

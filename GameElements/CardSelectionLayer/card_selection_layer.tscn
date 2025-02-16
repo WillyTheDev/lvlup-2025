@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://wlp50gc4teyc"]
+[gd_scene load_steps=28 format=3 uid="uid://wlp50gc4teyc"]
 
 [ext_resource type="Script" path="res://Scenes/card_selection_controller.gd" id="1_l4q4s"]
 [ext_resource type="Texture2D" uid="uid://du2nvm8bnfu4k" path="res://Assets/UI/buttonNext_neutral.png" id="2_33gdo"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dp4nhvt5vmo0j" path="res://Assets/UI/buttonReset_active.png" id="4_mlqeq"]
 [ext_resource type="Texture2D" uid="uid://8nnokq36mn5m" path="res://Assets/Cards/assomer.png" id="5_ir85q"]
 [ext_resource type="Texture2D" uid="uid://b63wnxpbjyoff" path="res://Assets/UI/buttonReset_hover.png" id="5_p0tl7"]
+[ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="6_hefye"]
 [ext_resource type="Texture2D" uid="uid://bsxaa80uo8rgg" path="res://Assets/Cards/dash.png" id="6_ydqto"]
 [ext_resource type="Texture2D" uid="uid://d0v57wcsvlsmd" path="res://Assets/Cards/desactiver_laser.png" id="7_b2t1d"]
 [ext_resource type="Texture2D" uid="uid://d5xdsxy0ko1f" path="res://Assets/Cards/assomer_pressed.png" id="7_swc0r"]
@@ -113,6 +114,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("3_d1045")
 texture_pressed = ExtResource("4_mlqeq")
 texture_hover = ExtResource("5_p0tl7")
+script = ExtResource("6_hefye")
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
 layout_mode = 2
@@ -131,6 +133,7 @@ texture_pressed = ExtResource("7_swc0r")
 texture_hover = ExtResource("8_5iltq")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="DashCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(217, 296)
@@ -142,6 +145,7 @@ texture_pressed = ExtResource("10_n504m")
 texture_hover = ExtResource("11_4w68q")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="LaserCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(217, 296)
@@ -153,6 +157,7 @@ texture_pressed = ExtResource("13_y1ep6")
 texture_hover = ExtResource("14_j73uu")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="LockPickCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(217, 296)
@@ -164,6 +169,7 @@ texture_pressed = ExtResource("16_8e12i")
 texture_hover = ExtResource("17_hilny")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="BombCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(217, 296)
@@ -175,6 +181,7 @@ texture_pressed = ExtResource("19_nt0d1")
 texture_hover = ExtResource("20_r5ing")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="GetTreasureCardButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(217, 296)
@@ -186,6 +193,7 @@ texture_pressed = ExtResource("22_xa61d")
 texture_hover = ExtResource("23_4tnlj")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("6_hefye")
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
 layout_mode = 2
@@ -199,6 +207,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("2_33gdo")
 texture_pressed = ExtResource("3_btpi2")
 texture_hover = ExtResource("4_mdae6")
+script = ExtResource("6_hefye")
 
 [node name="SelectedCardsText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
