@@ -66,3 +66,8 @@ func player_has_finished():
 	elapsed_time = float(end_time - start_time) / 1000.0
 	%VictoryLayer.visible = true
 	$"../../VictoryLayer/MarginContainer/VBoxContainer/Time Label".text = "[center]" + str(elapsed_time) + " seconds"
+
+func _on_peek_button_pressed():
+	# TODO: Make the button clickable
+	print("Peek pressed")
+	%CardSelectionLayer.visible = false
