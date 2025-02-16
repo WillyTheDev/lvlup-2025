@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfpp5vunkyy2o"]
+[gd_scene load_steps=14 format=3 uid="uid://dfpp5vunkyy2o"]
 
 [ext_resource type="Script" path="res://GameElements/Player/player.gd" id="1_4f2pt"]
 [ext_resource type="Script" path="res://GameElements/Player/camera.gd" id="2_57caf"]
-[ext_resource type="Texture2D" uid="uid://80b7rq82ajgf" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
+[ext_resource type="Texture2D" uid="uid://k6nmutniq7xl" path="res://Assets/Character/MainCharacter.png" id="3_68t0i"]
 [ext_resource type="Material" uid="uid://bf6d3tpycxjih" path="res://Assets/Dust/dustParticle.tres" id="4_fj21j"]
-[ext_resource type="Texture2D" uid="uid://dcx410r361to6" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
+[ext_resource type="Texture2D" uid="uid://bgsuro5snpvxr" path="res://Assets/Dust/circle_32.png" id="5_cr0mw"]
+[ext_resource type="AudioStream" uid="uid://ch8oipj147nqv" path="res://Assets/Sounds/dash.mp3" id="6_pp8h4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlqqf"]
 radius = 41.4286
@@ -154,3 +155,8 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BombZone"]
 shape = SubResource("CircleShape2D_clmln")
 debug_color = Color(0.976029, 0, 0.414963, 0.42)
+
+[node name="DashAudioPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_pp8h4")
+volume_db = -10.0

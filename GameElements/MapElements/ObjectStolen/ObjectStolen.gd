@@ -19,6 +19,7 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 
 func take():
+	%StealAudioPlayer.play()
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	self.visible = false
 	%StaticBody2D.set_collision_layer_value(1,false)

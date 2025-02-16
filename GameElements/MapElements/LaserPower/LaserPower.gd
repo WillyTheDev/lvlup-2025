@@ -18,6 +18,7 @@ func set_outline(value):
 		%CanvasGroup.get_node("Sprite").texture = ON_TEXTURE
 
 func disable_laser():
+	%DeactivationAudioPlayer.play()
 	set_outline(false)
 	%CanvasGroup.get_node("Sprite").texture = OFF_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,false)

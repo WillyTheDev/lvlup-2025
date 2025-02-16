@@ -57,6 +57,7 @@ func _physics_process(delta):
 
 func dash():
 	print("Player Dash !")
+	%DashAudioPlayer.play()
 	dash_velocity = dash_speed
 	if tween:
 		tween.stop

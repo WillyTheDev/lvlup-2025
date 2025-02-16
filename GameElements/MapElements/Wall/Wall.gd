@@ -10,6 +10,7 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 
 func destroys():
+	%AudioStreamPlayer2D.play()
 	const SMOKE = preload("res://GameElements/Smoke_explosion/smoke_explosion.tscn")
 	var new_smoke = SMOKE.instantiate()
 	new_smoke.global_position = self.global_position

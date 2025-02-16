@@ -1,7 +1,6 @@
 class_name Enemy
 extends CharacterBody2D
 
-
 @export var enemy_speed := 0
 
 var target : Node2D = null
@@ -32,6 +31,8 @@ func set_outline(value):
 
 func _on_taunt_area_body_entered(body):
 	if body.is_in_group("Player"):
+		if self.visible:
+			%ChaseAudioPlayer.play()
 		target = body
 		if get_parent() is PathFollow2D:
 			get_parent().path_speed = 0
@@ -42,6 +43,8 @@ func _on_catch_area_body_entered(body):
 		target = null
 		
 func stun():
+	%StunAudioPlayer.play()
+	%ChaseAudioPlayer.stop()
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	const SMOKE = preload("res://GameElements/Smoke_explosion/smoke_explosion.tscn")
 	var new_smoke = SMOKE.instantiate()
