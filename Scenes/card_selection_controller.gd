@@ -14,6 +14,10 @@ const SELECTED_CARD = preload("res://UI/SelectedCard/selected_card.tscn")
 
 signal on_next_pressed
 
+func _ready():
+	var text = " (max " + str(maximum_amount_of_card) + ")"
+	%SelectedCardsText.text += text
+
 func add_card_to_selected_list(card: Card):
 	if number_of_selected_card < maximum_amount_of_card:
 		number_of_selected_card += 1

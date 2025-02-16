@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://wlp50gc4teyc"]
+[gd_scene load_steps=27 format=3 uid="uid://wlp50gc4teyc"]
 
 [ext_resource type="Script" path="res://Scenes/card_selection_controller.gd" id="1_l4q4s"]
 [ext_resource type="Texture2D" uid="uid://du2nvm8bnfu4k" path="res://Assets/UI/buttonNext_neutral.png" id="2_33gdo"]
@@ -26,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://6ej8vlgy161l" path="res://Assets/Cards/peter_mur_hover.png" id="20_r5ing"]
 [ext_resource type="Texture2D" uid="uid://drcv3p2jea2jp" path="res://Assets/Cards/vole objet_pressed.png" id="22_xa61d"]
 [ext_resource type="Texture2D" uid="uid://r26nhwepmgum" path="res://Assets/Cards/vole objet_hover.png" id="23_4tnlj"]
-[ext_resource type="PackedScene" uid="uid://c5j7r1ciix4fh" path="res://UI/SelectedCard/selected_card.tscn" id="24_jmnv4"]
 
 [node name="CardSelectionLayer" type="CanvasLayer"]
 process_mode = 3
@@ -202,7 +201,8 @@ texture_normal = ExtResource("2_33gdo")
 texture_pressed = ExtResource("3_btpi2")
 texture_hover = ExtResource("4_mdae6")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+[node name="SelectedCardsText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
 size_flags_vertical = 6
@@ -225,36 +225,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="SelectedCard" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard2" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard3" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard4" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard5" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard6" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard7" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard8" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard9" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
-
-[node name="SelectedCard10" parent="MarginContainer/VBoxContainer/MarginContainer/SelectedCardList" instance=ExtResource("24_jmnv4")]
-layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer/reset" to="." method="reset_selection"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/GridContainer/StunCardButton" to="." method="_on_stun_card_button_pressed"]
