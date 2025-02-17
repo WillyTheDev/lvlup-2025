@@ -24,7 +24,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rypyi"]
 shader = ExtResource("2_q1uqj")
-shader_parameter/overlay = false
+shader_parameter/overlay = true
 shader_parameter/scanlines_opacity = 0.173
 shader_parameter/scanlines_width = 0.25
 shader_parameter/grille_opacity = 0.06
@@ -130,8 +130,8 @@ position = Vector2(1377, 1100)
 game_manager = NodePath("../GameManager")
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("5_7rlnd")]
-MAP_SIZE_X = 4000
-MAP_SIZE_Y = 2000
+MAP_SIZE_X = 120
+MAP_SIZE_Y = 120
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer", "in_game_ui", "victory_layer") instance=ExtResource("3_ng6j0")]
 unique_name_in_owner = true
@@ -164,7 +164,7 @@ visible = false
 gameManager = NodePath("../GameManager")
 
 [node name="DestinationArea" parent="Map" instance=ExtResource("12_u0x3s")]
-position = Vector2(1296, 990)
+position = Vector2(1284, 974)
 scale = Vector2(1.8, 2.6)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

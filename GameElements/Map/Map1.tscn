@@ -35,10 +35,6 @@ colors = PackedColorArray(0.790784, 0.698319, 0.497298, 1)
 gradient = SubResource("Gradient_ueyjb")
 
 [sub_resource type="Curve2D" id="Curve2D_2il31"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 807.692, 500, 0, 0, 0, 0, 134.615, 519.231)
-}
-point_count = 2
 
 [node name="Map1" type="Node2D"]
 script = SubResource("GDScript_lc114")
@@ -238,8 +234,9 @@ scale = Vector2(0.52, 0.52)
 curve = SubResource("Curve2D_2il31")
 
 [node name="PathFollow2D" parent="MapElements/Enemies/Path2D" instance=ExtResource("8_8kwcc")]
-position = Vector2(807.692, 500)
+position = Vector2(517.308, 484.615)
 rotation = 0.0
+scale = Vector2(0.769231, 0.769231)
 loop = true
 path_speed = 0.01
 
@@ -253,12 +250,12 @@ position = Vector2(2651, 1078)
 [node name="Wall34" parent="MapElements/Bounds" instance=ExtResource("6_s4lt7")]
 position = Vector2(1120, 1068)
 rotation = 1.5708
-scale = Vector2(7, 1)
+scale = Vector2(7.2, 1)
 
 [node name="Wall35" parent="MapElements/Bounds" instance=ExtResource("6_s4lt7")]
 position = Vector2(1130, 1068)
 rotation = 1.5708
-scale = Vector2(7, 1)
+scale = Vector2(7.2, 1)
 
 [node name="Wall36" parent="MapElements/Bounds" instance=ExtResource("6_s4lt7")]
 position = Vector2(2892, 1058)

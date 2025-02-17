@@ -8,10 +8,9 @@ func _ready():
 	while position_to_instantiate.y < MAP_SIZE_Y:
 		while position_to_instantiate.x < MAP_SIZE_X:
 			var fog = preload("res://GameElements/Fog/Fog.tscn").instantiate()
-			get_node("/root/").add_child.call_deferred(fog)
+			fog.name = "Fog"
+			add_child.call_deferred(fog)
 			position_to_instantiate.x += FOG_SIZE
 			fog.position = position_to_instantiate
 		position_to_instantiate.y += FOG_SIZE
 		position_to_instantiate.x = 0
-	
-	

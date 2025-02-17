@@ -24,7 +24,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rypyi"]
 shader = ExtResource("8_352wh")
-shader_parameter/overlay = false
+shader_parameter/overlay = true
 shader_parameter/scanlines_opacity = 0.173
 shader_parameter/scanlines_width = 0.25
 shader_parameter/grille_opacity = 0.06
@@ -145,7 +145,7 @@ in_game_ui = NodePath("../InGameUiLayer")
 
 [node name="BigCamera" type="Camera2D" parent="Map"]
 unique_name_in_owner = true
-position = Vector2(965, 541)
+position = Vector2(970, 560)
 enabled = false
 
 [node name="CardSelectionLayer" parent="Map" node_paths=PackedStringArray("in_game_ui") instance=ExtResource("13_xpuyl")]
