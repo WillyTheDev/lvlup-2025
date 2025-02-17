@@ -5,6 +5,7 @@ var initial_z_index = 0
 
 func _ready():
 	initial_z_index = %CanvasGroup.z_index
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 
 func set_outline(value):
 	if value == true:
@@ -23,7 +24,6 @@ func destroys():
 	new_smoke.global_position = self.global_position
 	new_smoke.scale += Vector2(0.5,0.5)
 	get_parent().add_child(new_smoke)
-	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	self.visible = false
 	%StaticBody2D.set_collision_layer_value(1,false)
 	%StaticBody2D.set_collision_mask_value(1, false)

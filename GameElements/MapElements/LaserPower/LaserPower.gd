@@ -7,6 +7,9 @@ const HOVER_TEXTURE = preload("res://Assets/LevelDesign/LaserPower_hover.png")
 
 @export var laser_zone: Node = null
 
+func _ready():
+	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
+
 func set_outline(value):
 	if value == true:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.WHITE)
@@ -23,7 +26,6 @@ func disable_laser():
 	%CanvasGroup.get_node("Sprite").texture = OFF_TEXTURE
 	laser_zone.area2d.set_collision_layer_value(1,false)
 	laser_zone.area2d.set_collision_mask_value(1, false)
-	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 	laser_zone.modulate = Color("ffffff00")
 	%StaticBody2D.set_collision_layer_value(1,false)
 	%StaticBody2D.set_collision_mask_value(1, false)

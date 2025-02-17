@@ -46,24 +46,37 @@ func on_treasure_get():
 	alert_layer.show_layer()
 
 func _on_card_selection_layer_on_next_pressed():
+	# Unpause the game and update UI visibility
 	get_tree().paused = false
 	in_game_ui.visible = true
-	on_next_round_started.emit()
 	card_selection_layer.visible = false
 	%PeekButtonLayer.visible = false
+	%CardSelectionLayer.visible = false
+
+	# Reset player state and position
 	player.global_position = player_spawn.global_position
 	player.has_treasure = false
+	player.can_stun = false
+	player.can_destroy_wall = false
+	player.can_get_treasure = false
+	player.can_unlock_door = false
+	player.can_disable_laser = false
+
+	# Switch camera focus
 	%BigCamera.enabled = false
 	player.player_camera.enabled = true
-	%CardSelectionLayer.visible = false
-	# Make the in game UI visible
-	print(in_game_ui)
-	in_game_ui.visible = true
-	# Start the card manager
-	print(in_game_ui.cardManager)
+
+	# Emit signal for next round
+	on_next_round_started.emit()
+
+	# Start card manager and set gameplay state
 	in_game_ui.cardManager.start()
 	player_is_playing = true
 	start_time = Time.get_ticks_msec()
+
+	# Log UI and card manager state
+	print(in_game_ui)
+	print(in_game_ui.cardManager)
 
 func player_has_finished():
 	player_is_playing = false
