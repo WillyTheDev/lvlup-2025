@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b56i7xwi7wiv5"]
 
-[ext_resource type="Texture2D" uid="uid://c0h7f248e7k1q" path="res://Assets/Cards/lockpicking.png" id="1_05wwp"]
+[ext_resource type="Texture2D" uid="uid://bp0l01e5fw7ax" path="res://Assets/Cards/lockpicking.png" id="1_05wwp"]
 [ext_resource type="Script" path="res://GameElements/Cards/DoorCard/door_card.gd" id="1_34npq"]
 
 [node name="DoorCard" type="TextureRect"]

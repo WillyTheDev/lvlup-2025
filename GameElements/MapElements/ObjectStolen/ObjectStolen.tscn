@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://GameElements/MapElements/ObjectStolen/ObjectStolen.gd" id="1_x3ajw"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xu2oh"]
 [ext_resource type="Shader" path="res://Shaders/item_highlight.gdshader" id="3_brl6k"]
-[ext_resource type="Texture2D" uid="uid://cgnfxrepu7npl" path="res://Assets/LevelDesign/ObjectStolen.png" id="3_fgowr"]
-[ext_resource type="AudioStream" uid="uid://c1oj050453lne" path="res://Assets/Sounds/steal_object.mp3" id="5_2y5l4"]
+[ext_resource type="Texture2D" uid="uid://3jqxm8dkubit" path="res://Assets/LevelDesign/ObjectStolen.png" id="3_fgowr"]
+[ext_resource type="AudioStream" uid="uid://d1rksa56ypmil" path="res://Assets/Sounds/steal_object.mp3" id="5_2y5l4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k4mx0"]
 size = Vector2(60, 60)

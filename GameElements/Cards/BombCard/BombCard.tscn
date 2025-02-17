@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwdy33wdtapg3"]
 
 [ext_resource type="Script" path="res://GameElements/Cards/BombCard/BombCard.gd" id="1_ilefi"]
-[ext_resource type="Texture2D" uid="uid://cjk7gwycl1a3a" path="res://Assets/Cards/peter_mur.png" id="2_4dwaq"]
+[ext_resource type="Texture2D" uid="uid://dgoet5uq0ijfs" path="res://Assets/Cards/peter_mur.png" id="2_4dwaq"]
 
 [node name="BombCard" type="TextureRect"]
 custom_minimum_size = Vector2(365, 505)

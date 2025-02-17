@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://GameElements/InGameUILayer/in_game_ui_layer.gd" id="1_6w3qp"]
 [ext_resource type="PackedScene" uid="uid://yfevd8114od4" path="res://GameElements/CardManager/CardManager.tscn" id="1_koc6h"]
-[ext_resource type="FontFile" uid="uid://c8heiuppjp7jn" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="2_xe7uj"]
-[ext_resource type="Texture2D" uid="uid://cr5nj0vmu8gpa" path="res://Assets/UI/buttonRetry_neutral.png" id="3_khjl0"]
-[ext_resource type="Texture2D" uid="uid://6h0epstncuyc" path="res://Assets/UI/buttonRetry_active.png" id="4_ut4tw"]
-[ext_resource type="Texture2D" uid="uid://2jisgctdsxcg" path="res://Assets/UI/buttonRetry_hover.png" id="5_65syq"]
+[ext_resource type="FontFile" uid="uid://bh2eudsa2gvhg" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="2_xe7uj"]
+[ext_resource type="Texture2D" uid="uid://dpshnusl27o8v" path="res://Assets/UI/buttonRetry_neutral.png" id="3_khjl0"]
+[ext_resource type="Texture2D" uid="uid://bb0wrudvarscs" path="res://Assets/UI/buttonRetry_active.png" id="4_ut4tw"]
+[ext_resource type="Texture2D" uid="uid://bt57mlxi82086" path="res://Assets/UI/buttonRetry_hover.png" id="5_65syq"]
 [ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="7_e0ijt"]
 
 [node name="InGameUiLayer" type="CanvasLayer" node_paths=PackedStringArray("cardManager")]
