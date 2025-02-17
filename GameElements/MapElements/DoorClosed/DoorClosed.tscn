@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0v75qir1iy5k"]
+[gd_scene load_steps=8 format=3 uid="uid://b0v75qir1iy5k"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/DoorClosed/DoorClosed.gd" id="1_p72e1"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_xdqor"]
-[ext_resource type="Texture2D" uid="uid://ur2oguwunt82" path="res://Assets/LevelDesign/DoorClosed.png" id="3_vgt2u"]
-[ext_resource type="AudioStream" uid="uid://dpo2cu82a15uh" path="res://Assets/Sounds/open_door.mp3" id="4_nd2x3"]
+[ext_resource type="Texture2D" uid="uid://47evwp0ebfln" path="res://Assets/LevelDesign/DoorClosed.png" id="3_vgt2u"]
+[ext_resource type="AudioStream" uid="uid://coshxmxjde5my" path="res://Assets/Sounds/open_door.mp3" id="4_nd2x3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i61lw"]
+size = Vector2(100, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3cqea"]
 size = Vector2(100, 54)

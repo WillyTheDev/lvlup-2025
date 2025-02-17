@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn78rkcxxxr8j"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/LaserZone/LaserZone.gd" id="1_dkr0o"]
-[ext_resource type="Texture2D" uid="uid://clrxyjiug4neh" path="res://Assets/LevelDesign/laser.png" id="2_jbv2r"]
+[ext_resource type="Texture2D" uid="uid://cfywvu16li4pp" path="res://Assets/LevelDesign/laser.png" id="2_jbv2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cs7qx"]
 size = Vector2(60, 40)

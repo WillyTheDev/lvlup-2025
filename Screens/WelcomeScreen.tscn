@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://c886xe01wsxlt"]
 
 [ext_resource type="Script" path="res://Screens/welcome_screen.gd" id="1_3qcqo"]
-[ext_resource type="Texture2D" uid="uid://4noe77bou48k" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
+[ext_resource type="Texture2D" uid="uid://qstjg3jfidou" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="2_17hql"]
 [ext_resource type="Shader" path="res://Shaders/vhs.gdshader" id="2_571ob"]
-[ext_resource type="Texture2D" uid="uid://c2gk43snrmiho" path="res://Assets/UI/buttonPlay_active.png" id="3_abn7t"]
-[ext_resource type="Texture2D" uid="uid://ck35skx0nu6sc" path="res://Assets/UI/menu.png" id="3_r50f2"]
-[ext_resource type="FontFile" uid="uid://c8heiuppjp7jn" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="4_6srox"]
-[ext_resource type="Texture2D" uid="uid://glk80lihmt2t" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
+[ext_resource type="Texture2D" uid="uid://mlg8pmdeyn71" path="res://Assets/UI/buttonPlay_active.png" id="3_abn7t"]
+[ext_resource type="Texture2D" uid="uid://dsstaobi4c0gd" path="res://Assets/UI/menu.png" id="3_r50f2"]
+[ext_resource type="FontFile" uid="uid://bh2eudsa2gvhg" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="4_6srox"]
+[ext_resource type="Texture2D" uid="uid://chl6vl5oph40n" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
 [ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="7_22trh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_axdo5"]

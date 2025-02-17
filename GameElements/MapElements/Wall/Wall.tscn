@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cbbpxm6qric1"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/Wall/Wall.gd" id="1_fp3t0"]
-[ext_resource type="Texture2D" uid="uid://c0bwiphrrig2m" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
-[ext_resource type="AudioStream" uid="uid://diamopjt2aapi" path="res://Assets/Sounds/bomb_wall.mp3" id="3_7n6kx"]
+[ext_resource type="Texture2D" uid="uid://cc85tyvtkkdyf" path="res://Assets/LevelDesign/wall.png" id="2_hsmxr"]
+[ext_resource type="AudioStream" uid="uid://wa0cjkjqd0q4" path="res://Assets/Sounds/bomb_wall.mp3" id="3_7n6kx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qv486"]
 size = Vector2(100, 16)

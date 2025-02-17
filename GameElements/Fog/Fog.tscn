@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://df727u3pjwy66"]
 
 [ext_resource type="Script" path="res://GameElements/Fog/fog.gd" id="1_garv4"]
-[ext_resource type="Texture2D" uid="uid://d21eh4y3w2ty2" path="res://GameElements/Fog/Fog.png" id="2_ytk0w"]
+[ext_resource type="Texture2D" uid="uid://brvws8p51hmp1" path="res://GameElements/Fog/Fog.png" id="2_ytk0w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4a65n"]
 radius = 160.312

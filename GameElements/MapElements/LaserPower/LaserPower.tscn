@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvkekb1sy14ic"]
+[gd_scene load_steps=8 format=3 uid="uid://dvkekb1sy14ic"]
 
 [ext_resource type="Script" path="res://GameElements/MapElements/LaserPower/LaserPower.gd" id="1_0e1n3"]
 [ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="2_fyuag"]
-[ext_resource type="Texture2D" uid="uid://dget2qpp2bv0j" path="res://Assets/LevelDesign/LaserPower_on.png" id="3_3qs4m"]
-[ext_resource type="AudioStream" uid="uid://bq8y04ipytg1m" path="res://Assets/Sounds/laser_desactivate.mp3" id="4_v3v3a"]
+[ext_resource type="Texture2D" uid="uid://d1rd1q0dcpghm" path="res://Assets/LevelDesign/LaserPower_on.png" id="3_3qs4m"]
+[ext_resource type="AudioStream" uid="uid://detksadxhwp24" path="res://Assets/Sounds/laser_desactivate.mp3" id="4_v3v3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2oco"]
 size = Vector2(60, 40)
