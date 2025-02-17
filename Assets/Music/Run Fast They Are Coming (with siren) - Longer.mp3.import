@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn6ouinjxxv5i"
+path="res://.godot/imported/Run Fast They Are Coming (with siren) - Longer.mp3-a3e50b77b5849ce6c218f7f5a3564bfe.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Run Fast They Are Coming (with siren) - Longer.mp3"
+dest_files=["res://.godot/imported/Run Fast They Are Coming (with siren) - Longer.mp3-a3e50b77b5849ce6c218f7f5a3564bfe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

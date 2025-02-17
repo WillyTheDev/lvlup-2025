@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xn6i81nru5qt"
+path="res://.godot/imported/Run Fast They Are Coming.mp3-d4a118d1656699dca80e0d4429e1e06c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Run Fast They Are Coming.mp3"
+dest_files=["res://.godot/imported/Run Fast They Are Coming.mp3-d4a118d1656699dca80e0d4429e1e06c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

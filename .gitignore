@@ -3,7 +3,7 @@
 /android/
 
 # .import files
-*.import
+# *.import
 
 # code editor / IDE ignores
 .vscode/
