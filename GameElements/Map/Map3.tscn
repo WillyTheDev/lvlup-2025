@@ -110,1384 +110,1388 @@ script = SubResource("GDScript_lc114")
 [node name="Walls" type="Node" parent="MapElements"]
 
 [node name="Wall3" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(430, 1630)
+position = Vector2(1190, 1880)
 rotation = 3.14159
 
 [node name="Wall4" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(550, 1630)
+position = Vector2(1310, 1880)
 rotation = 3.14159
 
 [node name="Wall5" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(650, 1630)
+position = Vector2(1410, 1880)
 rotation = 3.14159
 
 [node name="Wall7" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(850, 1630)
+position = Vector2(1610, 1880)
 rotation = 3.14159
 
 [node name="Wall8" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(950, 1630)
+position = Vector2(1710, 1880)
 rotation = 3.14159
 
 [node name="Wall9" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1050, 1630)
+position = Vector2(1810, 1880)
 rotation = 3.14159
 
 [node name="Wall6" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(750, 1630)
+position = Vector2(1510, 1880)
 rotation = 3.14159
 
 [node name="Wall11" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1250, 1630)
+position = Vector2(2010, 1880)
 rotation = 3.14159
 
 [node name="Wall12" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1350, 1630)
+position = Vector2(2110, 1880)
 rotation = 3.14159
 
 [node name="Wall13" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1450, 1630)
+position = Vector2(2210, 1880)
 rotation = 3.14159
 
 [node name="Wall14" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1150, 1630)
+position = Vector2(1910, 1880)
 rotation = 3.14159
 
 [node name="Wall15" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1650, 1630)
+position = Vector2(2410, 1880)
 rotation = 3.14159
 
 [node name="Wall16" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1750, 1630)
+position = Vector2(2510, 1880)
 rotation = 3.14159
 
 [node name="Wall17" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1850, 1630)
+position = Vector2(2610, 1880)
 rotation = 3.14159
 
 [node name="Wall18" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1550, 1630)
+position = Vector2(2310, 1880)
 rotation = 3.14159
 
 [node name="Wall19" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2050, 1630)
+position = Vector2(2810, 1880)
 rotation = 3.14159
 
 [node name="Wall20" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2150, 1630)
+position = Vector2(2910, 1880)
 rotation = 3.14159
 
 [node name="Wall21" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2250, 1630)
+position = Vector2(3010, 1880)
 rotation = 3.14159
 
 [node name="Wall23" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2350, 1630)
+position = Vector2(3110, 1880)
 rotation = 3.14159
 
 [node name="Wall22" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1950, 1630)
+position = Vector2(2710, 1880)
 rotation = 3.14159
 
 [node name="Wall24" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(440, 170)
+position = Vector2(1200, 420)
 rotation = 3.14159
 
 [node name="Wall25" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(540, 170)
+position = Vector2(1300, 420)
 rotation = 3.14159
 
 [node name="Wall26" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(640, 170)
+position = Vector2(1400, 420)
 rotation = 3.14159
 
 [node name="Wall73" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(190, 170)
+position = Vector2(950, 420)
 rotation = 3.14159
 
 [node name="Wall74" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(240, 170)
+position = Vector2(1000, 420)
 rotation = 3.14159
 
 [node name="Wall75" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(340, 170)
+position = Vector2(1100, 420)
 rotation = 3.14159
 
 [node name="Wall27" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(840, 170)
+position = Vector2(1600, 420)
 rotation = 3.14159
 
 [node name="Wall28" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(940, 170)
+position = Vector2(1700, 420)
 rotation = 3.14159
 
 [node name="Wall29" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1040, 170)
+position = Vector2(1800, 420)
 rotation = 3.14159
 
 [node name="Wall30" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(740, 170)
+position = Vector2(1500, 420)
 rotation = 3.14159
 
 [node name="Wall31" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1240, 170)
+position = Vector2(2000, 420)
 rotation = 3.14159
 
 [node name="Wall32" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1340, 170)
+position = Vector2(2100, 420)
 rotation = 3.14159
 
 [node name="Wall33" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1440, 170)
+position = Vector2(2200, 420)
 rotation = 3.14159
 
 [node name="Wall34" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1140, 170)
+position = Vector2(1900, 420)
 rotation = 3.14159
 
 [node name="Wall64" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1640, 170)
+position = Vector2(2400, 420)
 rotation = 3.14159
 
 [node name="Wall65" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1740, 170)
+position = Vector2(2500, 420)
 rotation = 3.14159
 
 [node name="Wall66" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1840, 170)
+position = Vector2(2600, 420)
 rotation = 3.14159
 
 [node name="Wall67" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1540, 170)
+position = Vector2(2300, 420)
 rotation = 3.14159
 
 [node name="Wall68" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2040, 170)
+position = Vector2(2800, 420)
 rotation = 3.14159
 
 [node name="Wall69" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2140, 170)
+position = Vector2(2900, 420)
 rotation = 3.14159
 
 [node name="Wall70" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 170)
+position = Vector2(3000, 420)
 rotation = 3.14159
 
 [node name="Wall71" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2340, 170)
+position = Vector2(3100, 420)
 rotation = 3.14159
 
 [node name="Wall72" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1940, 170)
+position = Vector2(2700, 420)
 rotation = 3.14159
 
 [node name="Wall134" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(440, 150)
+position = Vector2(1200, 400)
 rotation = 3.14159
 
 [node name="Wall135" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(540, 150)
+position = Vector2(1300, 400)
 rotation = 3.14159
 
 [node name="Wall136" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(640, 150)
+position = Vector2(1400, 400)
 rotation = 3.14159
 
 [node name="Wall137" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(190, 150)
+position = Vector2(950, 400)
 rotation = 3.14159
 
 [node name="Wall138" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(240, 150)
+position = Vector2(1000, 400)
 rotation = 3.14159
 
 [node name="Wall139" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(340, 150)
+position = Vector2(1100, 400)
 rotation = 3.14159
 
 [node name="Wall140" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(840, 150)
+position = Vector2(1600, 400)
 rotation = 3.14159
 
 [node name="Wall141" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(940, 150)
+position = Vector2(1700, 400)
 rotation = 3.14159
 
 [node name="Wall142" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1040, 150)
+position = Vector2(1800, 400)
 rotation = 3.14159
 
 [node name="Wall143" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(740, 150)
+position = Vector2(1500, 400)
 rotation = 3.14159
 
 [node name="Wall144" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1240, 150)
+position = Vector2(2000, 400)
 rotation = 3.14159
 
 [node name="Wall145" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1340, 150)
+position = Vector2(2100, 400)
 rotation = 3.14159
 
 [node name="Wall146" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1440, 150)
+position = Vector2(2200, 400)
 rotation = 3.14159
 
 [node name="Wall147" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1140, 150)
+position = Vector2(1900, 400)
 rotation = 3.14159
 
 [node name="Wall148" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1640, 150)
+position = Vector2(2400, 400)
 rotation = 3.14159
 
 [node name="Wall149" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1740, 150)
+position = Vector2(2500, 400)
 rotation = 3.14159
 
 [node name="Wall150" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1840, 150)
+position = Vector2(2600, 400)
 rotation = 3.14159
 
 [node name="Wall151" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1540, 150)
+position = Vector2(2300, 400)
 rotation = 3.14159
 
 [node name="Wall152" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2040, 150)
+position = Vector2(2800, 400)
 rotation = 3.14159
 
 [node name="Wall153" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2140, 150)
+position = Vector2(2900, 400)
 rotation = 3.14159
 
 [node name="Wall277" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2200, 490)
+position = Vector2(2960, 740)
 rotation = 3.14159
 
 [node name="Wall154" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 150)
+position = Vector2(3000, 400)
 rotation = 3.14159
 
 [node name="Wall155" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2340, 150)
+position = Vector2(3100, 400)
 rotation = 3.14159
 
 [node name="Wall156" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1940, 150)
+position = Vector2(2700, 400)
 rotation = 3.14159
 
 [node name="Wall307" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1600, 350)
+position = Vector2(2360, 600)
 rotation = 3.14159
 
 [node name="Wall308" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1700, 350)
+position = Vector2(2460, 600)
 rotation = 3.14159
 
 [node name="Wall309" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1800, 350)
+position = Vector2(2560, 600)
 rotation = 3.14159
 
 [node name="Wall310" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1500, 350)
+position = Vector2(2260, 600)
 rotation = 3.14159
 
 [node name="Wall311" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2000, 350)
+position = Vector2(2760, 600)
 rotation = 3.14159
 
 [node name="Wall312" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2100, 350)
+position = Vector2(2860, 600)
 rotation = 3.14159
 
 [node name="Wall313" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2200, 350)
+position = Vector2(2960, 600)
 rotation = 3.14159
 
 [node name="Wall314" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1900, 350)
+position = Vector2(2660, 600)
 rotation = 3.14159
 
 [node name="Wall271" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1610, 490)
+position = Vector2(2370, 740)
 rotation = 3.14159
 
 [node name="Wall272" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1710, 490)
+position = Vector2(2470, 740)
 rotation = 3.14159
 
 [node name="Wall273" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1910, 490)
+position = Vector2(2670, 740)
 rotation = 3.14159
 
 [node name="Wall274" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2010, 490)
+position = Vector2(2770, 740)
 rotation = 3.14159
 
 [node name="Wall275" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2110, 490)
+position = Vector2(2870, 740)
 rotation = 3.14159
 
 [node name="Wall276" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1810, 490)
+position = Vector2(2570, 740)
 rotation = 3.14159
 
 [node name="Wall35" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(550, 1260)
+position = Vector2(1310, 1510)
 rotation = 3.14159
 
 [node name="Wall36" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(430, 1260)
+position = Vector2(1190, 1510)
 rotation = 3.14159
 
 [node name="Wall39" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(750, 1260)
+position = Vector2(1510, 1510)
 rotation = 3.14159
 
 [node name="Wall40" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(650, 1260)
+position = Vector2(1410, 1510)
 rotation = 3.14159
 
 [node name="Wall89" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(850, 1260)
+position = Vector2(1610, 1510)
 rotation = 3.14159
 
 [node name="Wall90" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1050, 1260)
+position = Vector2(1810, 1510)
 rotation = 3.14159
 
 [node name="Wall91" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(950, 1260)
+position = Vector2(1710, 1510)
 rotation = 3.14159
 
 [node name="Wall92" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1185, 1260)
+position = Vector2(1945, 1510)
 rotation = 3.14159
 scale = Vector2(1.7, 1)
 
 [node name="Wall37" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(490, 1280)
+position = Vector2(1250, 1530)
 rotation = 1.5708
 
 [node name="Wall38" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(490, 1340)
+position = Vector2(1250, 1590)
 rotation = 1.5708
 
 [node name="Wall87" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(490, 1560)
+position = Vector2(1250, 1810)
 rotation = 1.5708
 
 [node name="Wall88" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(490, 1634)
+position = Vector2(1250, 1884)
 rotation = 1.5708
 scale = Vector2(0.51998, 1)
 
 [node name="Wall41" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1400)
+position = Vector2(930, 1650)
 rotation = 1.5708
 
 [node name="Wall42" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1500)
+position = Vector2(930, 1750)
 rotation = 1.5708
 
 [node name="Wall48" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1605)
+position = Vector2(930, 1855)
 rotation = 1.5708
 scale = Vector2(1.1, 1)
 
 [node name="Wall43" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(230, 1630)
+position = Vector2(990, 1880)
 rotation = 3.14159
 
 [node name="Wall44" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(330, 1630)
+position = Vector2(1090, 1880)
 rotation = 3.14159
 
 [node name="Wall10" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(430, 1650)
+position = Vector2(1190, 1900)
 rotation = 3.14159
 
 [node name="Wall95" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(550, 1650)
+position = Vector2(1310, 1900)
 rotation = 3.14159
 
 [node name="Wall96" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(650, 1650)
+position = Vector2(1410, 1900)
 rotation = 3.14159
 
 [node name="Wall97" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(850, 1650)
+position = Vector2(1610, 1900)
 rotation = 3.14159
 
 [node name="Wall98" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(950, 1650)
+position = Vector2(1710, 1900)
 rotation = 3.14159
 
 [node name="Wall99" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1050, 1650)
+position = Vector2(1810, 1900)
 rotation = 3.14159
 
 [node name="Wall100" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(750, 1650)
+position = Vector2(1510, 1900)
 rotation = 3.14159
 
 [node name="Wall294" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(530, 1500)
+position = Vector2(1290, 1750)
 rotation = 3.14159
 
 [node name="Wall295" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(630, 1500)
+position = Vector2(1390, 1750)
 rotation = 3.14159
 
 [node name="Wall296" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(830, 1500)
+position = Vector2(1590, 1750)
 rotation = 3.14159
 
 [node name="Wall297" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(930, 1500)
+position = Vector2(1690, 1750)
 rotation = 3.14159
 
 [node name="Wall298" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1030, 1500)
+position = Vector2(1790, 1750)
 rotation = 3.14159
 
 [node name="Wall299" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(730, 1500)
+position = Vector2(1490, 1750)
 rotation = 3.14159
 
 [node name="Wall300" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(530, 1380)
+position = Vector2(1290, 1630)
 rotation = 3.14159
 
 [node name="Wall301" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(630, 1380)
+position = Vector2(1390, 1630)
 rotation = 3.14159
 
 [node name="Wall302" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(830, 1380)
+position = Vector2(1590, 1630)
 rotation = 3.14159
 
 [node name="Wall303" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(930, 1380)
+position = Vector2(1690, 1630)
 rotation = 3.14159
 
 [node name="Wall304" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1030, 1380)
+position = Vector2(1790, 1630)
 rotation = 3.14159
 
 [node name="Wall305" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(730, 1380)
+position = Vector2(1490, 1630)
 rotation = 3.14159
 
 [node name="Wall101" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1250, 1650)
+position = Vector2(2010, 1900)
 rotation = 3.14159
 
 [node name="Wall102" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1350, 1650)
+position = Vector2(2110, 1900)
 rotation = 3.14159
 
 [node name="Wall103" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1450, 1650)
+position = Vector2(2210, 1900)
 rotation = 3.14159
 
 [node name="Wall265" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1320, 1370)
+position = Vector2(2080, 1620)
 rotation = 3.14159
 
 [node name="Wall266" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1420, 1370)
+position = Vector2(2180, 1620)
 rotation = 3.14159
 
 [node name="Wall267" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1440, 1370)
+position = Vector2(2200, 1620)
 rotation = 3.14159
 
 [node name="Wall104" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1150, 1650)
+position = Vector2(1910, 1900)
 rotation = 3.14159
 
 [node name="Wall227" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1210, 840)
+position = Vector2(1970, 1090)
 rotation = 3.14159
 
 [node name="Wall228" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1310, 840)
+position = Vector2(2070, 1090)
 rotation = 3.14159
 
 [node name="Wall229" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1410, 840)
+position = Vector2(2170, 1090)
 rotation = 3.14159
 
 [node name="Wall230" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1140, 840)
+position = Vector2(1900, 1090)
 rotation = 3.14159
 scale = Vector2(0.4, 1)
 
 [node name="Wall231" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1210, 860)
+position = Vector2(1970, 1110)
 rotation = 3.14159
 
 [node name="Wall232" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1310, 860)
+position = Vector2(2070, 1110)
 rotation = 3.14159
 
 [node name="Wall233" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1410, 860)
+position = Vector2(2170, 1110)
 rotation = 3.14159
 
 [node name="Wall234" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1140, 860)
+position = Vector2(1900, 1110)
 rotation = 3.14159
 scale = Vector2(0.4, 1)
 
 [node name="Wall105" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1650, 1650)
+position = Vector2(2410, 1900)
 rotation = 3.14159
 
 [node name="Wall106" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1750, 1650)
+position = Vector2(2510, 1900)
 rotation = 3.14159
 
 [node name="Wall107" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1850, 1650)
+position = Vector2(2610, 1900)
 rotation = 3.14159
 
 [node name="Wall108" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1550, 1650)
+position = Vector2(2310, 1900)
 rotation = 3.14159
 
 [node name="Wall261" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1320, 1470)
+position = Vector2(2080, 1720)
 rotation = 3.14159
 
 [node name="Wall262" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1420, 1470)
+position = Vector2(2180, 1720)
 rotation = 3.14159
 
 [node name="Wall263" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1520, 1470)
+position = Vector2(2280, 1720)
 rotation = 3.14159
 
 [node name="Wall270" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1530, 1210)
+position = Vector2(2290, 1460)
 rotation = 3.14159
 
 [node name="Wall293" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1210)
+position = Vector2(2320, 1460)
 rotation = 3.14159
 
 [node name="Wall264" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1470)
+position = Vector2(2320, 1720)
 rotation = 3.14159
 scale = Vector2(0.92001, 1)
 
 [node name="Wall109" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2050, 1650)
+position = Vector2(2810, 1900)
 rotation = 3.14159
 
 [node name="Wall110" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2150, 1650)
+position = Vector2(2910, 1900)
 rotation = 3.14159
 
 [node name="Wall111" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2250, 1650)
+position = Vector2(3010, 1900)
 rotation = 3.14159
 
 [node name="Wall112" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2350, 1650)
+position = Vector2(3110, 1900)
 rotation = 3.14159
 
 [node name="Wall113" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1950, 1650)
+position = Vector2(2710, 1900)
 rotation = 3.14159
 
 [node name="Wall243" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1850, 1430)
+position = Vector2(2610, 1680)
 rotation = 3.14159
 
 [node name="Wall244" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2050, 1430)
+position = Vector2(2810, 1680)
 rotation = 3.14159
 
 [node name="Wall245" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2150, 1430)
+position = Vector2(2910, 1680)
 rotation = 3.14159
 
 [node name="Wall246" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2200, 1430)
+position = Vector2(2960, 1680)
 rotation = 3.14159
 
 [node name="Wall247" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1950, 1430)
+position = Vector2(2710, 1680)
 rotation = 3.14159
 
 [node name="Wall248" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1850, 1090)
+position = Vector2(2610, 1340)
 rotation = 3.14159
 
 [node name="Wall249" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2050, 1090)
+position = Vector2(2810, 1340)
 rotation = 3.14159
 
 [node name="Wall250" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2150, 1090)
+position = Vector2(2910, 1340)
 rotation = 3.14159
 
 [node name="Wall251" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2200, 1090)
+position = Vector2(2960, 1340)
 rotation = 3.14159
 
 [node name="Wall252" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1950, 1090)
+position = Vector2(2710, 1340)
 rotation = 3.14159
 
 [node name="Wall114" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(230, 1650)
+position = Vector2(990, 1900)
 rotation = 3.14159
 
 [node name="Wall115" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(330, 1650)
+position = Vector2(1090, 1900)
 rotation = 3.14159
 
 [node name="Wall45" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(330, 1260)
+position = Vector2(1090, 1510)
 rotation = 3.14159
 
 [node name="Wall46" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(230, 1260)
+position = Vector2(990, 1510)
 rotation = 3.14159
 
 [node name="Wall173" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(550, 1240)
+position = Vector2(1310, 1490)
 rotation = 3.14159
 
 [node name="Wall174" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(430, 1240)
+position = Vector2(1190, 1490)
 rotation = 3.14159
 
 [node name="Wall175" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(750, 1240)
+position = Vector2(1510, 1490)
 rotation = 3.14159
 
 [node name="Wall176" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(650, 1240)
+position = Vector2(1410, 1490)
 rotation = 3.14159
 
 [node name="Wall177" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(850, 1240)
+position = Vector2(1610, 1490)
 rotation = 3.14159
 
 [node name="Wall178" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1050, 1240)
+position = Vector2(1810, 1490)
 rotation = 3.14159
 
 [node name="Wall179" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(950, 1240)
+position = Vector2(1710, 1490)
 rotation = 3.14159
 
 [node name="Wall180" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1185, 1240)
+position = Vector2(1945, 1490)
 rotation = 3.14159
 scale = Vector2(1.7, 1)
 
 [node name="Wall93" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1335, 1260)
+position = Vector2(2095, 1510)
 rotation = 3.14159
 scale = Vector2(1.3, 1)
 
 [node name="Wall181" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1335, 1240)
+position = Vector2(2095, 1490)
 rotation = 3.14159
 scale = Vector2(1.3, 1)
 
 [node name="Wall183" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(330, 1240)
+position = Vector2(1090, 1490)
 rotation = 3.14159
 
 [node name="Wall184" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(230, 1240)
+position = Vector2(990, 1490)
 rotation = 3.14159
 
 [node name="Wall47" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1300)
+position = Vector2(930, 1550)
 rotation = 1.5708
 
 [node name="Wall76" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1010)
+position = Vector2(930, 1260)
 rotation = 1.5708
 
 [node name="Wall77" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1110)
+position = Vector2(930, 1360)
 rotation = 1.5708
 
 [node name="Wall78" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 1200)
+position = Vector2(930, 1450)
 rotation = 1.5708
 
 [node name="Wall79" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 910)
+position = Vector2(930, 1160)
 rotation = 1.5708
 
 [node name="Wall80" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 620)
+position = Vector2(930, 870)
 rotation = 1.5708
 
 [node name="Wall81" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 720)
+position = Vector2(930, 970)
 rotation = 1.5708
 
 [node name="Wall82" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 810)
+position = Vector2(930, 1060)
 rotation = 1.5708
 
 [node name="Wall83" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 520)
+position = Vector2(930, 770)
 rotation = 1.5708
 
 [node name="Wall84" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 230)
+position = Vector2(930, 480)
 rotation = 1.5708
 
 [node name="Wall85" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 330)
+position = Vector2(930, 580)
 rotation = 1.5708
 
 [node name="Wall86" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(170, 420)
+position = Vector2(930, 670)
 rotation = 1.5708
 
 [node name="Wall157" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1400)
+position = Vector2(910, 1650)
 rotation = 1.5708
 
 [node name="Wall158" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1500)
+position = Vector2(910, 1750)
 rotation = 1.5708
 
 [node name="Wall159" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1605)
+position = Vector2(910, 1855)
 rotation = 1.5708
 scale = Vector2(1.1, 1)
 
 [node name="Wall161" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1300)
+position = Vector2(910, 1550)
 rotation = 1.5708
 
 [node name="Wall162" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1010)
+position = Vector2(910, 1260)
 rotation = 1.5708
 
 [node name="Wall163" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1110)
+position = Vector2(910, 1360)
 rotation = 1.5708
 
 [node name="Wall164" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 1200)
+position = Vector2(910, 1450)
 rotation = 1.5708
 
 [node name="Wall165" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 910)
+position = Vector2(910, 1160)
 rotation = 1.5708
 
 [node name="Wall235" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1810, 1200)
+position = Vector2(2570, 1450)
 rotation = 1.5708
 
 [node name="Wall236" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1810, 1300)
+position = Vector2(2570, 1550)
 rotation = 1.5708
 
 [node name="Wall237" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1810, 1390)
+position = Vector2(2570, 1640)
 rotation = 1.5708
 
 [node name="Wall238" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1810, 1130)
+position = Vector2(2570, 1380)
 rotation = 1.5708
 
 [node name="Wall239" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 1200)
+position = Vector2(3000, 1450)
 rotation = 1.5708
 
 [node name="Wall240" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 1300)
+position = Vector2(3000, 1550)
 rotation = 1.5708
 
 [node name="Wall241" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 1390)
+position = Vector2(3000, 1640)
 rotation = 1.5708
 
 [node name="Wall242" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 1130)
+position = Vector2(3000, 1380)
 rotation = 1.5708
 
 [node name="Wall166" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 620)
+position = Vector2(910, 870)
 rotation = 1.5708
 
 [node name="Wall167" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 720)
+position = Vector2(910, 970)
 rotation = 1.5708
 
 [node name="Wall168" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 810)
+position = Vector2(910, 1060)
 rotation = 1.5708
 
 [node name="Wall187" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 760)
+position = Vector2(1880, 1010)
 rotation = 1.5708
 
 [node name="Wall188" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 660)
+position = Vector2(1880, 910)
 rotation = 1.5708
 
 [node name="Wall189" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 370)
+position = Vector2(1880, 620)
 rotation = 1.5708
 
 [node name="Wall190" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 470)
+position = Vector2(1880, 720)
 rotation = 1.5708
 
 [node name="Wall191" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 560)
+position = Vector2(1880, 810)
 rotation = 1.5708
 
 [node name="Wall192" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 760)
+position = Vector2(1860, 1010)
 rotation = 1.5708
 
 [node name="Wall193" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 660)
+position = Vector2(1860, 910)
 rotation = 1.5708
 
 [node name="Wall197" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 960)
+position = Vector2(1880, 1210)
 rotation = 1.5708
 
 [node name="Wall198" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 860)
+position = Vector2(1880, 1110)
 rotation = 1.5708
 
 [node name="Wall199" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 960)
+position = Vector2(1860, 1210)
 rotation = 1.5708
 
 [node name="Wall200" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 860)
+position = Vector2(1860, 1110)
 rotation = 1.5708
 
 [node name="Wall194" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 370)
+position = Vector2(1860, 620)
 rotation = 1.5708
 
 [node name="Wall195" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 470)
+position = Vector2(1860, 720)
 rotation = 1.5708
 
 [node name="Wall196" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1100, 560)
+position = Vector2(1860, 810)
 rotation = 1.5708
 
 [node name="Wall201" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 760)
+position = Vector2(1880, 1010)
 rotation = 1.5708
 
 [node name="Wall202" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 660)
+position = Vector2(1880, 910)
 rotation = 1.5708
 
 [node name="Wall203" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 370)
+position = Vector2(1880, 620)
 rotation = 1.5708
 
 [node name="Wall204" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 470)
+position = Vector2(1880, 720)
 rotation = 1.5708
 
 [node name="Wall205" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 560)
+position = Vector2(1880, 810)
 rotation = 1.5708
 
 [node name="Wall225" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1170)
+position = Vector2(2320, 1420)
 rotation = 1.5708
 
 [node name="Wall208" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 960)
+position = Vector2(1880, 1210)
 rotation = 1.5708
 
 [node name="Wall209" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1120, 860)
+position = Vector2(1880, 1110)
 rotation = 1.5708
 
 [node name="Wall215" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 870)
+position = Vector2(2320, 1120)
 rotation = 1.5708
 
 [node name="Wall216" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 770)
+position = Vector2(2320, 1020)
 rotation = 1.5708
 
 [node name="Wall217" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 670)
+position = Vector2(2320, 920)
 rotation = 1.5708
 
 [node name="Wall218" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 1070)
+position = Vector2(2320, 1320)
 rotation = 1.5708
 
 [node name="Wall219" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1560, 970)
+position = Vector2(2320, 1220)
 rotation = 1.5708
 
 [node name="Wall169" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 520)
+position = Vector2(910, 770)
 rotation = 1.5708
 
 [node name="Wall170" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 230)
+position = Vector2(910, 480)
 rotation = 1.5708
 
 [node name="Wall171" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 330)
+position = Vector2(910, 580)
 rotation = 1.5708
 
 [node name="Wall172" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(150, 420)
+position = Vector2(910, 670)
 rotation = 1.5708
 
 [node name="Wall284" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(480, 570)
+position = Vector2(1240, 820)
 rotation = 1.5708
 
 [node name="Wall285" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(480, 380)
+position = Vector2(1240, 630)
 rotation = 1.5708
 
 [node name="Wall286" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(480, 470)
+position = Vector2(1240, 720)
 rotation = 1.5708
 
 [node name="Wall287" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(690, 400)
+position = Vector2(1450, 650)
 rotation = 1.5708
 
 [node name="Wall288" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(690, 210)
+position = Vector2(1450, 460)
 rotation = 1.5708
 
 [node name="Wall289" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(690, 300)
+position = Vector2(1450, 550)
 rotation = 1.5708
 
 [node name="Wall290" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(900, 590)
+position = Vector2(1660, 840)
 rotation = 1.5708
 
 [node name="Wall291" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(900, 400)
+position = Vector2(1660, 650)
 rotation = 1.5708
 
 [node name="Wall292" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(900, 490)
+position = Vector2(1660, 740)
 rotation = 1.5708
 
 [node name="Wall49" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1380)
+position = Vector2(3150, 1630)
 rotation = 1.5708
 
 [node name="Wall50" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1480)
+position = Vector2(3150, 1730)
 rotation = 1.5708
 
 [node name="Wall51" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1570)
+position = Vector2(3150, 1820)
 rotation = 1.5708
 
 [node name="Wall52" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1280)
+position = Vector2(3150, 1530)
 rotation = 1.5708
 
 [node name="Wall53" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 990)
+position = Vector2(3150, 1240)
 rotation = 1.5708
 
 [node name="Wall54" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1090)
+position = Vector2(3150, 1340)
 rotation = 1.5708
 
 [node name="Wall55" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 1180)
+position = Vector2(3150, 1430)
 rotation = 1.5708
 
 [node name="Wall56" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 890)
+position = Vector2(3150, 1140)
 rotation = 1.5708
 
 [node name="Wall57" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 600)
+position = Vector2(3150, 850)
 rotation = 1.5708
 
 [node name="Wall58" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 700)
+position = Vector2(3150, 950)
 rotation = 1.5708
 
 [node name="Wall59" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 790)
+position = Vector2(3150, 1040)
 rotation = 1.5708
 
 [node name="Wall60" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 500)
+position = Vector2(3150, 750)
 rotation = 1.5708
 
 [node name="Wall61" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 210)
+position = Vector2(3150, 460)
 rotation = 1.5708
 
 [node name="Wall62" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 310)
+position = Vector2(3150, 560)
 rotation = 1.5708
 
 [node name="Wall63" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2390, 400)
+position = Vector2(3150, 650)
 rotation = 1.5708
 
 [node name="Wall117" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1380)
+position = Vector2(3170, 1630)
 rotation = 1.5708
 
 [node name="Wall118" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1480)
+position = Vector2(3170, 1730)
 rotation = 1.5708
 
 [node name="Wall119" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1570)
+position = Vector2(3170, 1820)
 rotation = 1.5708
 
 [node name="Wall132" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1610)
+position = Vector2(3170, 1860)
 rotation = 1.5708
 
 [node name="Wall253" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1710, 1374)
+position = Vector2(2470, 1624)
 rotation = 1.5708
 scale = Vector2(0.72, 1)
 
 [node name="Wall254" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1710, 1460)
+position = Vector2(2470, 1710)
 rotation = 1.5708
 
 [node name="Wall255" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1710, 1550)
+position = Vector2(2470, 1800)
 rotation = 1.5708
 
 [node name="Wall257" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1600, 1260)
+position = Vector2(2360, 1510)
 rotation = 1.5708
 
 [node name="Wall258" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1600, 1350)
+position = Vector2(2360, 1600)
 rotation = 1.5708
 
 [node name="Wall268" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1490, 1330)
+position = Vector2(2250, 1580)
 rotation = 1.5708
 
 [node name="Wall269" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1490, 1270)
+position = Vector2(2250, 1520)
 rotation = 1.5708
 
 [node name="Wall259" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1600, 1430)
+position = Vector2(2360, 1680)
 rotation = 1.5708
 
 [node name="Wall260" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1280, 1430)
+position = Vector2(2040, 1680)
 rotation = 1.5708
 
 [node name="Wall256" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1710, 1630)
+position = Vector2(2470, 1880)
 rotation = 1.5708
 scale = Vector2(0.59998, 1)
 
 [node name="Wall120" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1280)
+position = Vector2(3170, 1530)
 rotation = 1.5708
 
 [node name="Wall121" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 990)
+position = Vector2(3170, 1240)
 rotation = 1.5708
 
 [node name="Wall122" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1090)
+position = Vector2(3170, 1340)
 rotation = 1.5708
 
 [node name="Wall123" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 1180)
+position = Vector2(3170, 1430)
 rotation = 1.5708
 
 [node name="Wall124" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 890)
+position = Vector2(3170, 1140)
 rotation = 1.5708
 
 [node name="Wall125" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 600)
+position = Vector2(3170, 850)
 rotation = 1.5708
 
 [node name="Wall126" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 700)
+position = Vector2(3170, 950)
 rotation = 1.5708
 
 [node name="Wall127" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 790)
+position = Vector2(3170, 1040)
 rotation = 1.5708
 
 [node name="Wall128" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 500)
+position = Vector2(3170, 750)
 rotation = 1.5708
 
 [node name="Wall278" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 1030)
+position = Vector2(3000, 1280)
 rotation = 1.5708
 
 [node name="Wall279" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 930)
+position = Vector2(3000, 1180)
 rotation = 1.5708
 
 [node name="Wall280" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 640)
+position = Vector2(3000, 890)
 rotation = 1.5708
 
 [node name="Wall281" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 740)
+position = Vector2(3000, 990)
 rotation = 1.5708
 
 [node name="Wall282" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 830)
+position = Vector2(3000, 1080)
 rotation = 1.5708
 
 [node name="Wall283" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2240, 540)
+position = Vector2(3000, 790)
 rotation = 1.5708
 
 [node name="Wall129" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 210)
+position = Vector2(3170, 460)
 rotation = 1.5708
 
 [node name="Wall133" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 190)
+position = Vector2(3170, 440)
+rotation = 1.5708
+
+[node name="Wall160" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
+position = Vector2(3150, 440)
 rotation = 1.5708
 
 [node name="Wall130" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 310)
+position = Vector2(3170, 560)
 rotation = 1.5708
 
 [node name="Wall131" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(2410, 400)
+position = Vector2(3170, 650)
 rotation = 1.5708
 
 [node name="Rooms" type="Node2D" parent="MapElements"]
 z_index = -10
 
 [node name="Sprite2D" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1747.5, 322.5)
+position = Vector2(2507.5, 572.5)
 scale = Vector2(4.98047, 315)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(640, 930)
+position = Vector2(1400, 1180)
 scale = Vector2(3.59375, 600)
 texture = SubResource("GradientTexture1D_15ayl")
 
 [node name="Sprite2D15" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1905, 785)
+position = Vector2(2665, 1035)
 scale = Vector2(2.69531, 590)
 texture = SubResource("GradientTexture1D_e7kwq")
 
 [node name="Sprite2D16" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1680, 1140)
+position = Vector2(2440, 1390)
 scale = Vector2(0.9375, 160)
 texture = SubResource("GradientTexture1D_e7kwq")
 
 [node name="Sprite2D8" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(938.125, 1325)
+position = Vector2(1698.13, 1575)
 scale = Vector2(3.6084, 110)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D9" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(955, 1555)
+position = Vector2(1715, 1805)
 scale = Vector2(3.55469, 150)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D10" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1180, 1420)
+position = Vector2(1940, 1670)
 scale = Vector2(0.78125, 133.75)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1340, 925)
+position = Vector2(2100, 1175)
 scale = Vector2(1.71875, 628.485)
 texture = SubResource("GradientTexture1D_ittef")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1900, 1550)
+position = Vector2(2660, 1800)
 scale = Vector2(3.82812, 140)
 texture = SubResource("GradientTexture1D_dvv5k")
 
 [node name="Sprite2D19" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1700.72, 1349.63)
+position = Vector2(2460.72, 1599.63)
 scale = Vector2(0.775604, 260.742)
 texture = SubResource("GradientTexture1D_dvv5k")
 
 [node name="Sprite2D20" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(2090, 1467.13)
+position = Vector2(2850, 1717.13)
 scale = Vector2(2.26563, 65.7422)
 texture = SubResource("GradientTexture1D_dvv5k")
 
 [node name="Sprite2D12" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1445, 1285)
+position = Vector2(2205, 1535)
 scale = Vector2(0.351562, 190)
 texture = SubResource("GradientTexture1D_ittef")
 
 [node name="Sprite2D11" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(2035, 1260)
+position = Vector2(2795, 1510)
 scale = Vector2(1.67969, 360)
 texture = SubResource("GradientTexture1D_lrod1")
 
 [node name="Sprite2D17" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1438.28, 1425)
+position = Vector2(2198.28, 1675)
 scale = Vector2(1.26343, 90)
 texture = SubResource("GradientTexture1D_cqk58")
 
 [node name="Sprite2D18" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1545, 1300)
+position = Vector2(2305, 1550)
 scale = Vector2(0.429687, 160)
 texture = SubResource("GradientTexture1D_cqk58")
 
 [node name="Sprite2D13" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(325, 1447.03)
+position = Vector2(1085, 1697.03)
 scale = Vector2(1.21094, 365.938)
 texture = SubResource("GradientTexture1D_vn65r")
 
 [node name="Sprite2D14" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(779.141, 1435)
+position = Vector2(1539.14, 1685)
 scale = Vector2(2.35046, 110)
 texture = SubResource("GradientTexture1D_vn65r")
 
 [node name="Sprite2D3" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1345, 540)
+position = Vector2(2105, 790)
 scale = Vector2(1.67969, 160)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(2312.5, 957.5)
+position = Vector2(3072.5, 1207.5)
 scale = Vector2(0.527345, 965)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D7" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(642.5, 395)
+position = Vector2(1402.5, 645)
 scale = Vector2(3.65234, 450)
 texture = SubResource("GradientTexture1D_jkpyv")
 
 [node name="Sprite2D21" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(271.25, 585)
+position = Vector2(1031.25, 835)
 scale = Vector2(0.771484, 110)
 texture = SubResource("GradientTexture1D_jkpyv")
 
 [node name="Enemies" type="Node" parent="MapElements"]
 
 [node name="Enemy11" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(370, 1030)
+position = Vector2(1130, 1280)
 scale = Vector2(0.44, 0.44)
 
 [node name="Enemy12" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(430, 330)
+position = Vector2(1190, 580)
 scale = Vector2(0.32, 0.32)
 
 [node name="Enemy2" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(2120, 1310)
+position = Vector2(2880, 1560)
 scale = Vector2(0.52, 0.52)
 
 [node name="Enemy6" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1550, 1270)
+position = Vector2(2310, 1520)
 scale = Vector2(0.25, 0.25)
 
 [node name="Enemy7" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1550, 1350)
+position = Vector2(2310, 1600)
 scale = Vector2(0.25, 0.25)
 
 [node name="Enemy8" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1340, 1420)
+position = Vector2(2100, 1670)
 scale = Vector2(0.25, 0.25)
 
 [node name="Enemy9" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1420, 1420)
+position = Vector2(2180, 1670)
 scale = Vector2(0.25, 0.25)
 
 [node name="Enemy10" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1510, 1420)
+position = Vector2(2270, 1670)
 scale = Vector2(0.25, 0.25)
 
 [node name="Enemy5" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(2120, 1190)
+position = Vector2(2880, 1440)
 scale = Vector2(0.52, 0.52)
 
 [node name="Enemy4" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1940, 1330)
+position = Vector2(2700, 1580)
 scale = Vector2(0.52, 0.52)
 
 [node name="Enemy3" parent="MapElements/Enemies" instance=ExtResource("2_l4jax")]
-position = Vector2(1940, 1180)
+position = Vector2(2700, 1430)
 scale = Vector2(0.52, 0.52)
 
 [node name="Lasers" type="Node" parent="MapElements"]
 
 [node name="LaserPower4" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(310, 690)
+position = Vector2(1070, 940)
 scale = Vector2(1.146, 1.30696)
 laser_zone = NodePath("../LaserZone2")
 
 [node name="LaserZone2" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(370, 620)
+position = Vector2(1130, 870)
 scale = Vector2(12.16, 3)
 
 [node name="LaserPower5" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(510, 1300)
+position = Vector2(1270, 1550)
 scale = Vector2(1.666, 1.9)
 laser_zone = NodePath("../LaserZone3")
 
 [node name="LaserZone3" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(1270, 1270)
+position = Vector2(2030, 1520)
 scale = Vector2(2.15999, 2.2)
 
 [node name="LaserPower6" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(510, 1550)
+position = Vector2(1270, 1800)
 scale = Vector2(1.666, 1.9)
 laser_zone = NodePath("../LaserZone4")
 
 [node name="LaserZone4" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(1270, 1480)
+position = Vector2(2030, 1730)
 scale = Vector2(2.34, 3.507)
 
 [node name="LaserPower7" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(1130, 770)
+position = Vector2(1890, 1020)
 scale = Vector2(1.666, 1.9)
 laser_zone = NodePath("../LaserZone5")
 
 [node name="LaserZone5" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(1130, 620)
+position = Vector2(1890, 870)
 scale = Vector2(6.95999, 2.79999)
 
 [node name="LaserPower8" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(1720, 1580)
+position = Vector2(2480, 1830)
 scale = Vector2(0.927034, 1.05724)
 laser_zone = NodePath("../LaserZone6")
 
 [node name="LaserZone6" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(1940, 1440)
+position = Vector2(2700, 1690)
 scale = Vector2(3.31999, 2.2)
 
 [node name="Sprite2D" parent="MapElements/Lasers/LaserZone6" index="0"]
@@ -1504,18 +1508,17 @@ scale = Vector2(0.233463, 0.176868)
 texture = ExtResource("5_bws34")
 
 [node name="LaserPower9" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("4_bw1m8")]
-position = Vector2(1590, 600)
+position = Vector2(2350, 850)
 scale = Vector2(1.15879, 1.32155)
 laser_zone = NodePath("../LaserZone7")
 
 [node name="LaserZone7" parent="MapElements/Lasers" instance=ExtResource("5_kpjlb")]
-position = Vector2(2230, 500)
+position = Vector2(2990, 750)
 rotation = 1.57079
 scale = Vector2(9.67999, 2.2)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="1"]
 position = Vector2(33.0575, 290.91)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1ssuq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="2"]
@@ -1525,7 +1528,6 @@ shape = SubResource("RectangleShape2D_ad8lb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="3"]
 position = Vector2(31.7115, 121.743)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ddg7o")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="4"]
@@ -1535,7 +1537,6 @@ shape = SubResource("RectangleShape2D_s3xko")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="MapElements/Lasers/LaserZone7/Area2D" index="5"]
 position = Vector2(2.32425, 121.591)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_le5p8")
 
 [node name="Sprite2D6" type="Sprite2D" parent="MapElements/Lasers/LaserZone7"]
@@ -1575,25 +1576,25 @@ texture = ExtResource("5_bws34")
 [node name="Doors" type="Node" parent="MapElements"]
 
 [node name="DoorClosed3" parent="MapElements/Doors" instance=ExtResource("6_lk6p2")]
-position = Vector2(1130, 1120)
+position = Vector2(1890, 1370)
 rotation = -1.57079
 scale = Vector2(2.39998, 1.8)
 
 [node name="DoorClosed4" parent="MapElements/Doors" instance=ExtResource("6_lk6p2")]
-position = Vector2(1709, 1220)
+position = Vector2(2469, 1470)
 scale = Vector2(2.17299, 1.41488)
 
 [node name="DoorClosed5" parent="MapElements/Doors" instance=ExtResource("6_lk6p2")]
-position = Vector2(1800, 1530)
+position = Vector2(2560, 1780)
 rotation = 1.57079
 scale = Vector2(2.17299, 1.41488)
 
 [node name="DoorClosed2" parent="MapElements/Doors" instance=ExtResource("6_lk6p2")]
-position = Vector2(270, 650)
+position = Vector2(1030, 900)
 scale = Vector2(2, 2.005)
 
 [node name="ObjectStolen" parent="MapElements" instance=ExtResource("7_8lje3")]
-position = Vector2(1310, 350)
+position = Vector2(2070, 600)
 
 [node name="RefMap3" type="Sprite2D" parent="MapElements"]
 visible = false

@@ -50,7 +50,7 @@ shader_parameter/vignette_opacity = 0.5
 script = ExtResource("1_m4qnj")
 
 [node name="filter" type="CanvasLayer" parent="."]
-layer = 2
+layer = 5
 
 [node name="ColorRect" type="ColorRect" parent="filter"]
 material = SubResource("ShaderMaterial_rypyi")
@@ -126,13 +126,12 @@ layer = 2
 
 [node name="Player" parent="Map" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_n1qik")]
 unique_name_in_owner = true
-position = Vector2(393, 868)
+position = Vector2(1377, 1100)
 game_manager = NodePath("../GameManager")
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("5_7rlnd")]
-position = Vector2(-10, 270)
-MAP_SIZE_X = 2090
-MAP_SIZE_Y = 1090
+MAP_SIZE_X = 4000
+MAP_SIZE_Y = 2000
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer", "in_game_ui", "victory_layer") instance=ExtResource("3_ng6j0")]
 unique_name_in_owner = true
@@ -155,7 +154,7 @@ maximum_amount_of_card = 3
 in_game_ui = NodePath("../InGameUiLayer")
 
 [node name="PlayerSpawn" type="Node2D" parent="Map"]
-position = Vector2(374, 838)
+position = Vector2(1380, 1100)
 
 [node name="AlertLayer" parent="Map" instance=ExtResource("8_6i3pe")]
 visible = false
@@ -165,7 +164,7 @@ visible = false
 gameManager = NodePath("../GameManager")
 
 [node name="DestinationArea" parent="Map" instance=ExtResource("12_u0x3s")]
-position = Vector2(312, 758)
+position = Vector2(1296, 990)
 scale = Vector2(1.8, 2.6)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
