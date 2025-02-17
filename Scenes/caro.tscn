@@ -21,11 +21,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CardManager" parent="CanvasLayer/Control" instance=ExtResource("1_2iojd")]
-layout_mode = 0
-offset_left = 1492.0
-offset_top = 510.0
-offset_right = 1492.0
-offset_bottom = 510.0
 
 [node name="Map" type="Node" parent="."]
 

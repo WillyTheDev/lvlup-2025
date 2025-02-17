@@ -49,6 +49,18 @@ shader_parameter/vignette_opacity = 0.5
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lvfol")
 
+[node name="filter" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="filter"]
+material = SubResource("ShaderMaterial_rypyi")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="VictoryLayer" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 process_mode = 3
@@ -110,18 +122,6 @@ script = ExtResource("6_p1bwd")
 [node name="TransitionLayer" parent="." instance=ExtResource("7_ficjt")]
 layer = 2
 
-[node name="filter" type="CanvasLayer" parent="."]
-layer = 2
-
-[node name="ColorRect" type="ColorRect" parent="filter"]
-material = SubResource("ShaderMaterial_rypyi")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
 [node name="Map" parent="." instance=ExtResource("9_sixa1")]
 position = Vector2(528.413, 895.871)
 
@@ -132,9 +132,9 @@ game_manager = NodePath("../GameManager")
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("11_64rre")]
 unique_name_in_owner = true
-position = Vector2(-388, -206)
-MAP_SIZE_X = 6000
-MAP_SIZE_Y = 3000
+position = Vector2(0, -10)
+MAP_SIZE_X = 2570
+MAP_SIZE_Y = 1860
 
 [node name="GameManager" parent="Map" node_paths=PackedStringArray("player", "card_selection_layer", "player_spawn", "map", "alert_layer", "in_game_ui", "victory_layer") instance=ExtResource("12_5dgty")]
 unique_name_in_owner = true
