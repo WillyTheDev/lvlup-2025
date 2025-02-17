@@ -148,7 +148,7 @@ victory_layer = NodePath("../../VictoryLayer")
 
 [node name="BigCamera" type="Camera2D" parent="Map"]
 unique_name_in_owner = true
-position = Vector2(965, 541)
+position = Vector2(2020, 1030)
 enabled = false
 
 [node name="CardSelectionLayer" parent="Map" node_paths=PackedStringArray("in_game_ui") instance=ExtResource("7_eqmjq")]

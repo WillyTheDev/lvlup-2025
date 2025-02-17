@@ -148,8 +148,9 @@ in_game_ui = NodePath("../InGameUiLayer")
 
 [node name="BigCamera" type="Camera2D" parent="Map"]
 unique_name_in_owner = true
-position = Vector2(970, 560)
+position = Vector2(2090, 1140)
 enabled = false
+zoom = Vector2(0.735, 0.735)
 
 [node name="CardSelectionLayer" parent="Map" node_paths=PackedStringArray("in_game_ui") instance=ExtResource("13_xpuyl")]
 unique_name_in_owner = true
