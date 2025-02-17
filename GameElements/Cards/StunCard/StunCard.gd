@@ -5,12 +5,12 @@ extends Card
 
 func _ready():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.can_stun = true
 
 func apply_effect():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.stun_closest_enemy()
 	player.can_stun = false
 	queue_free()

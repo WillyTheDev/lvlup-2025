@@ -5,12 +5,12 @@ extends Card
 
 func _ready():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.can_unlock_door = true
 
 func apply_effect():
 	if player == null:
-		var player = get_node("/root/Game/Map/Player")
+		player = get_node("/root/Game/Map/Player")
 	player.open_closest_door()
 	player.can_unlock_door = false
 	self.queue_free()
