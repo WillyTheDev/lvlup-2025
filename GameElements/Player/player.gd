@@ -75,6 +75,12 @@ func get_closest_treasure():
 			closest_treasure.set_outline(false)
 			closest_treasure = null
 		return
+	# If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	if closest_treasure != null:
+		var static_body_treasure_child = closest_treasure.get_children().find(func(child): return child.is_in_group("Treasure"))
+		if static_body_treasure_child not in treasure_bodies:
+			closest_treasure.set_outline(false)
+			closest_treasure = null
 	# If there are treasures, find the closest one and set its outline
 	for i in range(treasure_bodies.size()):
 		var body = treasure_bodies[i]
@@ -100,6 +106,12 @@ func get_closest_enemy():
 			closest_enemy.set_outline(false)
 			closest_enemy = null
 		return
+	# If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	if closest_enemy != null:
+		var static_body_enemy_child = closest_enemy.get_children().find(func(child): return child.is_in_group("Enemy"))
+		if static_body_enemy_child not in enemy_bodies:
+			closest_enemy.set_outline(false)
+			closest_enemy = null
 	# If there are enemies, find the closest one and set its outline
 	for i in range(enemy_bodies.size()):
 		var body = enemy_bodies[i]
@@ -125,6 +137,12 @@ func get_closest_wall():
 			closest_wall.set_outline(false)
 			closest_wall = null
 		return
+	# If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	if closest_wall != null:
+		var static_body_wall_child = closest_wall.get_children().find(func(child): return child.is_in_group("Wall"))
+		if static_body_wall_child not in wall_bodies:
+			closest_wall.set_outline(false)
+			closest_wall = null
 	# If there are walls, find the closest one and set its outline
 	for i in range(wall_bodies.size()):
 		var body = wall_bodies[i].get_parent()
@@ -150,6 +168,12 @@ func get_closest_door():
 			closest_door.set_outline(false)
 			closest_door = null
 		return
+	# If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	if closest_door != null:
+		var static_body_door_child = closest_door.get_children().find(func(child): return child.is_in_group("Door"))
+		if static_body_door_child not in door_bodies:
+			closest_door.set_outline(false)
+			closest_door = null
 	# If there are doors, find the closest one and set its outline
 	for i in range(door_bodies.size()):
 		var body = door_bodies[i].get_parent()
@@ -175,6 +199,12 @@ func get_closest_switch():
 			closest_switch.set_outline(false)
 			closest_switch = null
 		return
+	# If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	if closest_switch != null:
+		var static_body_switch_child = closest_switch.get_children().find(func(child): return child.is_in_group("Switch"))
+		if static_body_switch_child not in switch_bodies:
+			closest_switch.set_outline(false)
+			closest_switch = null
 	# If there are switches, find the closest one and set its outline
 	for i in range(switch_bodies.size()):
 		var body = switch_bodies[i].get_parent()

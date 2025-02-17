@@ -12,10 +12,12 @@ func set_outline(value):
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.WHITE)
 		%CanvasGroup.material.set_shader_parameter("onoff",1.0)
 		%CanvasGroup.get_node("Sprite").texture = HOVER_TEXTURE
+		%CanvasGroup.z_index += 1
 	else:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.BLACK)
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
 		%CanvasGroup.get_node("Sprite").texture = ON_TEXTURE
+		%CanvasGroup.z_index -= 1
 
 func disable_laser():
 	%DeactivationAudioPlayer.play()
