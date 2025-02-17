@@ -1,15 +1,20 @@
 class_name Wall
 extends Node
 
+var initial_z_index = 0
+
+func _ready():
+	initial_z_index = %CanvasGroup.z_index
+
 func set_outline(value):
 	if value == true:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.WHITE)
 		%CanvasGroup.material.set_shader_parameter("onoff",1.0)
-		%CanvasGroup.z_index += 1
+		%CanvasGroup.z_index = initial_z_index + 2
 	else:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.BLACK)
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
-		%CanvasGroup.z_index -= 1
+		%CanvasGroup.z_index = initial_z_index
 
 func destroys():
 	%AudioStreamPlayer2D.play()

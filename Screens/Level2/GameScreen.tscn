@@ -127,7 +127,10 @@ script = null
 
 [node name="Player" parent="Map" instance=ExtResource("10_xrfa7")]
 unique_name_in_owner = true
-position = Vector2(1296, 1470)
+position = Vector2(1270, 1463)
+
+[node name="PlayerSpawn" type="Node2D" parent="Map"]
+position = Vector2(1273, 1460)
 
 [node name="FogGenerator" parent="Map" instance=ExtResource("11_3xic7")]
 unique_name_in_owner = true
@@ -151,9 +154,6 @@ enabled = false
 [node name="CardSelectionLayer" parent="Map" node_paths=PackedStringArray("in_game_ui") instance=ExtResource("13_xpuyl")]
 unique_name_in_owner = true
 in_game_ui = NodePath("../InGameUiLayer")
-
-[node name="PlayerSpawn" type="Node2D" parent="Map"]
-position = Vector2(1299, 1467)
 
 [node name="AlertLayer" parent="Map" instance=ExtResource("14_tyim1")]
 unique_name_in_owner = true

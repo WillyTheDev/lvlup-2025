@@ -6,10 +6,15 @@ extends CharacterBody2D
 var target : Node2D = null
 var normalized = 1
 var starting_position : Vector2
+var initial_parent_speed = 0
+var initial_z_index = 0
 
 func _ready():
 	set_outline(false)
 	starting_position = self.global_position
+	initial_z_index = %CanvasGroup.z_index
+	if get_parent() is PathFollow2D:
+		initial_parent_speed = get_parent().path_speed
 	get_node("/root/Game/Map/GameManager").on_next_round_started.connect(enable_enemy)
 
 func _physics_process(delta):
@@ -26,11 +31,11 @@ func set_outline(value):
 	if value == true:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.WHITE)
 		%CanvasGroup.material.set_shader_parameter("onoff",1.0)
-		%CanvasGroup.z_index += 1
+		%CanvasGroup.z_index = initial_z_index + 2
 	else:
 		%CanvasGroup.material.set_shader_parameter("line_colour",Color.BLACK)
 		%CanvasGroup.material.set_shader_parameter("onoff",0.0)
-		%CanvasGroup.z_index -= 1
+		%CanvasGroup.z_index = initial_z_index
 
 func _on_taunt_area_body_entered(body):
 	if body.is_in_group("Player"):
@@ -68,6 +73,11 @@ func enable_enemy():
 	%CatchArea.set_collision_layer_value(1, true)
 	%CatchArea.set_collision_mask_value(1, true)
 	set_outline(false)
+	if get_parent() is PathFollow2D:
+		get_parent().path_speed = initial_parent_speed
+		get_parent().progress_ratio = 0
+		get_parent().direction = 1
+	
 	
 func play_animation_idle():
 	%AnimationPlayer.play("idle")

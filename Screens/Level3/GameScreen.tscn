@@ -129,6 +129,9 @@ unique_name_in_owner = true
 position = Vector2(1138, 1800)
 game_manager = NodePath("../GameManager")
 
+[node name="PlayerSpawn" type="Node2D" parent="Map"]
+position = Vector2(1149, 1797)
+
 [node name="FogGenerator" parent="Map" instance=ExtResource("11_64rre")]
 unique_name_in_owner = true
 MAP_SIZE_X = 4700
@@ -153,9 +156,6 @@ enabled = false
 unique_name_in_owner = true
 maximum_amount_of_card = 10
 in_game_ui = NodePath("../InGameUiLayer")
-
-[node name="PlayerSpawn" type="Node2D" parent="Map"]
-position = Vector2(1149, 1797)
 
 [node name="AlertLayer" parent="Map" instance=ExtResource("14_geoun")]
 unique_name_in_owner = true

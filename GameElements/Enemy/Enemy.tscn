@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://d2i7wpdlyrxth"]
 
 [ext_resource type="Script" path="res://GameElements/Enemy/enemy.gd" id="1_jljaa"]
-[ext_resource type="Texture2D" uid="uid://pxqyxfrr6ihr" path="res://Assets/Enemy/Guard.png" id="2_uoo3p"]
-[ext_resource type="AudioStream" uid="uid://cv0l3r6gytfdi" path="res://Assets/Sounds/stun_enemy.mp3" id="3_aw1ff"]
-[ext_resource type="AudioStream" uid="uid://mkmcxersf5ra" path="res://Assets/Sounds/enemy_chasing.mp3" id="4_wraca"]
+[ext_resource type="Texture2D" uid="uid://76jmx3cee56d" path="res://Assets/Enemy/Guard.png" id="2_uoo3p"]
+[ext_resource type="AudioStream" uid="uid://foy8m2cjuheq" path="res://Assets/Sounds/stun_enemy.mp3" id="3_aw1ff"]
+[ext_resource type="AudioStream" uid="uid://cm12ormc2juvn" path="res://Assets/Sounds/enemy_chasing.mp3" id="4_wraca"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_540wn"]
 radius = 43.2897
@@ -44,7 +44,7 @@ shader_parameter/line_thickness = 10
 radius = 339.329
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo1kb"]
-radius = 60.208
+radius = 60.0
 
 [sub_resource type="Animation" id="Animation_2q1bm"]
 length = 0.001

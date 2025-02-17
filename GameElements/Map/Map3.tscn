@@ -548,10 +548,6 @@ rotation = 3.14159
 position = Vector2(1730, 1870)
 rotation = 3.14159
 
-[node name="Wall298" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1830, 1870)
-rotation = 3.14159
-
 [node name="Wall299" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
 position = Vector2(1530, 1870)
 rotation = 3.14159
@@ -570,10 +566,6 @@ rotation = 3.14159
 
 [node name="Wall303" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
 position = Vector2(1730, 1750)
-rotation = 3.14159
-
-[node name="Wall304" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
-position = Vector2(1830, 1750)
 rotation = 3.14159
 
 [node name="Wall305" parent="MapElements/Walls" instance=ExtResource("1_v0g3y")]
@@ -1302,8 +1294,8 @@ scale = Vector2(4.98047, 315)
 texture = SubResource("GradientTexture1D_w4b5f")
 
 [node name="Sprite2D4" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1440, 1300)
-scale = Vector2(3.59375, 600)
+position = Vector2(1445, 1300)
+scale = Vector2(3.63281, 600)
 texture = SubResource("GradientTexture1D_15ayl")
 
 [node name="Sprite2D15" type="Sprite2D" parent="MapElements/Rooms"]
@@ -1327,8 +1319,8 @@ scale = Vector2(3.55469, 150)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D10" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1980, 1790)
-scale = Vector2(0.78125, 133.75)
+position = Vector2(1930, 1790)
+scale = Vector2(1.17188, 133.75)
 texture = SubResource("GradientTexture1D_0etje")
 
 [node name="Sprite2D5" type="Sprite2D" parent="MapElements/Rooms"]
@@ -1377,8 +1369,8 @@ scale = Vector2(1.21094, 365.938)
 texture = SubResource("GradientTexture1D_vn65r")
 
 [node name="Sprite2D14" type="Sprite2D" parent="MapElements/Rooms"]
-position = Vector2(1579.14, 1805)
-scale = Vector2(2.35046, 110)
+position = Vector2(1529.14, 1805)
+scale = Vector2(1.95984, 110)
 texture = SubResource("GradientTexture1D_vn65r")
 
 [node name="Sprite2D3" type="Sprite2D" parent="MapElements/Rooms"]
