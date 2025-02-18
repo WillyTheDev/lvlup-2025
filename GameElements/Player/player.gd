@@ -146,13 +146,11 @@ func get_closest_wall():
 			closest_wall.set_outline(false)
 			closest_wall = null
 		return
-	# Verify the closest is null after an object has been removed
-	# 	If the child of the actual closest is not in the overlapping_bodies, set the closest to null
+	# Set the closest wall to null if the actual has been removed in game
 	if closest_wall != null:
 		# get the right child (staticbody)
 		var closest_wall_staticbody_child = closest_wall.get_children().filter(func(child): return child is StaticBody2D)
-
-		# it means it has been removed, set actual closest = null
+		# remove if it's not in the actual overlapping_bodies
 		if closest_wall_staticbody_child not in overlapping_bodies:
 			closest_wall.set_outline(false)
 			closest_wall = null
