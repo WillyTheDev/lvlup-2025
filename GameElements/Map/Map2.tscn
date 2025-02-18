@@ -412,7 +412,7 @@ path_speed = 0.01
 [node name="Lasers" type="Node" parent="MapElements"]
 
 [node name="LaserPower" parent="MapElements/Lasers" node_paths=PackedStringArray("laser_zone") instance=ExtResource("5_il68l")]
-position = Vector2(2590, 929)
+position = Vector2(2590, 930)
 scale = Vector2(1.666, 1.9)
 laser_zone = NodePath("../LaserZone")
 

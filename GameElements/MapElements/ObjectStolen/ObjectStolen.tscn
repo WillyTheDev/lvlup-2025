@@ -31,6 +31,7 @@ shader_parameter/highlight_speed = 6.0
 shader_parameter/highlight_width = 15.0
 
 [node name="ObjectStolen" type="Node2D" groups=["ObjectStolen"]]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_x3ajw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["ObjectStolen"]]

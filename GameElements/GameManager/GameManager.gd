@@ -40,7 +40,7 @@ func player_catch():
 	%BigCamera.enabled = true
 	%CardSelectionLayer.visible = true
 	%CardSelectionLayer.reset_selection()
-	print("Player has been Catched !")
+	print("Player has been Catched ! (or has pressed retry)")
 
 func on_treasure_get():
 	alert_layer.show_layer()
@@ -88,3 +88,7 @@ func player_has_finished():
 
 func _on_peek_button_pressed():
 	card_selection_layer.visible = !card_selection_layer.visible
+	
+func _input(event):
+	if event.is_action_pressed("retry"):
+		player_catch()
