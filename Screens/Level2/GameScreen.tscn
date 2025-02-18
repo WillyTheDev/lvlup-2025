@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://brrsb70bjdjl3"]
+[gd_scene load_steps=26 format=3 uid="uid://brrsb70bjdjl3"]
 
-[ext_resource type="Script" path="res://Screens/Level1/game_screen.gd" id="1_u10k2"]
+[ext_resource type="Script" path="res://Screens/game_screen.gd" id="1_u10k2"]
 [ext_resource type="FontFile" uid="uid://d4jwea47nu7m0" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Extrabold_Modular.ttf" id="2_vst32"]
 [ext_resource type="Texture2D" uid="uid://dpshnusl27o8v" path="res://Assets/UI/buttonRetry_neutral.png" id="3_35p5u"]
 [ext_resource type="Texture2D" uid="uid://bb0wrudvarscs" path="res://Assets/UI/buttonRetry_active.png" id="4_s8f6e"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="6_hfiqc"]
 [ext_resource type="PackedScene" uid="uid://ccbpp75ye3ttb" path="res://GameElements/TransitionLayer/transition_layer.tscn" id="7_oc7tj"]
 [ext_resource type="Shader" path="res://Shaders/vhs.gdshader" id="8_352wh"]
+[ext_resource type="Texture2D" uid="uid://c28srn144jgi8" path="res://Assets/UI/buttonMenu_neutral.png" id="8_j355k"]
+[ext_resource type="Texture2D" uid="uid://bwb6snq82dro0" path="res://Assets/UI/buttonMenu_hover.png" id="9_er2rc"]
+[ext_resource type="Texture2D" uid="uid://dk6k53kd2liw" path="res://Assets/UI/buttonMenu_active.png" id="9_ith4a"]
 [ext_resource type="PackedScene" uid="uid://b46070ptp8kn4" path="res://GameElements/Map/Map2.tscn" id="9_owg3m"]
 [ext_resource type="PackedScene" uid="uid://dfpp5vunkyy2o" path="res://GameElements/Player/Player.tscn" id="10_xrfa7"]
 [ext_resource type="PackedScene" uid="uid://3c6jkak01qoc" path="res://GameElements/Fog/FogGenerator.tscn" id="11_3xic7"]
@@ -107,16 +110,30 @@ size_flags_vertical = 10
 theme_override_fonts/normal_font = ExtResource("2_vst32")
 theme_override_font_sizes/normal_font_size = 45
 bbcode_enabled = true
-text = "[center]temps :
-"
+text = "[center]Time"
 
-[node name="RetryGameButton" type="TextureButton" parent="VictoryLayer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VictoryLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="RetryGameButton" type="TextureButton" parent="VictoryLayer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 texture_normal = ExtResource("3_35p5u")
 texture_pressed = ExtResource("4_s8f6e")
 texture_hover = ExtResource("5_mmepi")
+script = ExtResource("6_hfiqc")
+
+[node name="MenuGameButton" type="TextureButton" parent="VictoryLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture_normal = ExtResource("8_j355k")
+texture_pressed = ExtResource("9_ith4a")
+texture_hover = ExtResource("9_er2rc")
 script = ExtResource("6_hfiqc")
 
 [node name="TransitionLayer" parent="." instance=ExtResource("7_oc7tj")]
@@ -206,6 +223,7 @@ script = ExtResource("6_hfiqc")
 [node name="EscapeListener" parent="." instance=ExtResource("21_uv6ma")]
 process_mode = 3
 
-[connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
+[connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/HBoxContainer/RetryGameButton" to="." method="_on_retry_game_button_pressed"]
+[connection signal="pressed" from="VictoryLayer/MarginContainer/VBoxContainer/HBoxContainer/MenuGameButton" to="." method="_on_menu_game_button_pressed"]
 [connection signal="on_next_pressed" from="Map/CardSelectionLayer" to="Map/GameManager" method="_on_card_selection_layer_on_next_pressed"]
 [connection signal="pressed" from="AudioStreamPlayer/PeekButtonLayer/ButtonMargin/Button" to="Map/GameManager" method="_on_peek_button_pressed"]
