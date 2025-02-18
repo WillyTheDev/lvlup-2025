@@ -68,6 +68,7 @@ mouse_filter = 2
 unique_name_in_owner = true
 process_mode = 3
 layer = 3
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="VictoryLayer"]
 anchors_preset = 15

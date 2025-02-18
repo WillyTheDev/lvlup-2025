@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c886xe01wsxlt"]
+[gd_scene load_steps=13 format=3 uid="uid://c886xe01wsxlt"]
 
 [ext_resource type="Script" path="res://Screens/welcome_screen.gd" id="1_3qcqo"]
 [ext_resource type="Texture2D" uid="uid://qstjg3jfidou" path="res://Assets/UI/buttonPlay_neutral.png" id="2_1ty1s"]
@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://bh2eudsa2gvhg" path="res://Assets/Fonts/Bendicion/OTF/Bendicion-Regular_Modular.otf" id="4_6srox"]
 [ext_resource type="FontFile" uid="uid://d4jwea47nu7m0" path="res://Assets/Fonts/Bendicion/TTF/Bendicion-Extrabold_Modular.ttf" id="4_34146"]
 [ext_resource type="Texture2D" uid="uid://chl6vl5oph40n" path="res://Assets/UI/buttonPlay_hover.png" id="4_gl246"]
+[ext_resource type="Theme" uid="uid://c5evannciay5x" path="res://Assets/UI/LevelSelectionButtons.tres" id="5_2dvsu"]
 [ext_resource type="Script" path="res://GameElements/TextureButtonWithSound/ExtendMyTextureButton.gd" id="7_22trh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_axdo5"]
@@ -76,15 +77,15 @@ layout_mode = 2
 
 [node name="LevelLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 clip_contents = false
-custom_minimum_size = Vector2(550, 30)
+custom_minimum_size = Vector2(350, 30)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 8
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_34146")
 theme_override_font_sizes/normal_font_size = 28
-bbcode_enabled = true
 text = "  Level selection"
+scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -102,7 +103,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme = ExtResource("5_2dvsu")
 theme_override_fonts/font = ExtResource("4_6srox")
 theme_override_font_sizes/font_size = 64
 text = "1"
@@ -120,7 +121,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme = ExtResource("5_2dvsu")
 theme_override_fonts/font = ExtResource("4_6srox")
 theme_override_font_sizes/font_size = 64
 text = "2"
@@ -138,7 +139,7 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme = ExtResource("5_2dvsu")
 theme_override_fonts/font = ExtResource("4_6srox")
 theme_override_font_sizes/font_size = 64
 text = "3"
